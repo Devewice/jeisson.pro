@@ -130,11 +130,7 @@ export default function Services() {
         </AnimateIn>
         <div className="bento-grid services-grid">
           {mainServices.map((s, i) => (
-            <AnimateIn
-              key={s.title}
-              delay={i * 0.05}
-              className={`bento-grid__item ${i < 2 ? 'bento-grid__item--wide' : 'bento-grid__item--half'}`}
-            >
+            <AnimateIn key={s.title} delay={i * 0.05} className="bento-grid__item">
               <ServiceCard service={s} />
             </AnimateIn>
           ))}
@@ -168,7 +164,7 @@ export default function Services() {
         <Link to="/contacto" className="btn btn--primary btn--lg btn--glow">
           Pedir cotización →
         </Link>
-        <Link to="/proyectos" className="btn btn--soft btn--lg" style={{ marginLeft: '0.5rem' }}>
+        <Link to="/proyectos" className="btn btn--soft btn--lg">
           Ver proyectos
         </Link>
       </AnimateIn>

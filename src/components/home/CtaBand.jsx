@@ -10,7 +10,7 @@ export default function CtaBand() {
           <h2>¿Necesitas desarrollo?</h2>
           <p>
             Escríbeme a {SITE.email}: qué hay que construir, stack si ya lo tienes y plazo. Si hace
-            falta una idea visual inicial o ya tienes diseño/UX, encajo en ambos casos.
+            falta una idea visual inicial o ya tienes diseño/UX, puedo integrarme en ambos casos.
           </p>
           <div className="cta-band__actions">
             <Link to="/contacto" className="btn btn--primary btn--lg btn--glow">

@@ -18,6 +18,16 @@
   border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
 }
 
+/* CTAs al pie de páginas internas (home.css no se importa en /servicios, etc.) */
+.section-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0 2.5rem;
+}
+
 .page-hero-split {
   display: grid;
   gap: 2rem;
@@ -465,6 +475,17 @@
   display: block;
   margin-bottom: 0.55rem;
   color: var(--accent);
+}
+
+/* Cuatro servicios principales: 1 col móvil, 2×2 desde tablet (sin mosaico wide+half) */
+.services-grid .bento-grid__item {
+  grid-column: span 12;
+}
+
+@media (min-width: 640px) {
+  .services-grid .bento-grid__item {
+    grid-column: span 6;
+  }
 }
 
 .services-grid .bento-card h2 {

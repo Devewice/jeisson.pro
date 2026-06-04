@@ -24,7 +24,7 @@ export const HERO = {
   title: 'Desarrollador full stack',
   subtitle:
     'APIs, deploy y producto en producción — NestJS, Next.js, WordPress y lo que el proyecto pida.',
-  focusLine: 'Último foco: e-commerce + backoffice (motai.app) · Bogotá · remoto OK',
+  focusLine: 'Último foco: e-commerce, apps web y backoffice (motai.app) · Bogotá · remoto OK',
   ctas: [
     { label: 'Ver proyectos', to: '/proyectos', primary: true },
     { label: 'Escribirme', to: '/contacto', primary: false },
@@ -42,7 +42,7 @@ export const HERO_SLIDES = [
   },
   {
     headline: 'Productos que ya están en línea',
-    sub: 'motai.app · backoffice NestJS · plugins · APIs documentadas',
+    sub: 'motai.app · apps web · backoffice NestJS · plugins · APIs documentadas',
   },
 ]
 
@@ -60,9 +60,9 @@ export const HOME_ANCHOR = {
   eyebrow: 'Caso reciente',
   title: 'Motai — motai.app',
   problem:
-    'Producto digital en motos: tienda pública, lógica a medida y operación interna conectada al negocio.',
+    'Producto digital en motos: tienda pública, apps web y operación interna conectada al negocio.',
   bullets: [
-    'WooCommerce con varios plugins propios y sincronización ERP',
+    'WooCommerce con plugins propios, apps web y sincronización ERP',
     'Backoffice NestJS + PostgreSQL: cotizaciones, contratos y APIs documentadas',
     'Deploy y mantenimiento del stack en producción',
   ],
@@ -93,7 +93,7 @@ export const HOME_FAQ = [
   },
   {
     q: '¿Incluyes diseño?',
-    a: 'El encargo principal es desarrollo. Puedo aportar una idea visual inicial o integrar el trabajo de tu equipo en Figma.',
+    a: 'El contrato base es desarrollo: integro el Figma de tu equipo o una idea visual inicial acotada al producto. Si necesitas más capa creativa — UI completa, editorial o motion — la definimos en un alcance paralelo y va en la cotización junto al código, sin mezclar presupuestos.',
   },
   {
     q: '¿Plazos y CV para reclutadores?',
@@ -164,7 +164,7 @@ export const WHY_BUILD = [
   },
   {
     title: 'Trayectoria en producción',
-    text: 'De motai.app a plataformas escolares: código que sigue en línea y APIs documentadas.',
+    text: 'De motai.app (tienda, apps web y backoffice) a plataformas escolares: código que sigue en línea y APIs documentadas.',
   },
 ]
 
@@ -243,7 +243,7 @@ export const PAGE_COPY = {
     subtitle:
       'APIs, backoffice, WordPress y deploy — con diseño como complemento cuando el proyecto lo necesita.',
     intro:
-      'Stack probado en motai.app, colegios y proyectos propios. Los tres bloques principales están abajo; editorial y motion solo si el alcance lo incluye.',
+      'Stack probado en motai.app (e-commerce, apps web y backoffice), colegios y proyectos propios. Los tres bloques principales están abajo; editorial y motion solo si el alcance lo incluye.',
     stackTitle: 'Tecnologías que uso en producción',
     stackSub:
       'Herramientas con las que ya he entregado — no una lista de moda.',
@@ -304,13 +304,13 @@ export const PAGE_COPY = {
 
 export const HOME_COPY = {
   audience: {
-    title: 'Con quién encajo',
-    sub: 'Si te reconoces en alguno de estos perfiles, probablemente podemos arrancar rápido.',
+    title: '¿Qué tipo de proyecto tienes?',
+    sub: 'Si alguno de estos perfiles se parece al tuyo, podemos arrancar con alcance y plazo claros.',
   },
   aboutWhy: {
     eyebrow: 'Sobre mí',
-    title: 'En resumen',
-    sub: 'Desarrollo primero; diseño y TIC en colegios como base para hablar con equipos creativos.',
+    title: 'Desarrollo primero, diseño cuando suma',
+    sub: 'Años en TIC escolar y editorial: puedo integrar Figma y handoff sin que el proyecto se quede en la maqueta.',
     cta: 'Conocer trayectoria',
   },
   services: {
@@ -350,9 +350,9 @@ export const EXPERIENCE = [
     period: 'Jul 2025 – Jun 2026',
     status: 'Finalizado',
     bullets: [
-      'WooCommerce, varios plugins a medida y sincronización con ERP',
+      'WooCommerce, plugins a medida, apps web y sincronización con ERP',
       'Backoffice NestJS + PostgreSQL: cotizaciones, contratos, RBAC y APIs',
-      'Deploy y mantenimiento del producto en producción',
+      'Deploy y mantenimiento de tienda, apps web y backoffice en producción',
     ],
   },
   {
@@ -401,17 +401,17 @@ export const EXPERIENCE = [
 
 export const ABOUT = {
   intro: [
-    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En motai.app desarrollé WooCommerce, varios plugins a medida y un backoffice con NestJS y PostgreSQL.',
+    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En motai.app desarrollé WooCommerce, plugins a medida, apps web y un backoffice con NestJS y PostgreSQL.',
     'Antes de dedicarme a tiempo completo al código coordiné TIC y trabajé diseño en colegios y editorial. Complemento el desarrollo con criterio visual cuando hace falta. Hoy busco encargos de desarrollo.',
   ],
   highlights: [
-    { label: '5+ años', detail: 'Código, APIs y producto en producción' },
-    { label: 'Diseño (complemento)', detail: 'Idea inicial · Figma y handoff' },
-    { label: 'Rubros', detail: 'Educación, editorial, e-commerce, motos' },
-    { label: 'Estudios', detail: 'UCMC, Panamericana, SENA, técnico en redes' },
+    { label: '5+ años en web', detail: 'Full stack · APIs · WordPress y deploy en producción' },
+    { label: 'Diseño (complemento)', detail: 'Figma · idea visual inicial · handoff al código' },
+    { label: 'Sectores', detail: 'Educación · e-commerce · editorial · institucional' },
+    { label: 'Formación', detail: 'Graduado: desarrollo de software y diseño digital (UCMC, Panamericana, SENA)' },
   ],
   audienceLine:
-    'Encajo con startups, agencias con diseño, colegios (TIC) y tiendas WordPress — ver perfiles en inicio.',
+    'Suelo trabajar con startups, agencias con diseño, colegios (TIC) y tiendas WordPress — los mismos perfiles del inicio.',
 }
 
 export const TOOLKIT_TOP = [
@@ -495,8 +495,8 @@ export const SERVICES = [
     title: 'Desarrollo web full stack',
     complement: false,
     description:
-      'Sitios y APIs con PHP (Laravel), TypeScript (NestJS, Next.js, React) y Node/Express cuando encaja. Git, revisiones de código, pruebas (Jest/Vitest) y despliegue acordado contigo.',
-    tags: ['PHP', 'TypeScript', 'Laravel', 'NestJS', 'Next.js', 'React', 'Node.js'],
+      'Sitios, apps web y APIs con PHP (Laravel), TypeScript (NestJS, Next.js, React) y Node/Express cuando encaja. Git, revisiones de código, pruebas (Jest/Vitest) y despliegue acordado contigo.',
+    tags: ['PHP', 'TypeScript', 'Laravel', 'NestJS', 'Next.js', 'React', 'Node.js', 'Apps web'],
     includes: ['Arquitectura y código en Git', 'Integración con tu hosting o el acordado', 'Documentación técnica básica'],
     excludes: ['Diseño de marca desde cero salvo acuerdo', 'Hosting facturado a tu nombre salvo gestión acordada'],
   },
@@ -504,7 +504,7 @@ export const SERVICES = [
     title: 'Backoffice y producto digital',
     complement: false,
     description:
-      'Paneles con NestJS, Next.js y PostgreSQL: cotizaciones, contratos, RBAC, OpenAPI y tiempo real (SSE/WebSockets). Mismo perfil que el backoffice de motai.app.',
+      'Paneles con NestJS, Next.js y PostgreSQL: cotizaciones, contratos, RBAC, OpenAPI y tiempo real (SSE/WebSockets). Mismo perfil que el backoffice y las apps web de motai.app.',
     tags: ['NestJS', 'Next.js', 'PostgreSQL', 'TypeORM', 'OpenAPI', 'RBAC'],
     includes: ['Modelo de datos y APIs documentadas', 'Roles y permisos acordados', 'Entrega en entornos staging/prod'],
     excludes: ['App móvil nativa', 'Mantenimiento indefinido sin contrato'],
@@ -513,7 +513,7 @@ export const SERVICES = [
     title: 'WordPress, WooCommerce y plugins',
     complement: false,
     description:
-      'Plugins PHP (PSR-4), WooCommerce, sync ERP, Redis y REST/AJAX. Varios plugins a medida en motai.app; optimización y formularios con reCAPTCHA.',
+      'Plugins PHP (PSR-4), WooCommerce, apps web, sync ERP, Redis y REST/AJAX. Varios plugins a medida en motai.app; optimización y formularios con reCAPTCHA.',
     tags: ['WordPress', 'WooCommerce', 'PHP', 'Redis', 'REST/AJAX'],
     includes: ['Plugins y temas hijo cuando aplica', 'Integraciones ERP/API', 'Puesta en línea acordada'],
     excludes: ['Contenido masivo de producto sin briefing', 'Licencias premium de terceros sin presupuesto'],
@@ -552,12 +552,12 @@ export const PROJECTS = [
     status: 'online',
     role: 'Desarrollador full stack',
     description:
-      'E-commerce y operación interna: WooCommerce, plugins a medida, sync ERP y backoffice NestJS + PostgreSQL.',
+      'E-commerce, apps web y operación interna: WooCommerce, plugins a medida, sync ERP y backoffice NestJS + PostgreSQL.',
     highlights: [
-      'Varios plugins PHP (PSR-4) y flujos propios sobre WooCommerce',
+      'Plugins PHP (PSR-4), apps web y flujos propios sobre WooCommerce',
       'Backoffice: cotizaciones, contratos, RBAC y APIs documentadas',
     ],
-    tags: ['WordPress', 'NestJS', 'TypeScript', 'PostgreSQL'],
+    tags: ['WordPress', 'NestJS', 'TypeScript', 'PostgreSQL', 'Apps web'],
   },
   {
     title: 'jeisson.pro',
