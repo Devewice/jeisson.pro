@@ -18,8 +18,8 @@
     "phone": "+57 312 724 0080",
     "location": "Suba, Bogotá D.C., Colombia",
     "website": {
-      "url": "https://www.elcreador.com.co",
-      "label": "elcreador.com.co"
+      "url": "https://jeisson.pro",
+      "label": "jeisson.pro"
     },
     "customFields": [
       {
@@ -35,7 +35,7 @@
     "icon": "article",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Diseñador multimedial con <strong>5+ años</strong> en branding, editorial, fotografía y contenidos digitales. Portfolio: <strong>elcreador.com.co</strong>, Behance y <strong>occidentexxi.com</strong>. Adobe Suite, WordPress y motion. Busco diseño gráfico, comunicación visual o producción multimedia.</p>"
+    "content": "<p>Diseñador multimedial con <strong>5+ años</strong> en branding, editorial, fotografía y contenidos digitales. Portfolio: <strong>jeisson.pro</strong>, Behance y <strong>occidentexxi.com</strong>. Adobe Suite, WordPress y motion. Busco diseño gráfico, comunicación visual o producción multimedia.</p>"
   },
   "sections": {
     "profiles": {
@@ -76,10 +76,10 @@
           "icon": "globe",
           "iconColor": "",
           "network": "Portfolio",
-          "username": "elcreador",
+          "username": "jeisson.pro",
           "website": {
-            "url": "https://www.elcreador.com.co",
-            "label": "elcreador.com.co",
+            "url": "https://jeisson.pro",
+            "label": "jeisson.pro",
             "inlineLink": false
           }
         },
@@ -391,14 +391,14 @@
         {
           "id": "018f1a2b-3c4d-7000-8004-000000000002",
           "hidden": false,
-          "name": "El Creador — Portfolio y Marca Personal",
+          "name": "jeisson.pro — Portafolio y estudio creativo",
           "period": "2019 – Presente",
           "website": {
-            "url": "https://www.elcreador.com.co",
-            "label": "elcreador.com.co",
+            "url": "https://jeisson.pro",
+            "label": "jeisson.pro",
             "inlineLink": true
           },
-          "description": "<p>Plataforma personal de portafolio y servicios creativos: diseño gráfico, desarrollo web, animación y producción audiovisual. Incluye identidad de marca, sitio WordPress y showcase de proyectos para clientes educativos y comerciales.</p><p><strong>Stack:</strong> WordPress, Divi, HTML5, CSS, JavaScript, branding.</p>"
+          "description": "<p>Marca unificada de portafolio y servicios creativos: diseño gráfico, desarrollo web, animación y producción audiovisual. Showcase de proyectos para clientes educativos y comerciales.</p><p><strong>Stack:</strong> WordPress, HTML5, CSS, JavaScript, branding, motion.</p>"
         },
         {
           "id": "018f1a2b-3c4d-7000-8004-000000000003",

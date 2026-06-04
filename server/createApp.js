@@ -3,6 +3,14 @@ import { fileURLToPath } from 'node:url'
 import express from 'express'
 import session from 'express-session'
 import cookieParser from 'cookie-parser'
+import {
+  createAccessToken,
+  listAccessTokens,
+  redeemAccessToken,
+  requireCvAuth,
+  requireOwner,
+  revokeAccessToken,
+} from './accessTokens.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
@@ -22,7 +30,7 @@ function requireAuth(req, res, next) {
     res.status(401).json({ ok: false, error: 'No autenticado' })
     return
   }
-  res.status(401).send('Acceso no autorizado. Inicia sesión en /login')
+  res.status(401).send('No autorizado')
 }
 
 export function createApp({ distPath } = {}) {
@@ -84,8 +92,65 @@ export function createApp({ distPath } = {}) {
     res.json({ ok: true, service: 'jeisson.pro' })
   })
 
-  app.use('/cv-dev', requireAuth, express.static(path.join(root, 'cv-dev')))
-  app.use('/cv-creativo', requireAuth, express.static(path.join(root, 'cv-creativo')))
+  app.get('/api/auth/session', (req, res) => {
+    res.json({
+      ok: true,
+      owner: Boolean(req.session?.user),
+      cvAccess: req.session?.cvAccess ?? null,
+      canManageLinks: Boolean(req.session?.user),
+    })
+  })
+
+  app.get('/api/acceso/:token', (req, res) => {
+    const entry = redeemAccessToken(req.params.token)
+    if (!entry) {
+      res.status(404).json({ ok: false, error: 'Enlace inválido o expirado' })
+      return
+    }
+    req.session.cvAccess = {
+      valid: true,
+      variant: entry.variant,
+      label: entry.label,
+      tokenId: entry.id,
+    }
+    res.json({
+      ok: true,
+      variant: entry.variant,
+      redirect: entry.variant === 'dev' ? '/cv/dev' : entry.variant === 'creativo' ? '/cv/creativo' : '/interno',
+    })
+  })
+
+  app.get('/api/access-links', requireOwner, (_req, res) => {
+    res.json({ ok: true, links: listAccessTokens() })
+  })
+
+  app.post('/api/access-links', requireOwner, (req, res) => {
+    const { label = '', variant = null, expiresInHours = 168 } = req.body ?? {}
+    const entry = createAccessToken({ label, variant, expiresInHours })
+    const base = process.env.PUBLIC_URL || ''
+    res.json({
+      ok: true,
+      link: {
+        id: entry.id,
+        url: `${base}/acceso/${entry.token}`,
+        variant: entry.variant,
+        expiresAt: entry.expiresAt,
+        label: entry.label,
+      },
+    })
+  })
+
+  app.delete('/api/access-links/:id', requireOwner, (req, res) => {
+    const removed = revokeAccessToken(req.params.id)
+    if (!removed) {
+      res.status(404).json({ ok: false, error: 'No encontrado' })
+      return
+    }
+    res.json({ ok: true })
+  })
+
+  app.use('/cv-dev', requireCvAuth, express.static(path.join(root, 'cv-dev')))
+  app.use('/cv-creativo', requireCvAuth, express.static(path.join(root, 'cv-creativo')))
 
   if (distPath !== null) {
     app.use(express.static(dist))

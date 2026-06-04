@@ -359,14 +359,14 @@
         {
           "id": "018f1a2b-3c4d-7000-8004-000000000002",
           "hidden": false,
-          "name": "El Creador — Portfolio y Marca Personal",
+          "name": "jeisson.pro — Portafolio personal",
           "period": "2019 – Presente",
           "website": {
-            "url": "https://www.elcreador.com.co",
-            "label": "elcreador.com.co",
+            "url": "https://jeisson.pro",
+            "label": "jeisson.pro",
             "inlineLink": true
           },
-          "description": "<p>Plataforma personal de portafolio y servicios creativos: diseño gráfico, desarrollo web, animación y producción audiovisual. Incluye identidad de marca, sitio WordPress y showcase de proyectos para clientes educativos y comerciales.</p><p><strong>Stack:</strong> WordPress, Divi, HTML5, CSS, JavaScript, branding.</p>"
+          "description": "<p>Portafolio y servicios bajo la marca <strong>jeisson.pro</strong>: diseño gráfico, desarrollo web, animación y producción audiovisual para clientes educativos y comerciales.</p><p><strong>Stack:</strong> React, Node.js, WordPress, HTML5, CSS, JavaScript, branding.</p>"
         },
         {
           "id": "018f1a2b-3c4d-7000-8004-000000000003",

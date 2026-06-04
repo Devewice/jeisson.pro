@@ -9,25 +9,116 @@ export const SITE = {
 }
 
 export const HERO = {
-  title: 'Diseño y código al servicio de marcas, educación y producto digital',
+  name: 'Jeisson David Riveros García',
+  title: 'Full stack, diseño y producto digital',
   subtitle:
-    'Fusiono creatividad y lógica: editorial, campañas, plataformas escolares, e-commerce y software en producción. Más de 5 años en sectores educativo, editorial, publicidad y tecnología.',
+    'Construyo experiencias web que convierten: desde el código en producción hasta la pieza visual que cuenta tu historia.',
   ctas: [
-    { label: 'Conóceme', to: '/sobre-mi', primary: false },
     { label: 'Ver proyectos', to: '/proyectos', primary: true },
-    { label: 'Contactar', to: '/contacto', primary: false },
+    { label: 'Hablemos', to: '/contacto', primary: false },
   ],
 }
+
+/** Líneas del slider del hero (Swiper fade) */
+export const HERO_SLIDES = [
+  {
+    headline: 'Desarrollo web en producción',
+    sub: 'PHP · TypeScript · NestJS · Next.js · WordPress',
+  },
+  {
+    headline: 'Diseño editorial y branding',
+    sub: 'Adobe Suite · motion 2D · campañas digitales',
+  },
+  {
+    headline: 'Producto y plataformas reales',
+    sub: 'motai.app · educación · e-commerce · APIs documentadas',
+  },
+]
+
+export const HOME_STATS = [
+  { value: '5+', label: 'Años en producción' },
+  { value: '10+', label: 'Proyectos destacados' },
+  { value: 'Full stack', label: 'Dev + diseño multimedia' },
+  { value: 'Bogotá', label: 'Remoto · híbrido · Colombia' },
+]
+
+export const TECH_MARQUEE = [
+  'TypeScript',
+  'React',
+  'NestJS',
+  'Next.js',
+  'PHP',
+  'Laravel',
+  'WordPress',
+  'PostgreSQL',
+  'Docker',
+  'Figma',
+  'InDesign',
+  'Blender',
+]
+
+export const HOME_PROCESS = [
+  {
+    step: '01',
+    title: 'Entender',
+    text: 'Objetivo de negocio, audiencia y restricciones técnicas antes de diseñar o codificar.',
+  },
+  {
+    step: '02',
+    title: 'Construir',
+    text: 'Iteración con código mantenible, diseño coherente y entregas medibles en cada sprint.',
+  },
+  {
+    step: '03',
+    title: 'Entregar',
+    text: 'Despliegue, documentación y soporte; dejo el producto listo para crecer contigo.',
+  },
+]
+
+export const CAPABILITY_BARS = [
+  { label: 'Desarrollo full stack', value: 92, color: 'accent' },
+  { label: 'WordPress / WooCommerce', value: 88, color: 'accent' },
+  { label: 'Diseño editorial & branding', value: 90, color: 'creativo' },
+  { label: 'Motion & campañas', value: 78, color: 'creativo' },
+  { label: 'Coordinación TIC / educación', value: 85, color: 'accent' },
+]
+
+export const BENTO_STACK = [
+  { name: 'TypeScript', zone: 'Core', size: 'lg' },
+  { name: 'React / Next.js', zone: 'Frontend', size: 'lg' },
+  { name: 'NestJS', zone: 'Backend', size: 'md' },
+  { name: 'PostgreSQL', zone: 'Data', size: 'md' },
+  { name: 'PHP / Laravel', zone: 'Backend', size: 'md' },
+  { name: 'WordPress', zone: 'CMS', size: 'lg' },
+  { name: 'Docker / CI', zone: 'Ops', size: 'sm' },
+  { name: 'Figma', zone: 'Design', size: 'sm' },
+  { name: 'InDesign', zone: 'Editorial', size: 'md' },
+  { name: 'Blender', zone: 'Motion', size: 'sm' },
+]
+
+export const DELIVERY_METRICS = [
+  { label: 'Sitios y productos', value: 24, suffix: '+' },
+  { label: 'Ediciones editoriales', value: 20, suffix: '+' },
+  { label: 'APIs integradas', value: 15, suffix: '+' },
+  { label: 'Instituciones', value: 6, suffix: '' },
+]
+
+export const FEATURED_PROJECT_KEYS = [
+  'Motai — motai.app',
+  'jeisson.pro',
+  'Revista Occidente XXI',
+  'Colegio Van Leeuwenhoek',
+]
 
 export const ABOUT = {
   intro: [
     'Soy diseñador multimedial y desarrollador full stack en Bogotá. Me apasiona unir lo visual y lo técnico: desde una edición de revista o una campaña en redes hasta un plugin WordPress o un backoffice en TypeScript.',
     'He trabajado en proyectos editoriales, instituciones educativas, publicidad, marketing digital, producción audiovisual y productos SaaS. Busco excelencia, trabajo en equipo y soluciones claras para quien no habla en “código”.',
-    'Hoy mi sitio principal es jeisson.pro; mi marca creativa sigue en elcreador.com.co y Behance. El detalle técnico de contratación está en el CV interno (acceso restringido).',
+    'Mi marca y portafolio están en jeisson.pro; también comparto trabajo en Behance.',
   ],
   highlights: [
     { label: '5+ años', detail: 'Diseño, desarrollo web y coordinación TIC' },
-    { label: 'Doble perfil', detail: 'CV desarrollo y CV creativo (privado)' },
+    { label: 'Doble perfil', detail: 'CV dev y creativo bajo demanda' },
     { label: 'Sectores', detail: 'Educación, editorial, moda, e-commerce, motos' },
     { label: 'Formación', detail: 'UCMC, SENA, Panamericana, técnico en redes' },
   ],
@@ -120,7 +211,7 @@ export const PROJECTS = [
     url: 'https://jeisson.pro',
     category: 'dev',
     description:
-      'Portafolio personal: sitio público (bio, servicios, proyectos, contacto) y módulo interno de CV con autenticación. Stack React, Vite, Express y sesiones.',
+      'Portafolio personal: sitio público y gestión privada de CV con enlaces temporales. Stack React, Vite, Express.',
     tags: ['React', 'Node.js', 'Express'],
   },
   {
@@ -133,12 +224,12 @@ export const PROJECTS = [
     tags: ['WordPress', 'NestJS', 'TypeScript', 'PostgreSQL'],
   },
   {
-    title: 'El Creador — Marca y estudio',
+    title: 'jeisson.pro — Estudio creativo',
     period: '2019 — Presente',
-    url: 'https://www.elcreador.com.co',
+    url: 'https://jeisson.pro',
     category: 'creative',
     description:
-      'Marca personal: diseño gráfico, desarrollo web, animación 2D, video y servicios para clientes educativos y comerciales. WordPress, identidad y showcase de trabajos.',
+      'Marca unificada: diseño gráfico, desarrollo web, animación 2D, video y servicios para clientes educativos y comerciales. Portafolio y contacto en jeisson.pro.',
     tags: ['Branding', 'WordPress', 'Motion', 'Portfolio'],
   },
   {

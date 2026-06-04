@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { useRef } from 'react'
+import { Link, Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
 import '../App.css'
 
@@ -14,11 +15,26 @@ const CV_CONFIG = {
 }
 
 export default function CvViewer({ variant }) {
-  const { logout } = useAuth()
+  const { logout, cvAccess, owner } = useAuth()
+  const iframeRef = useRef(null)
   const config = CV_CONFIG[variant]
+
+  const locked = cvAccess?.variant && cvAccess.variant !== variant
 
   if (!config) {
     return null
+  }
+
+  if (locked) {
+    return <Navigate to="/interno" replace />
+  }
+
+  function printPdf() {
+    const win = iframeRef.current?.contentWindow
+    if (win) {
+      win.focus()
+      win.print()
+    }
   }
 
   return (
@@ -26,9 +42,14 @@ export default function CvViewer({ variant }) {
       <div className="cv-viewer-toolbar">
         <h1>{config.title}</h1>
         <div className="cv-viewer-actions">
-          <Link to="/interno" className="btn">
-            ← CV interno
-          </Link>
+          {(owner || !cvAccess?.variant) && (
+            <Link to="/interno" className="btn">
+              ← Volver
+            </Link>
+          )}
+          <button type="button" className="btn" onClick={printPdf}>
+            Guardar PDF
+          </button>
           <button type="button" className="btn" onClick={() => logout()}>
             Salir
           </button>
@@ -38,11 +59,16 @@ export default function CvViewer({ variant }) {
             rel="noopener noreferrer"
             className="btn btn--primary"
           >
-            Abrir en pestaña nueva
+            Pestaña nueva
           </a>
         </div>
       </div>
-      <iframe className="cv-viewer-frame" src={config.src} title={config.title} />
+      <iframe
+        ref={iframeRef}
+        className="cv-viewer-frame"
+        src={config.src}
+        title={config.title}
+      />
     </div>
   )
 }

@@ -1,0 +1,106 @@
+.access-admin {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+.access-admin h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.access-admin > p {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.access-admin__form {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .access-admin__form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .access-admin__form button {
+    grid-column: 1 / -1;
+  }
+}
+
+.access-admin__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.access-admin__form input,
+.access-admin__form select {
+  padding: 0.5rem 0.65rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.access-admin__created {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--accent-soft);
+  border-radius: 8px;
+}
+
+.access-admin__created code {
+  display: block;
+  margin: 0.5rem 0;
+  word-break: break-all;
+}
+
+.access-admin__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.access-admin__list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.access-admin__list span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.access-admin__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.access-entry,
+.access-denied {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.access-denied h1 {
+  margin-bottom: 0.75rem;
+}

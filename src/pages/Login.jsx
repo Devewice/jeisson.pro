@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
+import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
 
 export default function Login() {
-  const { user, login } = useAuth()
+  const { owner, login } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
   const from = location.state?.from || '/interno'
@@ -13,7 +13,7 @@ export default function Login() {
   const [error, setError] = useState('')
   const [pending, setPending] = useState(false)
 
-  if (user) {
+  if (owner) {
     return <Navigate to={from} replace />
   }
 
@@ -34,8 +34,8 @@ export default function Login() {
   return (
     <div className="login-page">
       <div className="login-card">
-        <h1>Área interna</h1>
-        <p>Acceso a hojas de vida (desarrollo y creativo). Uso privado.</p>
+        <h1>Acceso privado</h1>
+        <p>Solo administrador. Los invitados entran por el enlace que generes en /interno.</p>
         <form onSubmit={handleSubmit} className="login-form">
           <label>
             Usuario
@@ -61,12 +61,9 @@ export default function Login() {
           </label>
           {error && <p className="login-error">{error}</p>}
           <button type="submit" className="btn btn--primary" disabled={pending}>
-            {pending ? 'Entrando…' : 'Iniciar sesión'}
+            {pending ? 'Entrando…' : 'Entrar'}
           </button>
         </form>
-        <Link to="/" className="login-back">
-          ← Volver al portafolio
-        </Link>
       </div>
     </div>
   )

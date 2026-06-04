@@ -1,7 +1,9 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext.jsx'
-import { SITE } from '../data/site.js'
+import MobileNav from './MobileNav.jsx'
+import SiteFooter from './SiteFooter.jsx'
+import SiteChrome from './SiteChrome.jsx'
 import './Layout.css'
+import './MobileNav.css'
 
 const NAV = [
   { to: '/', label: 'Inicio', end: true },
@@ -13,55 +15,47 @@ const NAV = [
 
 export default function Layout() {
   const { pathname } = useLocation()
-  const { user } = useAuth()
   const onCv = pathname.startsWith('/cv/')
-  const onLogin = pathname === '/login'
+  const onPrivate =
+    pathname.startsWith('/cv/') ||
+    pathname.startsWith('/interno') ||
+    pathname.startsWith('/acceso/') ||
+    pathname === '/login'
+  const onHome = pathname === '/'
 
-  if (onLogin) {
+  if (pathname === '/login' || pathname.startsWith('/acceso/')) {
     return <Outlet />
   }
 
   return (
-    <div className="app-shell">
-      <header className="site-header">
+    <div className={`app-shell ${onHome ? 'app-shell--home' : ''}`}>
+      <SiteChrome />
+      <header className={`site-header ${onHome ? 'site-header--transparent' : ''}`}>
         <Link to="/" className="site-logo">
           jeisson<span className="site-logo-dot">.pro</span>
         </Link>
         {!onCv && (
-          <nav className="site-nav" aria-label="Principal">
-            {NAV.map(({ to, label, end }) => (
-              <NavLink
-                key={to}
-                to={to}
-                end={end}
-                className={({ isActive }) => (isActive ? 'nav-active' : undefined)}
-              >
-                {label}
-              </NavLink>
-            ))}
-            {user ? (
-              <NavLink to="/interno" className="nav-internal">
-                CV interno
-              </NavLink>
-            ) : (
-              <NavLink to="/login" className="nav-internal">
-                Acceso CV
-              </NavLink>
-            )}
-          </nav>
+          <>
+            <nav className="site-nav site-nav--desktop" aria-label="Principal">
+              {NAV.map(({ to, label, end }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  end={end}
+                  className={({ isActive }) => (isActive ? 'nav-active' : undefined)}
+                >
+                  {label}
+                </NavLink>
+              ))}
+            </nav>
+            <MobileNav items={NAV} />
+          </>
         )}
       </header>
       <main className="site-main">
         <Outlet />
       </main>
-      {!onCv && (
-        <footer className="site-footer">
-          <p>
-            © {new Date().getFullYear()} {SITE.name} ·{' '}
-            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
-          </p>
-        </footer>
-      )}
+      {!onPrivate && <SiteFooter />}
     </div>
   )
 }

@@ -1,3 +1,11 @@
+export async function fetchSession() {
+  const res = await fetch('/api/auth/session', { credentials: 'include' })
+  if (!res.ok) {
+    return { owner: false, cvAccess: null, canManageLinks: false }
+  }
+  return res.json()
+}
+
 export async function fetchMe() {
   const res = await fetch('/api/auth/me', { credentials: 'include' })
   if (!res.ok) return null

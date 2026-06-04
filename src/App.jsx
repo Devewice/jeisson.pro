@@ -7,6 +7,8 @@ import Services from './pages/Services.jsx'
 import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
 import Login from './pages/Login.jsx'
+import AccessEntry from './pages/AccessEntry.jsx'
+import AccessDenied from './pages/AccessDenied.jsx'
 import CvHub from './pages/CvHub.jsx'
 import CvViewer from './pages/CvViewer.jsx'
 
@@ -14,6 +16,8 @@ export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/acceso/:token" element={<AccessEntry />} />
+      <Route path="/acceso-invalido" element={<AccessDenied />} />
       <Route element={<Layout />}>
         <Route index element={<Landing />} />
         <Route path="sobre-mi" element={<About />} />

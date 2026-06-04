@@ -30,8 +30,8 @@ echo.
 echo Portafolio jeisson.pro
 echo  Web:  http://localhost:5173
 echo  API:  http://localhost:3001
-echo  Login CV: http://localhost:5173/login
-echo  Usuario por defecto: jeisson (ver .env)
+echo  Admin CV (solo tu): http://localhost:5173/login
+echo  Enlaces invitados: generados en /interno tras login
 echo.
 call npm run dev
 

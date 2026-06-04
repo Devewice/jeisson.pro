@@ -74,6 +74,23 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.info-card--lift {
+  transition: transform 0.25s ease, border-color 0.25s, box-shadow 0.25s;
+}
+
+.info-card--lift:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 141, 239, 0.4);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.contact-block--pro {
+  padding: 2rem;
+  background: rgba(18, 21, 28, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
 .info-card {
   padding: 1.5rem;
   background: var(--surface);

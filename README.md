@@ -71,7 +71,7 @@ Trabajo local en `C:\torque` (backoffice NestJS/Next.js) y en el plugin WordPres
 - Educación con **`grade: "Graduado"`** (UCMC, Panamericana, etc.).
 - Sin fecha de nacimiento en la versión DEV (recomendación ATS).
 - Solapes de fechas (varios contratos en paralelo) **declarados** donde aplica (ej. Colegio Reina de Gales + otros).
-- Enlaces reales: `motai.app`, `colvanlee.edu.co`, `occidentexxi.com`, `elcreador.com.co`.
+- Enlaces reales: `jeisson.pro`, `motai.app`, `colvanlee.edu.co`, `occidentexxi.com`.
 
 ### Datos de contacto (referencia)
 
@@ -79,8 +79,7 @@ Trabajo local en `C:\torque` (backoffice NestJS/Next.js) y en el plugin WordPres
 - **Email:** contacto@jeisson.pro  
 - **Tel:** +57 312 724 0080  
 - **Ubicación:** Suba, Bogotá D.C., Colombia  
-- **Sitio:** https://jeisson.pro  
-- **Portfolio histórico / creativo:** https://www.elcreador.com.co  
+- **Sitio y marca:** https://jeisson.pro  
 - **LinkedIn:** [jeisson-david-riveros-garcia](https://www.linkedin.com/in/jeisson-david-riveros-garcia-6291b9244)  
 - **GitHub:** https://github.com/Devewice  
 - **Behance:** https://www.behance.net/jeissondav1  
@@ -117,23 +116,24 @@ Requisito: [Node.js](https://nodejs.org) 20+.
 
 | Ruta | Contenido |
 |------|-----------|
-| `/` | Inicio — hero, servicios, CTA |
+| `/` | Inicio — hero animado (Swiper), stats, servicios, proyectos slider, CTA |
 | `/sobre-mi` | Bio y trayectoria |
 | `/servicios` | Qué ofreces (dev, WP, diseño, TIC) |
 | `/proyectos` | Proyectos destacados |
 | `/contacto` | Email y redes |
 
-Textos editables en `src/data/site.js` (ampliados desde PDFs de referencia y JSON de CV; el CV interno sigue siendo la versión condensada para RR/ATS).
+Textos editables en `src/data/site.js`. Animaciones: **Framer Motion** + **Swiper** en el home. Estilos home en `src/styles/home.css`.
 
-### Interno (requiere login)
+### CV privado (no aparece en el menú)
 
-| Ruta | Contenido |
-|------|-----------|
-| `/login` | Acceso con usuario/contraseña (`.env`) |
-| `/interno` | Selector de CV dev / creativo |
-| `/cv/dev`, `/cv/creativo` | Visor (HTML protegido en servidor) |
+| Ruta | Quién |
+|------|--------|
+| `/login` | Solo tú (usuario en `.env`) — no enlazado en el sitio |
+| `/interno` | Tras login: hub + **generar enlaces** para invitados |
+| `/acceso/:token` | Enlace temporal → abre CV sin ver el menú |
+| `/cv/dev`, `/cv/creativo` | Visor + botón **Guardar PDF** (Ctrl+P) |
 
-Los archivos `cv-dev/` y `cv-creativo/` **no son públicos**: sin sesión, `/cv-dev/*` responde 401.
+Los HTML del CV responden **401** sin sesión ni enlace válido.
 
 ### Comandos
 
@@ -182,7 +182,7 @@ cv-creativo/index.html  → también en /cv-creativo/index.html vía la app
 ## Dominio y marca (solo planificación)
 
 Se valoró **`jeisson.pro`** como dominio profesional (mejor que `.click` o `.store`).  
-**`jeisson.pro`** es el sitio y correo principal en el CV DEV. **`elcreador.com.co`** sigue en proyectos y perfil creativo.
+**`jeisson.pro`** es la única marca y sitio principal (DEV y creativo). `elcreador.com.co` ya no se usa.
 
 ---
 
@@ -192,7 +192,7 @@ Se valoró **`jeisson.pro`** como dominio profesional (mejor que `.click` o `.st
 - [ ] Alinear HTML con últimos cambios del JSON si se editó solo en RR.
 - [ ] Cuando termine cursos Platzi: cambiar “En curso” → “Completado” solo en versión DEV.
 - [ ] PDFs originales en Descargas: copiar aquí a `originales/` si se quieren archivados junto al proyecto.
-- [ ] Publicar sitio en `jeisson.pro` o seguir con `elcreador.com.co` (decisión de marca).
+- [x] Marca unificada en `jeisson.pro` (sustituye elcreador.com.co).
 - [ ] Generar PDF final desde RR (plantillas `meowth` / `onyx`) y guardar en esta carpeta.
 
 ---

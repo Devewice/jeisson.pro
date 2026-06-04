@@ -1,15 +1,21 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import * as authApi from '../api/auth.js'
 
+const emptySession = { owner: false, cvAccess: null, canManageLinks: false }
+
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null)
+  const [session, setSession] = useState(emptySession)
   const [loading, setLoading] = useState(true)
 
   const refresh = useCallback(async () => {
-    const me = await authApi.fetchMe()
-    setUser(me)
+    const data = await authApi.fetchSession()
+    setSession({
+      owner: data.owner ?? false,
+      cvAccess: data.cvAccess ?? null,
+      canManageLinks: data.canManageLinks ?? false,
+    })
     setLoading(false)
   }, [])
 
@@ -17,20 +23,31 @@ export function AuthProvider({ children }) {
     refresh()
   }, [refresh])
 
-  const login = useCallback(async (username, password) => {
-    const u = await authApi.login(username, password)
-    setUser(u)
-    return u
-  }, [])
+  const login = useCallback(
+    async (username, password) => {
+      await authApi.login(username, password)
+      await refresh()
+    },
+    [refresh]
+  )
 
   const logout = useCallback(async () => {
     await authApi.logout()
-    setUser(null)
+    setSession(emptySession)
   }, [])
 
+  const hasCvAccess = session.owner || Boolean(session.cvAccess?.valid)
+
   const value = useMemo(
-    () => ({ user, loading, login, logout, refresh }),
-    [user, loading, login, logout, refresh]
+    () => ({
+      ...session,
+      loading,
+      hasCvAccess,
+      login,
+      logout,
+      refresh,
+    }),
+    [session, loading, hasCvAccess, login, logout, refresh]
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

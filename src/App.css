@@ -182,3 +182,11 @@
 .btn--primary:hover {
   filter: brightness(1.08);
 }
+
+.btn--glow {
+  box-shadow: 0 0 28px rgba(91, 141, 239, 0.35);
+}
+
+.btn--glow:hover {
+  box-shadow: 0 0 36px rgba(91, 141, 239, 0.5);
+}

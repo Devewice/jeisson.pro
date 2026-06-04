@@ -5,13 +5,32 @@
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
+  height: 64px;
   padding: 0 1.25rem;
-  background: var(--surface);
+  background: rgba(18, 21, 28, 0.85);
   border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.site-header--transparent {
+  background: rgba(10, 12, 16, 0.55);
+  border-bottom-color: transparent;
+}
+
+.app-shell--home .site-header--transparent {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.app-shell--home .site-main {
+  padding-top: 0;
 }
 
 .site-logo {
