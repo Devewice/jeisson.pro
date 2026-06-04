@@ -57,6 +57,15 @@ a:hover { color: var(--accent); }
 
 .sidebar-inner { display: flex; flex-direction: column; gap: 2rem; }
 
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent-soft);
+  box-shadow: 0 6px 20px rgba(44, 36, 25, 0.15);
+}
+
 .badge {
   font-family: var(--font-display);
   font-style: italic;

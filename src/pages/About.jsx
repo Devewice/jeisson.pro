@@ -1,33 +1,63 @@
+import { Link } from 'react-router-dom'
 import PageShell from '../components/PageShell.jsx'
 import AnimateIn from '../components/AnimateIn.jsx'
-import { ABOUT, EDUCATION, INTERESTS, SITE, TOOLKIT } from '../data/site.js'
+import { ABOUT, EDUCATION, INTERESTS, PAGE_COPY, SITE, TOOLKIT } from '../data/site.js'
 
 export default function About() {
-  return (
-    <PageShell eyebrow="Sobre mí" title={SITE.name} subtitle={SITE.tagline}>
-      <AnimateIn className="prose">
-        {ABOUT.intro.map((p) => (
-          <p key={p.slice(0, 32)}>{p}</p>
-        ))}
-      </AnimateIn>
+  const copy = PAGE_COPY.about
 
-      <div className="stat-grid">
-        {ABOUT.highlights.map(({ label, detail }) => (
-          <AnimateIn key={label}>
-            <div className="stat-card">
-              <strong>{label}</strong>
-              <span>{detail}</span>
-            </div>
-          </AnimateIn>
-        ))}
+  return (
+    <PageShell eyebrow={PAGE_COPY.about.title} title={SITE.name} subtitle={copy.subtitle}>
+      <div className="page-hero-split">
+        <AnimateIn>
+          <img
+            className="profile-avatar"
+            src={SITE.profileImage}
+            alt={SITE.name}
+            width={160}
+            height={160}
+          />
+        </AnimateIn>
+        <div className="prose-block">
+          {ABOUT.intro.map((p) => (
+            <AnimateIn key={p.slice(0, 32)}>
+              <p>{p}</p>
+            </AnimateIn>
+          ))}
+        </div>
       </div>
 
-      <section className="content-section">
-        <h2 className="section-heading">Formación</h2>
+      <section className="about-summary" aria-label="Resumen">
+        <div className="stat-grid about-summary__stats">
+          {ABOUT.highlights.map(({ label, detail }, i) => (
+            <AnimateIn key={label} delay={i * 0.05}>
+              <div className="glass-card stat-card">
+                <strong>{label}</strong>
+                <span>{detail}</span>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+
+        <AnimateIn className="about-cta-row">
+          <Link to="/proyectos" className="btn btn--primary">
+            Ver proyectos
+          </Link>
+          <Link to="/contacto" className="btn btn--soft">
+            Contacto
+          </Link>
+        </AnimateIn>
+      </section>
+
+      <section className="page-section page-section--education">
+        <AnimateIn className="section-block__head">
+          <p className="section-eyebrow">Estudios</p>
+          <h2 className="section-title">Formación</h2>
+        </AnimateIn>
         <div className="timeline-list">
           {EDUCATION.map((e, i) => (
-            <AnimateIn key={e.school} delay={i * 0.05}>
-              <article className="timeline-list-item">
+            <AnimateIn key={e.school} delay={i * 0.06}>
+              <article className="glass-card timeline-list-item">
                 <div className="timeline-list-head">
                   <h3>{e.school}</h3>
                   <span className="info-card-period">
@@ -42,50 +72,44 @@ export default function About() {
         </div>
       </section>
 
-      <section className="content-section">
-        <h2 className="section-heading">Herramientas</h2>
+      <section className="page-section">
+        <AnimateIn className="section-block__head">
+          <p className="section-eyebrow">Stack</p>
+          <h2 className="section-title">Herramientas</h2>
+        </AnimateIn>
         <div className="toolkit-grid">
-          <div>
-            <h3>Diseño y audiovisual</h3>
-            <div className="tag-row">
-              {TOOLKIT.design.map((t) => (
-                <span key={t} className="tag-pill tag-pill--muted">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3>Desarrollo</h3>
-            <div className="tag-row">
-              {TOOLKIT.dev.map((t) => (
-                <span key={t} className="tag-pill">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3>Web y ops</h3>
-            <div className="tag-row">
-              {TOOLKIT.other.map((t) => (
-                <span key={t} className="tag-pill tag-pill--muted">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
+          {[
+            { label: 'Desarrollo (principal)', items: TOOLKIT.dev, muted: false },
+            { label: 'Web, datos y ops', items: TOOLKIT.other, muted: true },
+            { label: 'Diseño y audiovisual (complemento)', items: TOOLKIT.design, muted: true },
+          ].map((group, i) => (
+            <AnimateIn key={group.label} delay={i * 0.08}>
+              <div className="glass-card toolkit-block">
+                <h3>{group.label}</h3>
+                <div className="tag-row">
+                  {group.items.map((t) => (
+                    <span key={t} className={group.muted ? 'tag-pill tag-pill--muted' : 'tag-pill'}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </AnimateIn>
+          ))}
         </div>
       </section>
 
-      <section className="content-section">
-        <h2 className="section-heading">Intereses profesionales</h2>
-        <ul className="interest-list">
-          {INTERESTS.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-        <p className="prose-footnote">{SITE.birthNote}</p>
+      <section className="page-section">
+        <AnimateIn>
+          <p className="section-eyebrow">Extra</p>
+          <h2 className="section-title">Temas que me interesan</h2>
+          <ul className="interest-list">
+            {INTERESTS.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="prose-footnote">{SITE.birthNote}</p>
+        </AnimateIn>
       </section>
     </PageShell>
   )

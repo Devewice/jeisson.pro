@@ -154,7 +154,8 @@
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: center;
+  gap: 0.4rem;
   padding: 0.45rem 0.85rem;
   font: inherit;
   font-size: 0.85rem;
@@ -162,31 +163,65 @@
   color: var(--text);
   background: transparent;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 999px;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.15s, border-color 0.15s;
 }
 
-.btn:hover {
+.btn:hover:not(.btn--primary) {
   background: var(--accent-soft);
   border-color: var(--accent);
 }
 
+.btn__arrow {
+  font-family: var(--font-mono);
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.btn:hover .btn__arrow {
+  transform: translateX(3px);
+}
+
 .btn--primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+  background: var(--accent-btn);
+  border-color: var(--accent-dim);
+  color: var(--accent-on);
+  font-weight: 600;
 }
 
 .btn--primary:hover {
-  filter: brightness(1.08);
+  background: var(--accent-btn-hover);
+  border-color: var(--accent);
+  color: var(--accent-on);
 }
 
 .btn--glow {
-  box-shadow: 0 0 28px rgba(91, 141, 239, 0.35);
+  box-shadow: 0 0 28px var(--accent-glow);
 }
 
 .btn--glow:hover {
-  box-shadow: 0 0 36px rgba(91, 141, 239, 0.5);
+  box-shadow: 0 0 40px var(--accent-glow);
+}
+
+.btn--lg {
+  padding: 0.65rem 1.2rem;
+  font-size: 0.92rem;
+  border-radius: 999px;
+}
+
+/* Secundario alineado a la UI (secciones «ver más») */
+.btn--soft {
+  background: rgba(0, 230, 118, 0.1);
+  border-color: rgba(0, 230, 118, 0.35);
+  color: var(--accent-bright);
+  font-weight: 600;
+}
+
+.btn--soft:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-bright);
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.1);
 }

@@ -1,7 +1,8 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
+import AmbientBackground from './AmbientBackground.jsx'
+import ScrollProgress from './ScrollProgress.jsx'
 import MobileNav from './MobileNav.jsx'
 import SiteFooter from './SiteFooter.jsx'
-import SiteChrome from './SiteChrome.jsx'
 import './Layout.css'
 import './MobileNav.css'
 
@@ -22,6 +23,7 @@ export default function Layout() {
     pathname.startsWith('/acceso/') ||
     pathname === '/login'
   const onHome = pathname === '/'
+  const showFx = !onPrivate
 
   if (pathname === '/login' || pathname.startsWith('/acceso/')) {
     return <Outlet />
@@ -29,28 +31,39 @@ export default function Layout() {
 
   return (
     <div className={`app-shell ${onHome ? 'app-shell--home' : ''}`}>
-      <SiteChrome />
-      <header className={`site-header ${onHome ? 'site-header--transparent' : ''}`}>
-        <Link to="/" className="site-logo">
-          jeisson<span className="site-logo-dot">.pro</span>
-        </Link>
-        {!onCv && (
-          <>
-            <nav className="site-nav site-nav--desktop" aria-label="Principal">
-              {NAV.map(({ to, label, end }) => (
-                <NavLink
-                  key={to}
-                  to={to}
-                  end={end}
-                  className={({ isActive }) => (isActive ? 'nav-active' : undefined)}
-                >
-                  {label}
-                </NavLink>
-              ))}
-            </nav>
-            <MobileNav items={NAV} />
-          </>
-        )}
+      {showFx && <AmbientBackground />}
+      {showFx && <ScrollProgress />}
+      <header className={`site-header ${showFx ? 'site-header--glass' : ''}`}>
+        <div className="site-header__inner">
+          <Link to="/" className="site-logo">
+            <span className="site-logo__prompt">&gt;</span>
+            jeisson<span className="site-logo-dot">.pro</span>
+          </Link>
+          {!onCv && (
+            <>
+              <nav className="site-nav site-nav--desktop" aria-label="Principal">
+                {NAV.map(({ to, label, end }) => (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    end={end}
+                    className={({ isActive }) =>
+                      isActive ? 'site-nav__link site-nav__link--active' : 'site-nav__link'
+                    }
+                  >
+                    {label}
+                  </NavLink>
+                ))}
+              </nav>
+              <div className="site-header__actions">
+                <Link to="/contacto" className="btn btn--primary btn--header">
+                  Escríbeme
+                </Link>
+                <MobileNav items={NAV} />
+              </div>
+            </>
+          )}
+        </div>
       </header>
       <main className="site-main">
         <Outlet />

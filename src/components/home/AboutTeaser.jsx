@@ -1,32 +1,30 @@
 import { Link } from 'react-router-dom'
-import { ABOUT } from '../../data/site.js'
+import { ABOUT, HOME_COPY } from '../../data/site.js'
 import AnimateIn from '../AnimateIn.jsx'
-import Section from '../Section.jsx'
 
 export default function AboutTeaser() {
   return (
-    <Section
-      id="sobre"
-      index="02"
-      eyebrow="Sobre mí"
-      title="Creatividad + lógica en un solo perfil"
-      subtitle={ABOUT.intro[0]}
-    >
-      <div className="about-teaser__grid">
+    <section className="section-block">
+      <div className="about-split">
         <AnimateIn>
-          <Link to="/sobre-mi" className="btn btn--primary btn--glow">
+          <p className="section-eyebrow">Sobre mí</p>
+          <h2 className="section-title">{HOME_COPY.aboutTeaser.title}</h2>
+          <p className="section-sub">{ABOUT.intro[0]}</p>
+          <Link to="/sobre-mi" className="btn btn--primary" style={{ marginTop: '1.25rem' }}>
             Conocer trayectoria →
           </Link>
         </AnimateIn>
-        <AnimateIn delay={0.12} className="about-teaser__highlights">
-          {ABOUT.highlights.map((h) => (
-            <div key={h.label} className="about-teaser__pill">
-              <strong>{h.label}</strong>
-              <span>{h.detail}</span>
-            </div>
+        <div className="about-highlights">
+          {ABOUT.highlights.map((h, i) => (
+            <AnimateIn key={h.label} delay={0.08 + i * 0.05}>
+              <div className="glass-card about-pill">
+                <strong>{h.label}</strong>
+                <span>{h.detail}</span>
+              </div>
+            </AnimateIn>
           ))}
-        </AnimateIn>
+        </div>
       </div>
-    </Section>
+    </section>
   )
 }

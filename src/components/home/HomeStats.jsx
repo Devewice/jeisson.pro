@@ -1,18 +1,19 @@
 import { HOME_STATS } from '../../data/site.js'
 import AnimateIn from '../AnimateIn.jsx'
-import Section from '../Section.jsx'
 
 export default function HomeStats() {
   return (
-    <Section index="01" eyebrow="En números" title="Trayectoria en cifras" variant="alt">
-      <div className="home-stats__grid">
+    <section className="section-block section-block--tight">
+      <div className="stats-row">
         {HOME_STATS.map((s, i) => (
-          <AnimateIn key={s.label} delay={i * 0.08} className="home-stats__item">
-            <strong>{s.value}</strong>
-            <span>{s.label}</span>
+          <AnimateIn key={s.label} delay={i * 0.06}>
+            <div className="glass-card stat-tile">
+              <strong>{s.value}</strong>
+              <span>{s.label}</span>
+            </div>
           </AnimateIn>
         ))}
       </div>
-    </Section>
+    </section>
   )
 }

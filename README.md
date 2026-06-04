@@ -188,7 +188,7 @@ Se valoró **`jeisson.pro`** como dominio profesional (mejor que `.click` o `.st
 
 ## Pendientes sugeridos (para la próxima sesión)
 
-- [ ] Subir **foto profesional** en Reactive Resume (`picture.url` está vacío).
+- [x] Foto profesional en `assets/images/profile.jpg` (copia en `public/images/`, `cv-dev/images/`, `cv-creativo/images/`).
 - [ ] Alinear HTML con últimos cambios del JSON si se editó solo en RR.
 - [ ] Cuando termine cursos Platzi: cambiar “En curso” → “Completado” solo en versión DEV.
 - [ ] PDFs originales en Descargas: copiar aquí a `originales/` si se quieren archivados junto al proyecto.

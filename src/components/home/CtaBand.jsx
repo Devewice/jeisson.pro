@@ -1,31 +1,29 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { SITE } from '../../data/site.js'
 import AnimateIn from '../AnimateIn.jsx'
+import { SITE } from '../../data/site.js'
 
 export default function CtaBand() {
   return (
-    <section className="cta-band">
+    <section className="section-block">
       <AnimateIn>
-        <motion.div
-          className="cta-band__inner"
-          whileHover={{ scale: 1.01 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-        >
-          <h2>¿Tienes un proyecto en mente?</h2>
+        <div className="glass-card cta-band__panel">
+          <h2>¿Necesitas desarrollo?</h2>
           <p>
-            Cuéntame la idea — desarrollo, diseño o ambos. Respondo desde {SITE.email} con propuesta
-            y siguientes pasos.
+            Escríbeme a {SITE.email}: qué hay que construir, stack si ya lo tienes y plazo. Si hace
+            falta una idea visual inicial o ya tienes diseño/UX, encajo en ambos casos.
           </p>
           <div className="cta-band__actions">
             <Link to="/contacto" className="btn btn--primary btn--lg btn--glow">
               Ir a contacto
             </Link>
-            <Link to="/sobre-mi" className="btn btn--lg">
-              Sobre mí
+            <Link to="/proyectos" className="btn btn--soft btn--lg">
+              Ver proyectos
+              <span className="btn__arrow" aria-hidden="true">
+                →
+              </span>
             </Link>
           </div>
-        </motion.div>
+        </div>
       </AnimateIn>
     </section>
   )

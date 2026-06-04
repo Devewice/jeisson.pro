@@ -1,0 +1,135 @@
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  perspective: 900px;
+}
+
+.ambient__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 0%, transparent 0%, var(--bg) 85%);
+  z-index: 4;
+}
+
+/* Malla 3D animada */
+.ambient__mesh-wrap {
+  position: absolute;
+  inset: -20% -10%;
+  transform-style: preserve-3d;
+  transform: rotateX(58deg) rotateZ(-12deg);
+  z-index: 1;
+}
+
+.ambient__mesh {
+  width: 200%;
+  height: 200%;
+  margin: -50% 0 0 -50%;
+  background-image:
+    linear-gradient(rgba(0, 230, 118, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 230, 118, 0.14) 1px, transparent 1px);
+  background-size: 72px 72px;
+  animation: mesh-drift 28s linear infinite;
+  mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, black 15%, transparent 72%);
+}
+
+@keyframes mesh-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(72px, 72px);
+  }
+}
+
+.ambient__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(0, 230, 118, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 230, 118, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: grid-pulse 6s ease-in-out infinite alternate;
+  mask-image: radial-gradient(ellipse 95% 75% at 50% 15%, black, transparent 68%);
+}
+
+.ambient__grid--fine {
+  background-size: 24px 24px;
+  opacity: 0.5;
+  animation: grid-drift-slow 40s linear infinite;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black, transparent 75%);
+}
+
+@keyframes grid-pulse {
+  from {
+    opacity: 0.45;
+  }
+  to {
+    opacity: 0.85;
+  }
+}
+
+@keyframes grid-drift-slow {
+  to {
+    background-position: 24px 24px;
+  }
+}
+
+.ambient__scan {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 230, 118, 0.03) 48%,
+    transparent 52%
+  );
+  background-size: 100% 220px;
+  animation: scan-sweep 9s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes scan-sweep {
+  0%,
+  100% {
+    background-position: 0 -220px;
+  }
+  50% {
+    background-position: 0 100vh;
+  }
+}
+
+.ambient__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.ambient__orb--a {
+  width: min(55vw, 520px);
+  height: min(55vw, 520px);
+  top: -18%;
+  left: -12%;
+  background: rgba(0, 230, 118, 0.2);
+}
+
+.ambient__orb--b {
+  width: min(42vw, 400px);
+  height: min(42vw, 400px);
+  top: 35%;
+  right: -14%;
+  background: rgba(0, 180, 100, 0.12);
+}
+
+.ambient__orb--c {
+  width: 300px;
+  height: 300px;
+  bottom: 8%;
+  left: 28%;
+  background: rgba(77, 159, 255, 0.07);
+}
