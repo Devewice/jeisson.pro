@@ -21,12 +21,18 @@ export default function Landing() {
       <section className="landing-panels">
         <article className="landing-panel">
           <h2>Desarrollo</h2>
-          <p>Full stack, APIs, WordPress enterprise y backoffice en TypeScript.</p>
+          <p>
+            E-commerce, plugins WordPress, backoffice NestJS/Next.js y plataformas
+            educativas. Más de 5 años entre código y producción.
+          </p>
           <Link to="/servicios">Qué ofrezco →</Link>
         </article>
         <article className="landing-panel">
-          <h2>Diseño</h2>
-          <p>Branding, editorial, motion y piezas para campañas digitales.</p>
+          <h2>Diseño y multimedia</h2>
+          <p>
+            Editorial (Occidente XXI), branding, animación 2D, foto, radio y campañas
+            para marcas y colegios.
+          </p>
           <Link to="/proyectos">Proyectos →</Link>
         </article>
         <article className="landing-panel landing-panel--muted">

@@ -123,7 +123,7 @@ Requisito: [Node.js](https://nodejs.org) 20+.
 | `/proyectos` | Proyectos destacados |
 | `/contacto` | Email y redes |
 
-Textos editables en `src/data/site.js`.
+Textos editables en `src/data/site.js` (ampliados desde PDFs de referencia y JSON de CV; el CV interno sigue siendo la versión condensada para RR/ATS).
 
 ### Interno (requiere login)
 
