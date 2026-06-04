@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "name": "jeisson.pro",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "jeisson-riveros-*.json": "jsonc"
+    },
+    "editor.formatOnSave": false,
+    "liveServer.settings.root": "/cv-dev"
+  },
+  "extensions": {
+    "recommendations": [
+      "ritwickdey.liveserver",
+      "esbenp.prettier-vscode"
+    ]
+  }
+}

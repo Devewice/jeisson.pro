@@ -1,0 +1,347 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "",
+    "size": 80,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0.5)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Jeisson David Riveros Garcia",
+    "headline": "Full Stack Web Developer | PHP | JavaScript | WordPress | Multimedia Designer",
+    "email": "jeissondav1@gmail.com",
+    "phone": "+57 3127240080",
+    "location": "Bogotá, Colombia",
+    "website": {
+      "url": "https://www.linkedin.com/in/jeisson-david-riveros-garcia-6291b9244",
+      "label": "LinkedIn"
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Profile",
+    "icon": "article",
+    "columns": 1,
+    "hidden": false,
+    "content": "Full Stack Web Developer y Diseñador Multimedia con más de 5 años de experiencia en desarrollo web, WordPress, PHP, JavaScript, marketing digital, producción multimedia y educación. Experiencia liderando proyectos para instituciones educativas, empresas y medios digitales."
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "icon": "messenger-logo",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "1",
+          "network": "LinkedIn",
+          "username": "jeisson-david-riveros-garcia-6291b9244",
+          "url": "https://www.linkedin.com/in/jeisson-david-riveros-garcia-6291b9244"
+        },
+        {
+          "id": "2",
+          "network": "Behance",
+          "username": "jeissondav1",
+          "url": "https://behance.net/jeissondav1"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "icon": "briefcase",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "1",
+          "company": "Motai",
+          "position": "Senior PHP / JavaScript Developer",
+          "location": "Bogotá",
+          "date": "Jul 2025 - Present",
+          "summary": "Desarrollo de software y soluciones empresariales."
+        },
+        {
+          "id": "2",
+          "company": "Santiago Aviador",
+          "position": "Web Developer",
+          "location": "Bogotá",
+          "date": "Apr 2024 - Jul 2025",
+          "summary": "Desarrollo de sitio web y tienda digital."
+        },
+        {
+          "id": "3",
+          "company": "Colegio Reina de Gales",
+          "position": "Web Developer & Content Manager",
+          "location": "Bogotá",
+          "date": "2024 - 2025",
+          "summary": "Desarrollo web institucional y contenidos digitales."
+        },
+        {
+          "id": "4",
+          "company": "Roger Murillo SAS",
+          "position": "Developer, Animator & Community Manager",
+          "location": "Bogotá",
+          "date": "2023 - 2025",
+          "summary": "Marketing digital, CMS, animación y gestión de comunidades."
+        },
+        {
+          "id": "5",
+          "company": "Colegio Van Leeuwenhoek",
+          "position": "ICT Coordinator, Instructor & Web Developer",
+          "location": "Bogotá",
+          "date": "2020 - 2025",
+          "summary": "Infraestructura tecnológica, redes, formación técnica y desarrollo web."
+        },
+        {
+          "id": "6",
+          "company": "Revista Occidente XXI",
+          "position": "Editorial Designer & Photographer",
+          "location": "Bogotá",
+          "date": "2020 - 2024",
+          "summary": "Diseño editorial, fotografía y producción visual."
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "icon": "graduation-cap",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "1",
+          "institution": "Universidad Colegio Mayor de Cundinamarca",
+          "studyType": "Diseño Digital y Multimedia",
+          "date": "En curso"
+        },
+        {
+          "id": "2",
+          "institution": "SENA",
+          "studyType": "Desarrollo de Medios Digitales",
+          "date": "2022-2023"
+        },
+        {
+          "id": "3",
+          "institution": "Unipanamericana",
+          "studyType": "Desarrollo de Software",
+          "date": "En curso"
+        },
+        {
+          "id": "4",
+          "institution": "Instituto Integrado de Suba",
+          "studyType": "Técnico en Mantenimiento de Computo",
+          "date": "2021"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "icon": "code-simple",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "skills": {
+      "title": "Skills",
+      "icon": "compass-tool",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "1",
+          "name": "PHP",
+          "level": 5
+        },
+        {
+          "id": "2",
+          "name": "JavaScript",
+          "level": 5
+        },
+        {
+          "id": "3",
+          "name": "WordPress",
+          "level": 5
+        },
+        {
+          "id": "4",
+          "name": "MySQL",
+          "level": 4
+        },
+        {
+          "id": "5",
+          "name": "HTML5",
+          "level": 5
+        },
+        {
+          "id": "6",
+          "name": "CSS3",
+          "level": 5
+        },
+        {
+          "id": "7",
+          "name": "Photoshop",
+          "level": 5
+        },
+        {
+          "id": "8",
+          "name": "Illustrator",
+          "level": 5
+        },
+        {
+          "id": "9",
+          "name": "Premiere",
+          "level": 4
+        },
+        {
+          "id": "10",
+          "name": "Blender",
+          "level": 3
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "icon": "translate",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "1",
+          "name": "Español",
+          "level": 5
+        },
+        {
+          "id": "2",
+          "name": "English",
+          "level": 3
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "icon": "football",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "1",
+          "name": "Marketing Digital"
+        },
+        {
+          "id": "2",
+          "name": "IA"
+        },
+        {
+          "id": "3",
+          "name": "Animación 3D"
+        }
+      ]
+    },
+    "awards": {
+      "title": "Awards",
+      "icon": "trophy",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "icon": "certificate",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "publications": {
+      "title": "Publications",
+      "icon": "books",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteer",
+      "icon": "hand-heart",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "icon": "phone",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "onyx",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "profiles",
+            "summary",
+            "education",
+            "experience"
+          ],
+          "sidebar": [
+            "skills",
+            "languages",
+            "interests"
+          ]
+        }
+      ]
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 14,
+      "marginY": 12,
+      "format": "a4",
+      "locale": "en-US",
+      "hideLinkUnderline": false,
+      "hideIcons": false,
+      "hideSectionIcons": true
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(220, 38, 38, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "500"
+        ],
+        "fontSize": 10,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 14,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": "",
+    "styleRules": []
+  }
+}

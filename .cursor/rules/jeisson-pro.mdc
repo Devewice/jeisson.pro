@@ -1,0 +1,11 @@
+---
+description: CV y portafolio jeisson.pro — contexto del proyecto
+globs: "**/*"
+alwaysApply: true
+---
+
+Lee `README.md` y `AGENTS.md` en la raíz del repo antes de modificar archivos.
+
+- Editar solo los JSON canónicos `jeisson-riveros-reactive-resume.json` y `jeisson-riveros-creativo-reactive-resume.json` salvo petición de HTML.
+- Respetar versión DEV vs CREATIVA, Motai (pasado, oculto en creativo), y reglas ATS del README.
+- Responder en español.

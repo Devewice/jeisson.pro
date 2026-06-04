@@ -1,0 +1,714 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "",
+    "size": 96,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 8,
+    "borderColor": "rgba(0, 0, 0, 0.15)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.2)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Jeisson David Riveros García",
+    "headline": "Desarrollador Web Full Stack · PHP · JavaScript · WordPress",
+    "email": "contacto@elcreador.com.co",
+    "phone": "+57 312 724 0080",
+    "location": "Suba, Bogotá D.C., Colombia",
+    "website": {
+      "url": "https://www.elcreador.com.co",
+      "label": "elcreador.com.co"
+    },
+    "customFields": [
+      {
+        "id": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+        "icon": "map-pin",
+        "text": "Bogotá D.C. · Remoto o híbrido · Disponible",
+        "link": ""
+      }
+    ]
+  },
+  "summary": {
+    "title": "Perfil profesional",
+    "icon": "article",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> construyendo plataformas, APIs y sitios en producción (PHP, JavaScript, WordPress, MySQL). Experiencia reciente como <strong>Desarrollador Senior</strong> en <a href=\"https://motai.app\">Motai</a> (producto web en producción).</p><p>Experiencia en sector educativo y comercial en <strong>jornadas institucionales compatibles</strong> con proyectos freelance y desarrollo por encargo. <strong>Disponible</strong> para nuevas oportunidades back-end / full stack.</p><p>Aporto código mantenible, integración de APIs y entrega con resultados medibles.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Perfiles",
+      "icon": "messenger-logo",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000001",
+          "hidden": false,
+          "icon": "linkedin-logo",
+          "iconColor": "",
+          "network": "LinkedIn",
+          "username": "jeisson-david-riveros-garcia",
+          "website": {
+            "url": "https://www.linkedin.com/in/jeisson-david-riveros-garcia-6291b9244",
+            "label": "LinkedIn",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000005",
+          "hidden": false,
+          "icon": "github-logo",
+          "iconColor": "",
+          "network": "GitHub",
+          "username": "jeissondav1",
+          "website": {
+            "url": "https://github.com/jeissondav1",
+            "label": "github.com/jeissondav1",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000003",
+          "hidden": false,
+          "icon": "globe",
+          "iconColor": "",
+          "network": "Portfolio",
+          "username": "elcreador",
+          "website": {
+            "url": "https://www.elcreador.com.co",
+            "label": "elcreador.com.co",
+            "inlineLink": false
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experiencia laboral",
+      "icon": "briefcase",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000001",
+          "hidden": false,
+          "company": "Motai",
+          "position": "Desarrollador Senior PHP / JavaScript",
+          "location": "Bogotá D.C., Colombia (remoto)",
+          "period": "Jul 2025 – Jun 2026",
+          "website": {
+            "url": "https://motai.app",
+            "label": "motai.app",
+            "inlineLink": true
+          },
+          "roles": [],
+          "description": "<ul><li>Desarrollé el producto web en <strong>motai.app</strong>: módulos back-end en <strong>PHP</strong>, lógica de negocio en <strong>JavaScript</strong> y consumo de <strong>APIs REST</strong>.</li><li>Modelé y consulté datos en <strong>MySQL</strong>; documenté endpoints para integraciones internas.</li><li>Trabajé con <strong>Git</strong> (branches, PRs) y despliegues iterativos con el equipo de producto.</li><li>Stack: PHP 8+, JavaScript (ES6+), MySQL, HTML/CSS.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000002",
+          "hidden": false,
+          "company": "Santiago Aviador",
+          "position": "Desarrollador Web · E-commerce",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Abr 2024 – Jul 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "roles": [],
+          "description": "<ul><li>Entrega de <strong>sitio corporativo + tienda WooCommerce</strong> con catálogo, pasarela de pago y diseño responsive.</li><li>Reducción de tareas manuales de publicación al centralizar contenidos en <strong>WordPress</strong> (Divi).</li><li>SEO on-page y optimización de plantillas clave de conversión.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000003",
+          "hidden": false,
+          "company": "Colegio Reina de Gales",
+          "position": "Diseñador y Desarrollador Web",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Feb 2024 – Jul 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "roles": [],
+          "description": "<ul><li>Mantenimiento del <strong>portal institucional</strong> (HTML/CSS/JS, CMS): +15 landing pages y recursos digitales por ciclo escolar.</li><li>Jornada institucional parcial, en paralelo a otros contratos declarados.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000005",
+          "hidden": false,
+          "company": "Colegio Van Leeuwenhoek",
+          "position": "Coordinador TIC · Desarrollador Web",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Ene 2020 – Dic 2023",
+          "website": {
+            "url": "https://colvanlee.edu.co",
+            "label": "colvanlee.edu.co",
+            "inlineLink": true
+          },
+          "roles": [],
+          "description": "<ul><li>Liderazgo del área TIC: web institucional en <strong>colvanlee.edu.co</strong>, plataforma interna y soporte a comunidad educativa (+800 usuarios).</li><li>Desarrollo de módulos web educativos con JavaScript, HTML5, CSS y CMS.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000004",
+          "hidden": true,
+          "company": "Roger Murillo SAS",
+          "position": "Community Manager · Desarrollador",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Ene 2023 – Jul 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "roles": [],
+          "description": ""
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000006",
+          "hidden": true,
+          "company": "Revista Occidente XXI",
+          "position": "Diseñador Editorial",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Ene 2020 – May 2024",
+          "website": {
+            "url": "https://www.occidentexxi.com",
+            "label": "occidentexxi.com",
+            "inlineLink": true
+          },
+          "roles": [],
+          "description": ""
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000007",
+          "hidden": true,
+          "company": "Corporación ESHAC",
+          "position": "Diseñador Gráfico",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Ene 2022 – Dic 2022",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "roles": [],
+          "description": ""
+        }
+      ]
+    },
+    "education": {
+      "title": "Educación",
+      "icon": "graduation-cap",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8003-000000000001",
+          "hidden": false,
+          "school": "Universidad Colegio Mayor de Cundinamarca (UCMC)",
+          "degree": "Tecnólogo",
+          "area": "Diseño Digital y Multimedia",
+          "grade": "Graduado",
+          "location": "Bogotá D.C., Colombia",
+          "period": "2023 – 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li>Enfoque en productos multimediales, comunicación visual y estrategia de mercado.</li><li>Proyectos integradores de diseño, animación y producción de contenidos digitales.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8003-000000000002",
+          "hidden": false,
+          "school": "Servicio Nacional de Aprendizaje (SENA)",
+          "degree": "Tecnólogo",
+          "area": "Desarrollo de Medios Gráficos Visuales / Medios Digitales",
+          "grade": "Completado",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Jun 2022 – Dic 2023",
+          "website": {
+            "url": "https://www.sena.edu.co",
+            "label": "sena.edu.co",
+            "inlineLink": false
+          },
+          "description": "<ul><li>Desarrollo de productos multimedia adaptables a distintos canales y audiencias.</li><li>Desarrollo web, uso de CRM/CMS y producción de contenidos digitales.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8003-000000000003",
+          "hidden": false,
+          "school": "Universidad Panamericana",
+          "degree": "Tecnólogo",
+          "area": "Desarrollo de Software",
+          "grade": "Graduado",
+          "location": "Bogotá D.C., Colombia",
+          "period": "2022 – 2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li>Formación en desarrollo de software, lógica de programación y arquitectura de sistemas.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8003-000000000004",
+          "hidden": false,
+          "school": "Instituto Integrado de Suba",
+          "degree": "Técnico",
+          "area": "Mantenimiento de Equipos Informáticos",
+          "grade": "Graduado",
+          "location": "Suba, Bogotá D.C., Colombia",
+          "period": "Ene 2021 – Dic 2021",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li>Reparación y mantenimiento preventivo de hardware, redes locales y sistemas operativos.</li><li>Soporte técnico, diagnóstico de fallas y administración de infraestructura TI.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8003-000000000005",
+          "hidden": true,
+          "school": "Liceo Mallerland",
+          "degree": "Bachiller Académico",
+          "area": "Educación Media",
+          "grade": "Graduado",
+          "location": "Colombia",
+          "period": "2007",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Proyectos destacados",
+      "icon": "code-simple",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000001",
+          "hidden": true,
+          "name": "Revista Occidente XXI — Ediciones Digitales",
+          "period": "2020 – 2024",
+          "website": {
+            "url": "https://www.occidentexxi.com/ediciones",
+            "label": "occidentexxi.com/ediciones",
+            "inlineLink": true
+          },
+          "description": "<p>Diseño editorial completo de múltiples ediciones impresas y digitales. Responsable de identidad visual por número, maquetación, retoque fotográfico y adaptación responsive para web. Proyecto de larga duración con entregas periódicas bajo deadline editorial.</p><p><strong>Stack:</strong> Adobe InDesign, Photoshop, Illustrator, fotografía digital.</p>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000002",
+          "hidden": false,
+          "name": "El Creador — Portfolio y Marca Personal",
+          "period": "2019 – Presente",
+          "website": {
+            "url": "https://www.elcreador.com.co",
+            "label": "elcreador.com.co",
+            "inlineLink": true
+          },
+          "description": "<p>Plataforma personal de portafolio y servicios creativos: diseño gráfico, desarrollo web, animación y producción audiovisual. Incluye identidad de marca, sitio WordPress y showcase de proyectos para clientes educativos y comerciales.</p><p><strong>Stack:</strong> WordPress, Divi, HTML5, CSS, JavaScript, branding.</p>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000003",
+          "hidden": false,
+          "name": "Plataforma TIC — Colegio Van Leeuwenhoek",
+          "period": "2020 – 2023",
+          "website": {
+            "url": "https://colvanlee.edu.co",
+            "label": "colvanlee.edu.co",
+            "inlineLink": true
+          },
+          "description": "<p>Desarrollo de plataforma interna institucional, sitio web escolar y proceso de rebranding. Integración de recursos educativos digitales, módulos web interactivos y soporte a la emisora de radio escolar.</p><p><strong>Stack:</strong> JavaScript, HTML5, CSS, CMS, administración de sistemas.</p>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000004",
+          "hidden": false,
+          "name": "Tienda Digital — Santiago Aviador",
+          "period": "2024 – 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>E-commerce completo con catálogo de productos, diseño UX orientado a conversión, integración de pagos y estrategia de contenidos. Sitio corporativo y tienda en un ecosistema digital unificado.</p><p><strong>Stack:</strong> WordPress, WooCommerce, CSS responsive, SEO on-page.</p>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000005",
+          "hidden": true,
+          "name": "Campañas Digitales — Roger Murillo SAS",
+          "period": "2023 – 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Suite de campañas publicitarias multicanal: piezas animadas 2D, gestión de redes sociales, landing pages y sitios CMS. Coordinación creativa desde concepto hasta publicación y seguimiento de métricas.</p><p><strong>Stack:</strong> Blender, Adobe Premiere, WordPress, community management, marketing digital.</p>"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Habilidades",
+      "icon": "compass-tool",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000001",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "PHP",
+          "proficiency": "Avanzado",
+          "level": 0,
+          "keywords": [
+            "Laravel (formación)",
+            "APIs",
+            "MVC",
+            "MySQL"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000002",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "JavaScript",
+          "proficiency": "Avanzado",
+          "level": 0,
+          "keywords": [
+            "ES6+",
+            "DOM",
+            "APIs REST",
+            "Node.js (formación)"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000004",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "WordPress / WooCommerce",
+          "proficiency": "Avanzado",
+          "level": 0,
+          "keywords": [
+            "Divi",
+            "CMS",
+            "E-commerce"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000005",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "MySQL",
+          "proficiency": "Intermedio",
+          "level": 0,
+          "keywords": [
+            "SQL",
+            "Modelado",
+            "Consultas"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000003",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "HTML5 & CSS3",
+          "proficiency": "Avanzado",
+          "level": 0,
+          "keywords": [
+            "Responsive",
+            "Flexbox",
+            "Grid"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000006",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Git & GitHub",
+          "proficiency": "Avanzado",
+          "level": 0,
+          "keywords": [
+            "PRs",
+            "Branches",
+            "Flujo colaborativo"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000010",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "APIs REST",
+          "proficiency": "Avanzado",
+          "level": 0,
+          "keywords": [
+            "Integración",
+            "JSON",
+            "Express (formación)"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000011",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "IA aplicada al desarrollo",
+          "proficiency": "Intermedio",
+          "level": 0,
+          "keywords": [
+            "Asistencia de código",
+            "Automatización"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Idiomas",
+      "icon": "translate",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8006-000000000001",
+          "hidden": false,
+          "language": "Español",
+          "fluency": "Nativo",
+          "level": 0
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8006-000000000002",
+          "hidden": false,
+          "language": "Inglés",
+          "fluency": "B2 — lectura técnica y documentación en inglés",
+          "level": 0
+        }
+      ]
+    },
+    "interests": {
+      "title": "Intereses",
+      "icon": "heart",
+      "columns": 1,
+      "hidden": true,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8007-000000000001",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Diseño gráfico y comunicación visual",
+          "keywords": [
+            "Branding",
+            "Editorial",
+            "Publicidad"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8007-000000000002",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Animación digital y cine",
+          "keywords": [
+            "2D",
+            "Motion",
+            "Producción audiovisual"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8007-000000000003",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Marketing digital",
+          "keywords": [
+            "Redes sociales",
+            "Contenidos",
+            "Estrategia"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8007-000000000004",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Tecnología e IA aplicada",
+          "keywords": [
+            "Desarrollo web",
+            "Automatización",
+            "Innovación"
+          ]
+        }
+      ]
+    },
+    "awards": {
+      "title": "Reconocimientos",
+      "icon": "trophy",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "certifications": {
+      "title": "Formación complementaria",
+      "icon": "certificate",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8009-000000000006",
+          "hidden": false,
+          "title": "Git y GitHub Profesional",
+          "issuer": "Platzi",
+          "date": "Completado · 2025",
+          "website": {
+            "url": "https://platzi.com",
+            "label": "Platzi",
+            "inlineLink": false
+          },
+          "description": "<p>Control de versiones y flujo colaborativo en equipos de desarrollo.</p>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8009-000000000001",
+          "hidden": false,
+          "title": "JavaScript",
+          "issuer": "Platzi",
+          "date": "En curso · 2025",
+          "website": {
+            "url": "https://platzi.com",
+            "label": "Platzi",
+            "inlineLink": false
+          },
+          "description": "<p>ES6+, asincronía, patrones front-end modernos.</p>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8009-000000000002",
+          "hidden": false,
+          "title": "Node.js: API REST con Express.js",
+          "issuer": "Platzi",
+          "date": "En curso · 2025",
+          "website": {
+            "url": "https://platzi.com",
+            "label": "Platzi",
+            "inlineLink": false
+          },
+          "description": "<p>Back-end, middleware y servicios REST.</p>"
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publicaciones",
+      "icon": "books",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Voluntariado",
+      "icon": "hand-heart",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "references": {
+      "title": "Referencias",
+      "icon": "phone",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8008-000000000001",
+          "hidden": false,
+          "name": "Disponibles bajo solicitud",
+          "position": "Contacto directo vía email o LinkedIn",
+          "website": {
+            "url": "https://www.linkedin.com/in/jeisson-david-riveros-garcia-6291b9244",
+            "label": "LinkedIn",
+            "inlineLink": false
+          },
+          "phone": "",
+          "description": ""
+        }
+      ]
+    }
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "meowth",
+    "layout": {
+      "sidebarWidth": 32,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "summary",
+            "experience",
+            "projects"
+          ],
+          "sidebar": [
+            "profiles",
+            "skills",
+            "certifications",
+            "languages",
+            "education"
+          ]
+        }
+      ]
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 5,
+      "marginX": 14,
+      "marginY": 12,
+      "format": "a4",
+      "locale": "es-ES",
+      "hideLinkUnderline": false,
+      "hideIcons": false,
+      "hideSectionIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "hidden"
+      },
+      "colors": {
+        "primary": "rgba(30, 64, 175, 1)",
+        "text": "rgba(17, 24, 39, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Sans",
+        "fontWeights": [
+          "400",
+          "500"
+        ],
+        "fontSize": 10,
+        "lineHeight": 1.45
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Sans",
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "fontSize": 13,
+        "lineHeight": 1.3
+      }
+    },
+    "notes": "<p>Versión DEV. Versión creativa: jeisson-riveros-creativo-reactive-resume.json</p>",
+    "styleRules": []
+  }
+}
