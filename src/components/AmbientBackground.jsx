@@ -3,30 +3,22 @@ import { useDocumentVisible } from '../hooks/useDocumentVisible.js'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.js'
 import './AmbientBackground.css'
 
-/**
- * Fondo liviano: gradientes + rejilla + haz terminal.
- * Sin blur, sin 3D, sin listeners de scroll (mejor GPU).
- */
 function AmbientBackground() {
   const visible = useDocumentVisible()
   const reducedMotion = usePrefersReducedMotion()
-
-  const className = [
-    'ambient',
-    !visible ? 'ambient--paused' : '',
-    reducedMotion ? 'ambient--static' : '',
-  ]
-    .filter(Boolean)
-    .join(' ')
+  const still = reducedMotion || !visible
 
   return (
-    <div className={className} aria-hidden="true">
-      <div className="ambient__glow" />
-      <div className="ambient__grid">
-        <div className="ambient__grid-shift" />
+    <div className={`ambient${still ? ' ambient--still' : ''}`} aria-hidden="true">
+      <div className="ambient__blobs">
+        <div className="ambient__blob ambient__blob--primary" />
+        <div className="ambient__blob ambient__blob--secondary" />
+        <div className="ambient__blob ambient__blob--tertiary" />
       </div>
-      <div className="ambient__horizon" />
-      {!reducedMotion && <div className="ambient__beam" />}
+      <div className="ambient__grain" />
+      <div className="ambient__chrome">
+        <span className="ambient__chrome-shine" />
+      </div>
       <div className="ambient__vignette" />
     </div>
   )
