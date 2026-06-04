@@ -1,222 +1,138 @@
+/* Fondo Matrix / dev — optimizado: solo gradientes + 2 animaciones transform/opacity */
+
 .ambient {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-  perspective: 900px;
-  contain: layout paint;
+  contain: strict;
   isolation: isolate;
+  background: var(--bg);
 }
 
-/* Parallax al scroll vía CSS (evita listeners JS en navegadores compatibles) */
-@supports (animation-timeline: scroll()) {
-  .ambient--css-scroll {
-    animation: ambient-fade-scroll linear both;
-    animation-timeline: scroll(root block);
-  }
-
-  .ambient--css-scroll .ambient__mesh-wrap {
-    animation: ambient-mesh-tilt linear both;
-    animation-timeline: scroll(root block);
-  }
-
-  .ambient--css-scroll .ambient__orb--a {
-    animation: ambient-orb-a-parallax linear both;
-    animation-timeline: scroll(root block);
-  }
-
-  .ambient--css-scroll .ambient__orb--b {
-    animation: ambient-orb-b-parallax linear both;
-    animation-timeline: scroll(root block);
-  }
+/* Inspiración: aurora suave (Linear) + brillo terminal */
+.ambient__glow {
+  position: absolute;
+  inset: -15%;
+  background:
+    radial-gradient(ellipse 58% 48% at 10% -8%, rgba(0, 230, 118, 0.2), transparent 58%),
+    radial-gradient(ellipse 42% 38% at 92% 18%, rgba(0, 179, 90, 0.09), transparent 52%),
+    radial-gradient(ellipse 55% 42% at 48% 105%, rgba(77, 159, 255, 0.06), transparent 58%);
+  animation: ambient-glow-breathe 16s ease-in-out infinite alternate;
 }
 
-@keyframes ambient-fade-scroll {
-  0% {
+@keyframes ambient-glow-breathe {
+  from {
+    opacity: 0.82;
+  }
+  to {
     opacity: 1;
   }
-  40% {
-    opacity: 0.9;
+}
+
+/* Rejilla tipo Vercel — una capa, desplazamiento lento por transform */
+.ambient__grid {
+  position: absolute;
+  inset: 0;
+  mask-image: radial-gradient(ellipse 110% 85% at 50% -5%, black 18%, transparent 74%);
+}
+
+.ambient__grid-shift {
+  position: absolute;
+  inset: -64px;
+  background-image:
+    linear-gradient(rgba(0, 230, 118, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 230, 118, 0.09) 1px, transparent 1px);
+  background-size: 64px 64px;
+  animation: ambient-grid-drift 56s linear infinite;
+}
+
+@keyframes ambient-grid-drift {
+  to {
+    transform: translate3d(64px, 64px, 0);
   }
+}
+
+/* Línea de horizonte / prompt */
+.ambient__horizon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: min(32vh, 280px);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 230, 118, 0.45) 20%,
+    rgba(0, 230, 118, 0.55) 50%,
+    rgba(0, 230, 118, 0.45) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 48px 1px rgba(0, 230, 118, 0.12);
+  opacity: 0.65;
+}
+
+/* Haz de escaneo — un solo elemento con transform (no repinta toda la pantalla) */
+.ambient__beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 140px;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 230, 118, 0.07) 42%,
+    rgba(0, 230, 118, 0.02) 70%,
+    transparent 100%
+  );
+  opacity: 0;
+  animation: ambient-beam 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes ambient-beam {
+  0%,
   100% {
+    transform: translate3d(0, -20vh, 0);
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.85;
+  }
+  48% {
+    transform: translate3d(0, 105vh, 0);
     opacity: 0.75;
   }
-}
-
-@keyframes ambient-mesh-tilt {
-  from {
-    transform: rotateX(58deg) rotateZ(-12deg);
+  94% {
+    opacity: 0;
   }
-  to {
-    transform: rotateX(66deg) rotateZ(-12deg);
-  }
-}
-
-@keyframes ambient-orb-a-parallax {
-  from {
-    transform: scale(2) translate3d(0, 0, 0);
-  }
-  to {
-    transform: scale(2) translate3d(0, 140px, 0);
-  }
-}
-
-@keyframes ambient-orb-b-parallax {
-  from {
-    transform: scale(2) translate3d(0, 0, 0);
-  }
-  to {
-    transform: scale(2) translate3d(0, -100px, 0);
-  }
-}
-
-.ambient--paused .ambient__mesh,
-.ambient--paused .ambient__grid,
-.ambient--paused .ambient__scan,
-.ambient--paused .ambient__orb--a,
-.ambient--paused .ambient__orb--b,
-.ambient--paused.ambient--css-scroll,
-.ambient--paused.ambient--css-scroll .ambient__mesh-wrap {
-  animation-play-state: paused !important;
 }
 
 .ambient__vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 0%, transparent 0%, var(--bg) 85%);
-  z-index: 4;
-}
-
-/* Malla 3D animada */
-.ambient__mesh-wrap {
-  position: absolute;
-  inset: -20% -10%;
-  transform-style: preserve-3d;
-  transform: rotateX(58deg) rotateZ(-12deg);
-  z-index: 1;
-}
-
-.ambient__mesh {
-  width: 200%;
-  height: 200%;
-  margin: -50% 0 0 -50%;
-  background-image:
-    linear-gradient(rgba(0, 230, 118, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 230, 118, 0.14) 1px, transparent 1px);
-  background-size: 72px 72px;
-  animation: mesh-drift 28s linear infinite;
-  mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, black 15%, transparent 72%);
-}
-
-@keyframes mesh-drift {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(72px, 72px);
-  }
-}
-
-.ambient__grid {
-  position: absolute;
-  inset: 0;
   z-index: 2;
-  background-image:
-    linear-gradient(rgba(0, 230, 118, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 230, 118, 0.05) 1px, transparent 1px);
-  background-size: 48px 48px;
-  animation: grid-pulse 6s ease-in-out infinite alternate;
-  mask-image: radial-gradient(ellipse 95% 75% at 50% 15%, black, transparent 68%);
+  background: radial-gradient(ellipse 75% 65% at 50% 0%, transparent 0%, var(--bg) 88%);
 }
 
-.ambient__grid--fine {
-  background-size: 24px 24px;
-  opacity: 0.5;
-  animation: grid-drift-slow 40s linear infinite;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black, transparent 75%);
+.ambient--paused .ambient__glow,
+.ambient--paused .ambient__grid-shift,
+.ambient--paused .ambient__beam {
+  animation-play-state: paused !important;
 }
 
-@keyframes grid-pulse {
-  from {
-    opacity: 0.45;
-  }
-  to {
-    opacity: 0.85;
-  }
-}
-
-@keyframes grid-drift-slow {
-  to {
-    background-position: 24px 24px;
-  }
-}
-
-.ambient__scan {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(0, 230, 118, 0.03) 48%,
-    transparent 52%
-  );
-  background-size: 100% 220px;
-  animation: scan-sweep 9s ease-in-out infinite;
-  opacity: 0.6;
-}
-
-@keyframes scan-sweep {
-  0%,
-  100% {
-    background-position: 0 -220px;
-  }
-  50% {
-    background-position: 0 100vh;
-  }
-}
-
-.ambient__orb {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 0;
-  transform: scale(2);
-  transform-origin: center center;
-  will-change: transform;
-}
-
-.ambient__orb--a {
-  width: min(27.5vw, 260px);
-  height: min(27.5vw, 260px);
-  top: -18%;
-  left: -12%;
-  background: rgba(0, 230, 118, 0.2);
-  filter: blur(50px);
-}
-
-.ambient__orb--b {
-  width: min(21vw, 200px);
-  height: min(21vw, 200px);
-  top: 35%;
-  right: -14%;
-  background: rgba(0, 180, 100, 0.12);
-  filter: blur(50px);
-}
-
-.ambient__orb--c {
-  width: 150px;
-  height: 150px;
-  bottom: 8%;
-  left: 28%;
-  background: rgba(77, 159, 255, 0.07);
-  filter: blur(50px);
+.ambient--static .ambient__glow,
+.ambient--static .ambient__grid-shift,
+.ambient--static .ambient__beam {
+  animation: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ambient__mesh,
-  .ambient__grid,
-  .ambient__scan {
+  .ambient__glow,
+  .ambient__grid-shift,
+  .ambient__beam {
     animation: none !important;
   }
 }

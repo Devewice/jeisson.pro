@@ -1,5 +1,2 @@
-/**
- * Prueba de rendimiento: fondo Matrix animado.
- * Cambia a `true` cuando termines de probar.
- */
-export const ENABLE_AMBIENT_BACKGROUND = false
+/** Fondo ambiental (rejilla + brillo Matrix). Desactiva solo para pruebas. */
+export const ENABLE_AMBIENT_BACKGROUND = true
