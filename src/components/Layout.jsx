@@ -5,6 +5,7 @@ import AmbientBackground from './AmbientBackground.jsx'
 import ScrollProgress from './ScrollProgress.jsx'
 import MobileNav from './MobileNav.jsx'
 import SiteFooter from './SiteFooter.jsx'
+import StickyContactCta from './StickyContactCta.jsx'
 import './Layout.css'
 import './MobileNav.css'
 
@@ -79,6 +80,7 @@ export default function Layout() {
         </Suspense>
       </main>
       {!onPrivate && <SiteFooter />}
+      {showFx && !onHome && <StickyContactCta />}
     </div>
   )
 }

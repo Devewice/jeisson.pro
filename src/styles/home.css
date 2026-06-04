@@ -13,19 +13,91 @@
 /* —— Hero (una sola capa, sin caja anidada) —— */
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: min(100vh, 920px);
+  min-height: min(100dvh, 920px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 6rem 1.25rem 4rem;
-  text-align: center;
+}
+
+.hero__layout {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (min-width: 860px) {
+  .hero__layout {
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    text-align: left;
+  }
+
+  .hero__ctas {
+    justify-content: flex-start !important;
+  }
+
+  .hero-rotate {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-rotate__track {
+    justify-content: flex-start;
+  }
+
+  .hero__lead {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .hero__content {
   width: 100%;
-  max-width: 720px;
+  max-width: 560px;
+  text-align: center;
+}
+
+@media (min-width: 860px) {
+  .hero__content {
+    text-align: left;
+  }
+}
+
+.hero__focus {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-bright);
+  line-height: 1.5;
+}
+
+@media (min-width: 860px) {
+  .hero__focus {
+    margin-left: 0;
+  }
+}
+
+.hero__photo-wrap {
+  margin: 0;
+  justify-self: center;
+}
+
+.hero__photo {
+  display: block;
+  width: min(72vw, 280px);
+  height: min(72vw, 280px);
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--border-glow);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(0, 230, 118, 0.08);
 }
 
 .hero__badge {
@@ -578,4 +650,178 @@
 .about-pill span {
   font-size: 0.88rem;
   color: var(--muted);
+}
+
+.about-why__intro {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
+.about-why__bento {
+  margin-top: 0.5rem;
+}
+
+/* Caso ancla */
+.anchor-case__card {
+  padding: 1.75rem 1.5rem;
+  border-top: 3px solid var(--cat-dev);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 720px) {
+  .anchor-case__card {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.anchor-case__period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.anchor-case__problem {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.anchor-case__bullets {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.anchor-case__bullets li + li {
+  margin-top: 0.35rem;
+}
+
+.anchor-case__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+/* Perfiles / audiencia */
+.audience-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .audience-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.audience-card {
+  padding: 1.25rem 1.15rem;
+  height: 100%;
+}
+
+.audience-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.audience-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.audience-sectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.services-bento--home {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .services-bento--home {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* FAQ home */
+.home-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.home-faq__item {
+  padding: 0;
+  overflow: hidden;
+}
+
+.home-faq__item summary {
+  padding: 1.1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.home-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-faq__item summary::after {
+  content: '+';
+  float: right;
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
+.home-faq__item[open] summary::after {
+  content: '−';
+}
+
+.home-faq__item p {
+  margin: 0;
+  padding: 0 1.25rem 1.15rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  padding-top: 0.85rem;
+}
+
+.home-faq__more {
+  margin: 1.25rem 0 0;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+.home-faq__more a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.home-faq__more a:hover {
+  text-decoration: underline;
 }

@@ -1,13 +1,13 @@
 import HeroBanner from '../components/home/HeroBanner.jsx'
 import TechMarquee from '../components/home/TechMarquee.jsx'
-import ExploreNav from '../components/home/ExploreNav.jsx'
-import HomeStats from '../components/home/HomeStats.jsx'
-import AboutTeaser from '../components/home/AboutTeaser.jsx'
+import AnchorCase from '../components/AnchorCase.jsx'
+import AudienceChips from '../components/home/AudienceChips.jsx'
+import AboutWhySection from '../components/home/AboutWhySection.jsx'
 import ServicesPreview from '../components/home/ServicesPreview.jsx'
 import FeaturedProjects from '../components/home/FeaturedProjects.jsx'
-import CapabilitiesStrip from '../components/home/CapabilitiesStrip.jsx'
-import WhyBuildSection from '../components/home/WhyBuildSection.jsx'
 import ProcessSection from '../components/home/ProcessSection.jsx'
+import CtaMid from '../components/home/CtaMid.jsx'
+import HomeFaq from '../components/home/HomeFaq.jsx'
 import CtaBand from '../components/home/CtaBand.jsx'
 import '../styles/home.css'
 
@@ -17,14 +17,14 @@ export default function Landing() {
       <HeroBanner />
       <TechMarquee />
       <div className="home-page__body">
-        <ExploreNav />
-        <HomeStats />
-        <AboutTeaser />
+        <AnchorCase />
+        <AudienceChips />
+        <AboutWhySection />
         <ServicesPreview />
         <FeaturedProjects />
-        <WhyBuildSection />
-        <CapabilitiesStrip />
         <ProcessSection />
+        <CtaMid />
+        <HomeFaq />
         <CtaBand />
       </div>
     </div>

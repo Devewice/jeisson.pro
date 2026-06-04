@@ -37,6 +37,13 @@ export default function ContactForm({ embedded = false }) {
       <p className="section-eyebrow">Formulario</p>
       {!embedded && <h2 className="contact-form__title">Enviar mensaje</h2>}
       <p className="contact-form__note">{copy.formNote}</p>
+      {copy.formHints?.length > 0 && (
+        <ul className="contact-form__hints">
+          {copy.formHints.map((hint) => (
+            <li key={hint}>{hint}</li>
+          ))}
+        </ul>
+      )}
 
       <form className="contact-form__fields" onSubmit={handleSubmit}>
         <label>

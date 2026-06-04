@@ -1,13 +1,26 @@
 import { Link } from 'react-router-dom'
 import PageShell from '../components/PageShell.jsx'
+import PageBreadcrumb from '../components/PageBreadcrumb.jsx'
+import PageNextStep from '../components/PageNextStep.jsx'
 import AnimateIn from '../components/AnimateIn.jsx'
-import { ABOUT, EDUCATION, INTERESTS, PAGE_COPY, SITE, TOOLKIT } from '../data/site.js'
+import {
+  ABOUT,
+  EDUCATION,
+  EXPERIENCE,
+  FOOTER,
+  INTERESTS,
+  PAGE_COPY,
+  SITE,
+  TOOLKIT_TOP,
+} from '../data/site.js'
 
 export default function About() {
   const copy = PAGE_COPY.about
 
   return (
-    <PageShell eyebrow={PAGE_COPY.about.title} title={SITE.name} subtitle={copy.subtitle}>
+    <PageShell eyebrow={copy.title} title={copy.heading} subtitle={copy.subtitle}>
+      <PageBreadcrumb />
+
       <div className="page-hero-split">
         <AnimateIn>
           <img
@@ -19,13 +32,48 @@ export default function About() {
           />
         </AnimateIn>
         <div className="prose-block">
+          <p className="page-avail">
+            <span className="page-avail__dot" />
+            {FOOTER.availability}
+          </p>
           {ABOUT.intro.map((p) => (
             <AnimateIn key={p.slice(0, 32)}>
               <p>{p}</p>
             </AnimateIn>
           ))}
+          <p className="page-muted-line">{ABOUT.audienceLine}</p>
         </div>
       </div>
+
+      <section className="page-section" aria-label="Experiencia">
+        <AnimateIn className="section-block__head">
+          <p className="section-eyebrow">Trayectoria</p>
+          <h2 className="section-title">{copy.experienceTitle}</h2>
+        </AnimateIn>
+        <div className="experience-list">
+          {EXPERIENCE.map((job, i) => (
+            <AnimateIn key={job.org} delay={i * 0.05}>
+              <article className="glass-card experience-card">
+                <div className="experience-card__head">
+                  <div>
+                    <h3>{job.role}</h3>
+                    <p className="experience-card__org">{job.org}</p>
+                  </div>
+                  <div className="experience-card__meta">
+                    <span className="info-card-period">{job.period}</span>
+                    <span className="experience-card__status">{job.status}</span>
+                  </div>
+                </div>
+                <ul className="experience-card__bullets">
+                  {job.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </article>
+            </AnimateIn>
+          ))}
+        </div>
+      </section>
 
       <section className="about-summary" aria-label="Resumen">
         <div className="stat-grid about-summary__stats">
@@ -43,8 +91,8 @@ export default function About() {
           <Link to="/proyectos" className="btn btn--primary">
             Ver proyectos
           </Link>
-          <Link to="/contacto" className="btn btn--soft">
-            Contacto
+          <Link to={copy.cvLink.to} className="btn btn--soft">
+            {copy.cvLink.label}
           </Link>
         </AnimateIn>
       </section>
@@ -75,42 +123,38 @@ export default function About() {
       <section className="page-section">
         <AnimateIn className="section-block__head">
           <p className="section-eyebrow">Stack</p>
-          <h2 className="section-title">Herramientas</h2>
+          <h2 className="section-title">Herramientas frecuentes</h2>
+          <p className="section-sub">{copy.toolkitNote}</p>
         </AnimateIn>
-        <div className="toolkit-grid">
-          {[
-            { label: 'Desarrollo (principal)', items: TOOLKIT.dev, muted: false },
-            { label: 'Web, datos y ops', items: TOOLKIT.other, muted: true },
-            { label: 'Diseño y audiovisual (complemento)', items: TOOLKIT.design, muted: true },
-          ].map((group, i) => (
-            <AnimateIn key={group.label} delay={i * 0.08}>
-              <div className="glass-card toolkit-block">
-                <h3>{group.label}</h3>
-                <div className="tag-row">
-                  {group.items.map((t) => (
-                    <span key={t} className={group.muted ? 'tag-pill tag-pill--muted' : 'tag-pill'}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </AnimateIn>
-          ))}
-        </div>
+        <AnimateIn>
+          <div className="glass-card toolkit-block toolkit-block--compact">
+            <div className="tag-row">
+              {TOOLKIT_TOP.map((t) => (
+                <span key={t} className="tag-pill">
+                  {t}
+                </span>
+              ))}
+            </div>
+            <Link to={copy.toolkitLink.to} className="btn btn--soft" style={{ marginTop: '1rem' }}>
+              {copy.toolkitLink.label} →
+            </Link>
+          </div>
+        </AnimateIn>
       </section>
 
       <section className="page-section">
         <AnimateIn>
           <p className="section-eyebrow">Extra</p>
-          <h2 className="section-title">Temas que me interesan</h2>
-          <ul className="interest-list">
-            {INTERESTS.map((item) => (
+          <h2 className="section-title">Temas de interés</h2>
+          <ul className="interest-list interest-list--compact">
+            {INTERESTS.slice(0, 4).map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="prose-footnote">{SITE.birthNote}</p>
         </AnimateIn>
       </section>
+
+      <PageNextStep />
     </PageShell>
   )
 }

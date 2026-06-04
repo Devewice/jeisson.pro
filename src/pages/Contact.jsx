@@ -2,10 +2,12 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import PageShell from '../components/PageShell.jsx'
+import PageBreadcrumb from '../components/PageBreadcrumb.jsx'
+import PageNextStep from '../components/PageNextStep.jsx'
 import AnimateIn from '../components/AnimateIn.jsx'
 import ContactForm from '../components/ContactForm.jsx'
 import ContactPicker from '../components/ContactPicker.jsx'
-import SocialLinks from '../components/SocialLinks.jsx'
+import SiteFaq from '../components/SiteFaq.jsx'
 import { PAGE_COPY, SITE } from '../data/site.js'
 
 function whatsappUrl() {
@@ -16,6 +18,22 @@ function whatsappUrl() {
 function ChannelPanel({ channel }) {
   if (channel === 'form') {
     return <ContactForm embedded />
+  }
+
+  if (channel === 'recruiter') {
+    const r = PAGE_COPY.contact.recruiter
+    const href = `mailto:${SITE.email}?subject=${encodeURIComponent(r.mailSubject)}`
+    return (
+      <>
+        <p className="section-eyebrow">{r.eyebrow}</p>
+        <p className="contact-recruiter-text">{r.text}</p>
+        <div className="contact-actions">
+          <a className="btn btn--primary btn--lg btn--glow" href={href}>
+            {r.cta}
+          </a>
+        </div>
+      </>
+    )
   }
 
   const config = {
@@ -39,7 +57,7 @@ function ChannelPanel({ channel }) {
     phone: {
       eyebrow: 'Llamada',
       value: SITE.phone,
-      href: SITE.phoneTel,
+      href: `tel:${SITE.phoneTel}`,
       meta: `${SITE.location} · horario Colombia`,
       cta: 'Llamar ahora',
       external: false,
@@ -76,6 +94,8 @@ export default function Contact() {
 
   return (
     <PageShell eyebrow={copy.title} title={copy.heading} subtitle={copy.subtitle}>
+      <PageBreadcrumb />
+
       <div className="contact-layout">
         <AnimateIn>
           <p className="page-lead">{copy.intro}</p>
@@ -86,17 +106,17 @@ export default function Contact() {
           </ul>
           <p className="contact-response">{copy.response}</p>
           <div className="about-cta-row" style={{ marginTop: '1.5rem' }}>
-            <Link to="/servicios" className="btn">
+            <Link to="/servicios" className="btn btn--soft">
               Servicios
             </Link>
-            <Link to="/proyectos" className="btn">
+            <Link to="/proyectos" className="btn btn--soft">
               Proyectos
             </Link>
           </div>
         </AnimateIn>
 
         <AnimateIn delay={0.06}>
-          <div className="contact-main">
+          <div className="contact-main contact-main--sticky">
             <ContactPicker value={channel} onChange={setChannel} />
 
             <div className="glass-card contact-block">
@@ -116,9 +136,9 @@ export default function Contact() {
         </AnimateIn>
       </div>
 
-      <AnimateIn delay={0.1}>
-        <SocialLinks variant="footer" />
-      </AnimateIn>
+      <SiteFaq showContactLink={false} className="section-block site-faq site-faq--contact" />
+
+      <PageNextStep />
     </PageShell>
   )
 }

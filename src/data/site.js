@@ -23,7 +23,8 @@ export const HERO = {
   name: 'Jeisson David Riveros García',
   title: 'Desarrollador full stack',
   subtitle:
-    'Más de 5 años en producción: código en Git, APIs documentadas, despliegues con Docker y CI/CD, y backoffice en NestJS/Next.js. También WordPress y plugins a medida — de la base de datos al sitio en línea.',
+    'APIs, deploy y producto en producción — NestJS, Next.js, WordPress y lo que el proyecto pida.',
+  focusLine: 'Último foco: e-commerce + backoffice (motai.app) · Bogotá · remoto OK',
   ctas: [
     { label: 'Ver proyectos', to: '/proyectos', primary: true },
     { label: 'Escribirme', to: '/contacto', primary: false },
@@ -48,8 +49,56 @@ export const HERO_SLIDES = [
 export const HOME_STATS = [
   { value: '5+', label: 'Años construyendo en serio' },
   { value: '10+', label: 'Proyectos en el portafolio' },
-  { value: 'Git', label: 'CI/CD y deploy en serio' },
+  { value: 'APIs', label: 'Docker · CI/CD · deploy' },
   { value: 'Bogotá', label: 'Colombia · remoto OK' },
+]
+
+/** Caso ancla en home (título debe coincidir con PROJECTS) */
+export const HOME_ANCHOR_PROJECT = 'Motai — motai.app'
+
+export const HOME_ANCHOR = {
+  eyebrow: 'Caso reciente',
+  title: 'Motai — motai.app',
+  problem:
+    'Producto digital en motos: tienda pública, lógica a medida y operación interna conectada al negocio.',
+  bullets: [
+    'WooCommerce con varios plugins propios y sincronización ERP',
+    'Backoffice NestJS + PostgreSQL: cotizaciones, contratos y APIs documentadas',
+    'Deploy y mantenimiento del stack en producción',
+  ],
+  cta: { label: 'Ver todos los proyectos', to: '/proyectos' },
+  link: { label: 'Visitar motai.app', href: 'https://motai.app' },
+}
+
+export const HOME_AUDIENCE = [
+  { label: 'Startup / producto', detail: 'MVP, APIs y panel interno' },
+  { label: 'Agencia con diseño', detail: 'Implemento Figma y handoff' },
+  { label: 'Educación / TIC', detail: 'Portales y plataformas escolares' },
+  { label: 'Tienda WordPress', detail: 'WooCommerce y plugins a medida' },
+]
+
+export const HOME_SECTORS = ['E-commerce', 'Educación', 'Editorial', 'Moda', 'Institucional']
+
+/** Solo estos servicios en la preview del home */
+export const HOME_SERVICES_KEYS = [
+  'Desarrollo web full stack',
+  'Backoffice y producto digital',
+  'WordPress, WooCommerce y plugins',
+]
+
+export const HOME_FAQ = [
+  {
+    q: '¿Trabajas remoto?',
+    a: 'Sí. Base en Bogotá; proyectos en Colombia y remoto con reuniones por videollamada y entregas en Git.',
+  },
+  {
+    q: '¿Incluyes diseño?',
+    a: 'El encargo principal es desarrollo. Puedo aportar una idea visual inicial o integrar el trabajo de tu equipo en Figma.',
+  },
+  {
+    q: '¿Plazos y CV para reclutadores?',
+    a: 'Plazos según alcance; primer contacto suele responder en 24–48 h. Si necesitas CV formal, escríbeme por contacto y te comparto enlace o versión acordada.',
+  },
 ]
 
 export const TECH_MARQUEE = [
@@ -137,38 +186,53 @@ export const HOME_PROCESS = [
   },
 ]
 
-export const EXPLORE_NAV = [
+export const PAGE_NEXT = {
+  '/sobre-mi': { label: 'Ver servicios y stack', to: '/servicios' },
+  '/servicios': { label: 'Ver casos en proyectos', to: '/proyectos' },
+  '/proyectos': { label: 'Pedir cotización', to: '/contacto' },
+  '/contacto': { label: 'Volver al inicio', to: '/' },
+}
+
+export const PROJECT_CTA = {
+  all: { label: 'Quiero algo parecido', to: '/contacto' },
+  dev: { label: 'Cuéntame tu producto', to: '/contacto' },
+  education: { label: 'Hablemos de tu colegio', to: '/contacto' },
+  creative: { label: 'Consultar encargo visual', to: '/contacto' },
+}
+
+export const SERVICE_ENGAGEMENTS = [
   {
-    to: '/sobre-mi',
-    title: 'Sobre mí',
-    desc: 'De dónde vengo, qué estudié y con qué herramientas trabajo hoy.',
-    icon: '01',
-    size: 'half',
-    accent: 'matrix',
+    title: 'Producto nuevo',
+    text: 'De alcance y arquitectura a deploy: web, API o backoffice desde cero o sobre base acordada.',
   },
   {
-    to: '/servicios',
-    title: 'Servicios',
-    desc: 'Full stack, backoffice, WordPress y el detalle del stack que uso.',
-    icon: '02',
-    size: 'half',
-    accent: 'cyan',
+    title: 'Feature en producto existente',
+    text: 'Iteración en código ajeno o tuyo: integraciones, módulos, correcciones y releases acotados.',
   },
   {
-    to: '/proyectos',
-    title: 'Proyectos',
-    desc: 'Proyectos en código, educación y editorial.',
-    icon: '03',
-    size: 'wide',
-    accent: 'matrix',
+    title: 'Auditoría + primer sprint',
+    text: 'Revisión técnica, prioridades y un primer entregable en Git antes de comprometer roadmap largo.',
+  },
+]
+
+export const SERVICES_PROCESS = [
+  {
+    step: '01',
+    title: 'Aterrizar',
+    text: 'Workshop breve o documento de alcance: problema, usuarios, stack, plazos y criterios de éxito.',
+    deliverables: ['Alcance escrito', 'Riesgos y dependencias', 'Propuesta de fases'],
   },
   {
-    to: '/contacto',
-    title: 'Contacto',
-    desc: 'Un correo con la idea alcanza. Te respondo con alcance y tiempos.',
-    icon: '04',
-    size: 'third',
-    accent: 'gold',
+    step: '02',
+    title: 'Armar',
+    text: 'Sprints con entregas en Git; UI alineada a Figma o a tu equipo; revisiones y pruebas acordadas.',
+    deliverables: ['Repos y ramas claras', 'Demos por iteración', 'APIs documentadas si aplica'],
+  },
+  {
+    step: '03',
+    title: 'Dejar listo',
+    text: 'Deploy, handoff y ventana de ajustes. El sistema queda operable, no solo maquetado.',
+    deliverables: ['Puesta en producción', 'Notas de operación', 'Soporte post-lanzamiento acordado'],
   },
 ]
 
@@ -177,67 +241,98 @@ export const PAGE_COPY = {
     title: 'Servicios',
     heading: 'Desarrollo web y producto',
     subtitle:
-      'Contratas desarrollo: APIs, backoffice, WordPress a medida y deploy. El diseño lo sumo como complemento — una idea inicial que pulimos juntos o con tu equipo.',
+      'APIs, backoffice, WordPress y deploy — con diseño como complemento cuando el proyecto lo necesita.',
     intro:
-      'En motai.app desarrollé WooCommerce, varios plugins a medida (sync ERP y flujos propios) y backoffice en NestJS; también Laravel, React, WordPress y este sitio. Abajo el stack; editorial o motion solo si el proyecto lo incluye.',
+      'Stack probado en motai.app, colegios y proyectos propios. Los tres bloques principales están abajo; editorial y motion solo si el alcance lo incluye.',
     stackTitle: 'Tecnologías que uso en producción',
     stackSub:
-      'Lo que aparece abajo son herramientas con las que ya he entregado — no una lista de moda.',
+      'Herramientas con las que ya he entregado — no una lista de moda.',
     outro: 'Si tu stack no está aquí pero el proyecto es web, escríbeme igual: suelo entrar por auditoría y un primer sprint acotado.',
+    skillsEyebrow: 'Además del desarrollo',
+    skillsTitle: 'Otras habilidades',
+    skillsSub:
+      'Diseño editorial, motion y piezas visuales — las aporto cuando el proyecto lo pide, no como servicio principal.',
+    motaiLink: { label: 'Ver caso Motai en proyectos', to: '/proyectos#caso-destacado' },
   },
   projects: {
     title: 'Portafolio',
-    heading: 'Proyectos con contexto',
+    heading: 'Proyectos',
     subtitle:
-      'No es un catálogo de logos: cada ficha dice qué hice, con qué stack y en qué ventana de tiempo.',
+      'Cada caso indica qué hice, con qué stack trabajé y en qué fechas — de producto digital a TIC en instituciones.',
     intro:
-      'La mayoría son entregas de desarrollo; hay fichas con fuerte componente visual de años en editorial. Filtra por categoría o abre el enlace cuando el sitio sigue activo.',
+      'Usa el filtro por categoría. Si un proyecto no tiene enlace, suele ser entrega interna o material de archivo.',
+    checklistTitle: 'Qué mandar si quieres algo parecido',
   },
   contact: {
     title: 'Contacto',
-    heading: 'Cuéntame qué necesitas',
-    subtitle: 'Correo, WhatsApp o el formulario — elige el canal que te quede más cómodo.',
+    heading: 'Escribirme',
+    subtitle:
+      'Correo, WhatsApp, llamada o formulario. Con un poco de contexto te respondo con alcance y plazos orientativos.',
     intro:
-      'Cuéntame qué hay que construir o mantener en código: stack actual, plazo y si ya tienes diseño/UX o prefieres que aporte una idea visual inicial.',
+      'Indica qué hay que construir o mantener: producto (web, API, backoffice, tienda), stack si ya lo tienes, plazo y si cuentas con diseño/UX o quieres que aporte una idea visual inicial.',
     bullets: [
       'Qué producto o sistema necesitas (web, API, backoffice, tienda…)',
       'Stack o restricciones (hosting, WordPress, base de datos)',
       'Si hay diseñadores/UX en el proyecto y en qué fase estás',
     ],
-    response: 'Correo: 24–48 h hábiles · WhatsApp: suele ser el mismo día en horario laboral',
+    response: 'Suelo responder en 24–48 h por correo; por WhatsApp, el mismo día en horario laboral (Colombia).',
     formNote: 'El formulario abre tu cliente de correo con el mensaje listo — no guardo datos en servidor.',
+    formHints: [
+      'Plazo aproximado o fecha límite',
+      'Presupuesto orientativo (si lo tienes)',
+      '¿Ya tienes diseño en Figma o equipo creativo?',
+    ],
     whatsappPrefill: 'Hola Jeisson, vi jeisson.pro y me gustaría hablar de un proyecto:',
+    recruiter: {
+      eyebrow: 'Reclutadores',
+      text: 'Si necesitas CV formal o perfil completo, escríbeme y te comparto enlace o versión acordada (también zona privada del sitio bajo solicitud).',
+      cta: 'Solicitar CV',
+      mailSubject: 'CV jeisson.pro — solicitud reclutador',
+    },
   },
   about: {
     title: 'Sobre mí',
+    heading: 'Jeisson — desarrollador full stack',
     subtitle:
-      'Desarrollador full stack en Bogotá. APIs, deploy y WordPress; diseño como complemento cuando el proyecto lo necesita.',
+      'Trayectoria en producto web, TIC en colegios y formación en desarrollo y diseño digital.',
+    experienceTitle: 'Experiencia',
+    toolkitNote: 'Listado completo de stack agrupado en Servicios.',
+    toolkitLink: { label: 'Ver stack en servicios', to: '/servicios' },
+    cvLink: { label: 'Solicitar CV', to: '/contacto' },
   },
 }
 
 export const HOME_COPY = {
-  explore: {
-    sub: 'Trayectoria dev, servicios con stack, casos en producción y contacto.',
+  audience: {
+    title: 'Con quién encajo',
+    sub: 'Si te reconoces en alguno de estos perfiles, probablemente podemos arrancar rápido.',
   },
-  aboutTeaser: {
+  aboutWhy: {
+    eyebrow: 'Sobre mí',
     title: 'En resumen',
-    sub: null,
+    sub: 'Desarrollo primero; diseño y TIC en colegios como base para hablar con equipos creativos.',
+    cta: 'Conocer trayectoria',
   },
   services: {
-    sub: 'Full stack, backoffice, WordPress y stack detallado en la página de servicios.',
+    sub: 'Lo que más encargo hoy. El detalle completo está en la página de servicios.',
   },
   projects: {
-    sub: 'Casos en código y, en algunos, capa visual — filtra por categoría.',
+    sub: 'Más casos en código, educación y editorial — filtra por categoría.',
   },
   whyBuild: {
     title: 'Por qué contratar desarrollo bien hecho',
     sub: 'Menos deuda técnica, diseño como complemento cuando toca y producto que aguanta el día a día.',
   },
-  capabilities: {
-    sub: 'Lo que ya usé en producción — de motai.app a colegios y proyectos propios.',
-  },
   process: {
     sub: 'Tres fases orientadas a entregar software funcionando, no solo maquetas.',
+  },
+  ctaMid: {
+    title: '¿Tienes alcance y plazo?',
+    sub: 'Cuéntame qué hay que construir. Respondo con estimación inicial y siguientes pasos.',
+  },
+  faq: {
+    title: 'Preguntas frecuentes',
+    sub: 'Lo que suelen preguntar antes del primer correo.',
   },
 }
 
@@ -248,18 +343,89 @@ export const FEATURED_PROJECT_KEYS = [
   'Colegio Van Leeuwenhoek',
 ]
 
+export const EXPERIENCE = [
+  {
+    role: 'Desarrollador full stack',
+    org: 'Motai · motai.app',
+    period: 'Jul 2025 – Jun 2026',
+    status: 'Finalizado',
+    bullets: [
+      'WooCommerce, varios plugins a medida y sincronización con ERP',
+      'Backoffice NestJS + PostgreSQL: cotizaciones, contratos, RBAC y APIs',
+      'Deploy y mantenimiento del producto en producción',
+    ],
+  },
+  {
+    role: 'Coordinación TIC y desarrollo',
+    org: 'Colegio Van Leeuwenhoek',
+    period: '2020 – 2025',
+    status: 'Finalizado',
+    bullets: [
+      'Sitio web, apps móviles y software de transmisión personalizado para la emisora',
+      'Sistemas de carnetización, reportes y herramientas internas para la comunidad (+800 usuarios)',
+      'Soporte diario a docentes; rebranding y proyectos audiovisuales institucionales',
+    ],
+  },
+  {
+    role: 'TIC y desarrollo de software',
+    org: 'Colegio Reina de Gales',
+    period: '2021 – 2025',
+    status: 'Finalizado',
+    bullets: [
+      'Sitio web institucional y landings por ciclo académico',
+      'Software de transmisión radial y sistemas de notas e inventarios',
+      'Herramientas internas para la operación diaria de la institución',
+    ],
+  },
+  {
+    role: 'Desarrollo web y diseño editorial',
+    org: 'Revista Occidente XXI',
+    period: '2020 – 2024',
+    status: 'Finalizado',
+    bullets: [
+      'Portal de noticias web: anti-bots, Redis y cacheo',
+      '+20 ediciones InDesign, identidad por número y archivo de ediciones',
+    ],
+  },
+  {
+    role: 'Desarrollo y encargos creativos',
+    org: 'Marca personal · jeisson.pro',
+    period: '2019 – Presente',
+    status: 'Activo',
+    bullets: [
+      'Portafolio, clientes en educación y comercio',
+      'Desarrollo como base; diseño/motion puntuales si el proyecto lo incluye',
+    ],
+  },
+]
+
 export const ABOUT = {
   intro: [
-    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En motai.app desarrollé el sitio en WooCommerce, varios plugins a medida (sync con ERP y lógica propia) y un backoffice con NestJS y PostgreSQL; ahí concentras buena parte del stack que manejo.',
-    'Antes de dedicarme a tiempo completo al código coordiné TIC y trabajé diseño en colegios y editorial. Complemento el desarrollo con criterio visual: puedo proponer una idea inicial y afinarla contigo, en Figma o con tu equipo de UX. Hoy busco encargos de desarrollo.',
+    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En motai.app desarrollé WooCommerce, varios plugins a medida y un backoffice con NestJS y PostgreSQL.',
+    'Antes de dedicarme a tiempo completo al código coordiné TIC y trabajé diseño en colegios y editorial. Complemento el desarrollo con criterio visual cuando hace falta. Hoy busco encargos de desarrollo.',
   ],
   highlights: [
     { label: '5+ años', detail: 'Código, APIs y producto en producción' },
     { label: 'Diseño (complemento)', detail: 'Idea inicial · Figma y handoff' },
-    { label: 'Rubros', detail: 'Educación, editorial, moda, e-commerce, motos' },
+    { label: 'Rubros', detail: 'Educación, editorial, e-commerce, motos' },
     { label: 'Estudios', detail: 'UCMC, Panamericana, SENA, técnico en redes' },
   ],
+  audienceLine:
+    'Encajo con startups, agencias con diseño, colegios (TIC) y tiendas WordPress — ver perfiles en inicio.',
 }
+
+export const TOOLKIT_TOP = [
+  'PHP',
+  'TypeScript',
+  'NestJS',
+  'Next.js',
+  'React',
+  'Laravel',
+  'WordPress',
+  'PostgreSQL',
+  'Docker',
+  'Git',
+]
 
 export const INTERESTS = [
   'Arquitectura web, APIs y producto digital',
@@ -327,36 +493,50 @@ export const EDUCATION = [
 export const SERVICES = [
   {
     title: 'Desarrollo web full stack',
+    complement: false,
     description:
       'Sitios y APIs con PHP (Laravel), TypeScript (NestJS, Next.js, React) y Node/Express cuando encaja. Git, revisiones de código, pruebas (Jest/Vitest) y despliegue acordado contigo.',
     tags: ['PHP', 'TypeScript', 'Laravel', 'NestJS', 'Next.js', 'React', 'Node.js'],
+    includes: ['Arquitectura y código en Git', 'Integración con tu hosting o el acordado', 'Documentación técnica básica'],
+    excludes: ['Diseño de marca desde cero salvo acuerdo', 'Hosting facturado a tu nombre salvo gestión acordada'],
   },
   {
     title: 'Backoffice y producto digital',
+    complement: false,
     description:
-      'Paneles con NestJS, Next.js y PostgreSQL: cotizaciones, contratos, RBAC, OpenAPI y tiempo real (SSE/WebSockets). Lo implementé en el backoffice de motai.app; mismo perfil para tu operación.',
+      'Paneles con NestJS, Next.js y PostgreSQL: cotizaciones, contratos, RBAC, OpenAPI y tiempo real (SSE/WebSockets). Mismo perfil que el backoffice de motai.app.',
     tags: ['NestJS', 'Next.js', 'PostgreSQL', 'TypeORM', 'OpenAPI', 'RBAC'],
+    includes: ['Modelo de datos y APIs documentadas', 'Roles y permisos acordados', 'Entrega en entornos staging/prod'],
+    excludes: ['App móvil nativa', 'Mantenimiento indefinido sin contrato'],
   },
   {
     title: 'WordPress, WooCommerce y plugins',
+    complement: false,
     description:
-      'Plugins PHP (PSR-4), WooCommerce, sync ERP, Redis y REST/AJAX. En motai.app varios plugins a medida sobre el frente WooCommerce; también optimización y formularios con reCAPTCHA.',
+      'Plugins PHP (PSR-4), WooCommerce, sync ERP, Redis y REST/AJAX. Varios plugins a medida en motai.app; optimización y formularios con reCAPTCHA.',
     tags: ['WordPress', 'WooCommerce', 'PHP', 'Redis', 'REST/AJAX'],
+    includes: ['Plugins y temas hijo cuando aplica', 'Integraciones ERP/API', 'Puesta en línea acordada'],
+    excludes: ['Contenido masivo de producto sin briefing', 'Licencias premium de terceros sin presupuesto'],
   },
   {
     title: 'Educación y coordinación TIC',
+    complement: false,
     description:
       'Portales escolares, plataformas internas en JavaScript/CMS y soporte a comunidades grandes (+800 usuarios). El foco es que el sistema funcione; la parte gráfica va aparte si se contrata.',
     tags: ['TIC', 'JavaScript', 'CMS', 'Plataformas'],
+    includes: ['Capacitación básica a equipo interno', 'Soporte en horario acordado'],
+    excludes: ['Hardware y redes físicas', 'Diseño gráfico institucional completo'],
   },
   {
-    title: 'Diseño editorial (complemento)',
+    title: 'Diseño editorial',
+    complement: true,
     description:
       'Solo si el proyecto lo incluye: revistas, identidad, InDesign. Trayectoria en Occidente XXI (+20 ediciones); hoy priorizo contratos de desarrollo.',
     tags: ['InDesign', 'Editorial', 'Branding'],
   },
   {
-    title: 'Motion y redes (complemento)',
+    title: 'Motion y redes',
+    complement: true,
     description:
       'Animación 2D, Premiere/Audition o piezas para redes cuando no hay equipo creativo y el alcance lo contempla — no es el servicio principal.',
     tags: ['Blender', 'Premiere', 'Motion 2D'],
@@ -365,94 +545,143 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
-    title: 'jeisson.pro',
-    period: '2026 — Presente',
-    url: 'https://jeisson.pro',
-    category: 'dev',
-    description:
-      'Este portafolio: parte pública y zona privada de CV con enlaces temporales para reclutadores. React, Vite y Express.',
-    tags: ['React', 'Node.js', 'Express'],
-  },
-  {
     title: 'Motai — motai.app',
     period: '2025 — 2026',
     url: 'https://motai.app',
     category: 'dev',
+    status: 'online',
+    role: 'Desarrollador full stack',
     description:
-      'WooCommerce, varios plugins a medida, sync ERP y backoffice interno (NestJS, PostgreSQL): cotizaciones, contratos y APIs documentadas.',
+      'E-commerce y operación interna: WooCommerce, plugins a medida, sync ERP y backoffice NestJS + PostgreSQL.',
+    highlights: [
+      'Varios plugins PHP (PSR-4) y flujos propios sobre WooCommerce',
+      'Backoffice: cotizaciones, contratos, RBAC y APIs documentadas',
+    ],
     tags: ['WordPress', 'NestJS', 'TypeScript', 'PostgreSQL'],
   },
   {
-    title: 'jeisson.pro — Estudio creativo',
+    title: 'jeisson.pro',
     period: '2019 — Presente',
     url: 'https://jeisson.pro',
-    category: 'creative',
-    description:
-      'Marca personal: desarrollo web como base; diseño y motion en encargos puntuales para educación y comercio.',
-    tags: ['WordPress', 'Desarrollo', 'Branding'],
-  },
-  {
-    title: 'Revista Occidente XXI',
-    period: '2020 — 2024',
-    url: 'https://www.occidentexxi.com/ediciones',
-    category: 'creative',
-    description:
-      'Diseño editorial de más de 20 ediciones, identidad por número y cobertura fotográfica de eventos. Archivo en occidentexxi.com/ediciones.',
-    tags: ['InDesign', 'Editorial', 'Fotografía', 'Web'],
-  },
-  {
-    title: 'Colegio Van Leeuwenhoek',
-    period: '2020 — 2025',
-    url: 'https://colvanlee.edu.co',
-    category: 'education',
-    description:
-      'Coordinación TIC, web, plataforma interna, rebranding y emisora. Soporte diario a docentes y estudiantes.',
-    tags: ['TIC', 'JavaScript', 'CMS', 'Radio'],
-  },
-  {
-    title: 'Colegio Reina de Gales',
-    period: '2021 — 2025',
-    url: null,
-    category: 'education',
-    description:
-      'Portal web, contenidos online, radio/TV escolar y landings por ciclo académico.',
-    tags: ['Web', 'Audiovisual', 'Contenidos', 'Institucional'],
-  },
-  {
-    title: 'Santiago Aviador — E-commerce',
-    period: '2024 — 2025',
-    url: null,
     category: 'dev',
+    status: 'online',
+    role: 'Desarrollo y producto',
     description:
-      'Sitio corporativo y tienda WooCommerce con catálogo, pagos y contenidos centralizados en WordPress (Divi).',
-    tags: ['WooCommerce', 'WordPress', 'SEO', 'UX'],
-  },
-  {
-    title: 'Roger Murillo SAS',
-    period: '2023 — 2025',
-    url: null,
-    category: 'creative',
-    description:
-      'Campañas, animación 2D, sitios en CMS y piezas gráficas para la marca del cliente.',
-    tags: ['Animación', 'CM', 'WordPress', 'Marketing'],
-  },
-  {
-    title: 'Corporación ESHAC',
-    period: '2022',
-    url: null,
-    category: 'creative',
-    description:
-      'Maquetación publicitaria y piezas para redes alineadas a la identidad existente.',
-    tags: ['Diseño gráfico', 'Redes', 'Maquetación'],
+      'Portafolio público, zona privada de CV para reclutadores y encargos puntuales de diseño/motion cuando el proyecto lo incluye.',
+    highlights: ['React, Vite, Express y auth para CV', 'Marca personal: dev primero, creativo como complemento'],
+    tags: ['React', 'Node.js', 'WordPress', 'Branding'],
   },
   {
     title: 'Campus — Administración escolar',
     period: 'Open source',
     url: 'https://github.com/Devewice/Campus',
     category: 'dev',
+    status: 'opensource',
+    role: 'Desarrollo full stack (PHP)',
     description:
-      'Sistema de administración escolar en PHP, publicado en GitHub (Devewice).',
-    tags: ['PHP', 'GitHub', 'Educación'],
+      'Sistema de administración escolar open source (Devewice): matrículas, notas, reportes y módulos para la operación administrativa de instituciones educativas. Publicado en GitHub para revisión y uso.',
+    highlights: [
+      'Backend en PHP con lógica de negocio para procesos escolares',
+      'Gestión académica y administrativa (notas, reportes, usuarios/roles)',
+      'Proyecto abierto: documentación y código en el repositorio',
+    ],
+    tags: ['PHP', 'MySQL', 'GitHub', 'Educación', 'Open source'],
+  },
+  {
+    title: 'Santiago Aviador — E-commerce',
+    period: '2024 — 2025',
+    url: null,
+    category: 'dev',
+    status: 'private',
+    role: 'Desarrollo web (WooCommerce)',
+    description:
+      'Tienda WooCommerce para la operación de alimentación escolar: pedidos con anticipación, entrega al salón de clases y lógica de cupo (consumo por estudiante). Los acudientes pueden recargar o pagar desde casa el cupo consumido.',
+    highlights: [
+      'Catálogo, checkout y pagos en WordPress (Divi)',
+      'Pedidos programados y entrega al salón',
+      'Cupo por estudiante y pagos remotos para padres',
+    ],
+    tags: ['WooCommerce', 'WordPress', 'E-commerce', 'PHP'],
+  },
+  {
+    title: 'Colegio Van Leeuwenhoek',
+    period: '2020 — 2025',
+    url: 'https://colvanlee.edu.co',
+    category: 'education',
+    status: 'online',
+    role: 'TIC, desarrollo web y software a medida',
+    description:
+      'Coordinación TIC con desarrollo de página web, aplicaciones móviles y software de transmisión personalizado para la emisora, además de sistemas de carnetización, reportes y otras herramientas que la institución requería.',
+    highlights: [
+      'Sitio institucional y plataformas internas en producción',
+      'Apps móviles y software de transmisión propio',
+      'Carnetización, reportes y soporte a +800 usuarios (docentes y estudiantes)',
+    ],
+    tags: ['TIC', 'JavaScript', 'Web', 'Apps móviles', 'CMS'],
+  },
+  {
+    title: 'Colegio Reina de Gales',
+    period: '2021 — 2025',
+    url: null,
+    category: 'education',
+    status: 'private',
+    role: 'TIC, desarrollo web y software a medida',
+    description:
+      'Página web institucional, landings por ciclo y desarrollo de software para la operación de la institución: transmisión radial, gestión de inventarios y sistema de notas, entre otras necesidades internas.',
+    highlights: [
+      'Sitio web y contenidos por periodo lectivo',
+      'Software de transmisión radial basado en aplicación propia',
+      'Sistemas de inventario y notas para uso institucional',
+    ],
+    tags: ['TIC', 'JavaScript', 'Web', 'Software a medida', 'Institucional'],
+  },
+  {
+    title: 'Revista Occidente XXI',
+    period: '2020 — 2024',
+    url: 'https://www.occidentexxi.com/ediciones',
+    category: 'dev',
+    status: 'archive',
+    role: 'Desarrollo web y diseño editorial',
+    description:
+      'Portal de noticias web completo (publicación y archivo de ediciones) con sistemas anti-bots, Redis y cacheo. En paralelo: +20 ediciones en InDesign, identidad por número y cobertura fotográfica.',
+    highlights: [
+      'Sitio tipo portal de noticias en WordPress',
+      'Capas anti-bots, Redis y estrategia de cacheo',
+      'Diseño editorial y archivo público de números',
+    ],
+    tags: ['WordPress', 'Redis', 'Web', 'InDesign', 'Editorial'],
+  },
+  {
+    title: 'Roger Murillo SAS',
+    period: '2023 — 2025',
+    url: null,
+    category: 'dev',
+    status: 'private',
+    role: 'Desarrollo web, automatización y contenidos',
+    description:
+      'Sitio en WordPress, e-learning, tienda de compras en línea con bonos, automatizaciones en n8n con chatbots y piezas de campaña (incl. animación 2D cuando el proyecto lo requería).',
+    highlights: [
+      'Web institucional y comercial en WordPress',
+      'Plataforma e-learning y sistema de compras online con bonos',
+      'Flujos en n8n con chatbots para atención y procesos',
+    ],
+    tags: ['WordPress', 'n8n', 'Chatbots', 'E-learning', 'E-commerce', 'Automatización'],
+  },
+  {
+    title: 'Corporación ESHAC',
+    period: '2022',
+    url: null,
+    category: 'dev',
+    status: 'private',
+    role: 'Desarrollo web, automatización y diseño',
+    description:
+      'Sitio web, sistemas automatizados de cronogramas y agendamiento de citas, además de maquetación y piezas para redes alineadas a la identidad de la corporación.',
+    highlights: [
+      'Sitio web institucional',
+      'Cronogramas automatizados y flujo de agendamiento de citas',
+      'Piezas gráficas y campañas respetando el manual de marca',
+    ],
+    tags: ['Web', 'Automatización', 'Agendamiento', 'Diseño gráfico', 'Redes'],
   },
 ]
 
