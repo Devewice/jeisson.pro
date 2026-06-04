@@ -216,6 +216,14 @@
   animation: marquee 40s linear infinite;
 }
 
+.tech-marquee--paused .tech-marquee__track {
+  animation-play-state: paused;
+}
+
+.featured-swiper-placeholder {
+  min-height: 320px;
+}
+
 .tech-marquee__item {
   font-family: var(--font-mono);
   font-size: 0.82rem;

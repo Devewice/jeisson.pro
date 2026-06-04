@@ -1,4 +1,6 @@
+import { Suspense } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
+import { ENABLE_AMBIENT_BACKGROUND } from '../config/perfFlags.js'
 import AmbientBackground from './AmbientBackground.jsx'
 import ScrollProgress from './ScrollProgress.jsx'
 import MobileNav from './MobileNav.jsx'
@@ -31,7 +33,7 @@ export default function Layout() {
 
   return (
     <div className={`app-shell ${onHome ? 'app-shell--home' : ''}`}>
-      {showFx && <AmbientBackground />}
+      {showFx && ENABLE_AMBIENT_BACKGROUND && <AmbientBackground />}
       {showFx && <ScrollProgress />}
       <header className={`site-header ${showFx ? 'site-header--glass' : ''}`}>
         <div className="site-header__inner">
@@ -66,7 +68,15 @@ export default function Layout() {
         </div>
       </header>
       <main className="site-main">
-        <Outlet />
+        <Suspense
+          fallback={
+            <div className="page-loading" role="status">
+              Cargando…
+            </div>
+          }
+        >
+          <Outlet />
+        </Suspense>
       </main>
       {!onPrivate && <SiteFooter />}
     </div>

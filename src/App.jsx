@@ -1,16 +1,18 @@
+import { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
-import Landing from './pages/Landing.jsx'
-import About from './pages/About.jsx'
-import Services from './pages/Services.jsx'
-import Projects from './pages/Projects.jsx'
-import Contact from './pages/Contact.jsx'
 import Login from './pages/Login.jsx'
 import AccessEntry from './pages/AccessEntry.jsx'
 import AccessDenied from './pages/AccessDenied.jsx'
-import CvHub from './pages/CvHub.jsx'
-import CvViewer from './pages/CvViewer.jsx'
+
+const Landing = lazy(() => import('./pages/Landing.jsx'))
+const About = lazy(() => import('./pages/About.jsx'))
+const Services = lazy(() => import('./pages/Services.jsx'))
+const Projects = lazy(() => import('./pages/Projects.jsx'))
+const Contact = lazy(() => import('./pages/Contact.jsx'))
+const CvHub = lazy(() => import('./pages/CvHub.jsx'))
+const CvViewer = lazy(() => import('./pages/CvViewer.jsx'))
 
 export default function App() {
   return (

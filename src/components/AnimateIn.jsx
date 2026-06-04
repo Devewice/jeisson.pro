@@ -19,8 +19,9 @@ export default function AnimateIn({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-60px' }}
+      viewport={{ once: true, margin: '-40px', amount: 0.12 }}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
+      layout={false}
       variants={defaultVariants}
       {...props}
     >

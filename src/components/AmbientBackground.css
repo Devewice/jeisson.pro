@@ -5,6 +5,80 @@
   pointer-events: none;
   overflow: hidden;
   perspective: 900px;
+  contain: layout paint;
+  isolation: isolate;
+}
+
+/* Parallax al scroll vía CSS (evita listeners JS en navegadores compatibles) */
+@supports (animation-timeline: scroll()) {
+  .ambient--css-scroll {
+    animation: ambient-fade-scroll linear both;
+    animation-timeline: scroll(root block);
+  }
+
+  .ambient--css-scroll .ambient__mesh-wrap {
+    animation: ambient-mesh-tilt linear both;
+    animation-timeline: scroll(root block);
+  }
+
+  .ambient--css-scroll .ambient__orb--a {
+    animation: ambient-orb-a-parallax linear both;
+    animation-timeline: scroll(root block);
+  }
+
+  .ambient--css-scroll .ambient__orb--b {
+    animation: ambient-orb-b-parallax linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes ambient-fade-scroll {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.75;
+  }
+}
+
+@keyframes ambient-mesh-tilt {
+  from {
+    transform: rotateX(58deg) rotateZ(-12deg);
+  }
+  to {
+    transform: rotateX(66deg) rotateZ(-12deg);
+  }
+}
+
+@keyframes ambient-orb-a-parallax {
+  from {
+    transform: scale(2) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(2) translate3d(0, 140px, 0);
+  }
+}
+
+@keyframes ambient-orb-b-parallax {
+  from {
+    transform: scale(2) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(2) translate3d(0, -100px, 0);
+  }
+}
+
+.ambient--paused .ambient__mesh,
+.ambient--paused .ambient__grid,
+.ambient--paused .ambient__scan,
+.ambient--paused .ambient__orb--a,
+.ambient--paused .ambient__orb--b,
+.ambient--paused.ambient--css-scroll,
+.ambient--paused.ambient--css-scroll .ambient__mesh-wrap {
+  animation-play-state: paused !important;
 }
 
 .ambient__vignette {
@@ -106,30 +180,43 @@
 .ambient__orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
   z-index: 0;
+  transform: scale(2);
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .ambient__orb--a {
-  width: min(55vw, 520px);
-  height: min(55vw, 520px);
+  width: min(27.5vw, 260px);
+  height: min(27.5vw, 260px);
   top: -18%;
   left: -12%;
   background: rgba(0, 230, 118, 0.2);
+  filter: blur(50px);
 }
 
 .ambient__orb--b {
-  width: min(42vw, 400px);
-  height: min(42vw, 400px);
+  width: min(21vw, 200px);
+  height: min(21vw, 200px);
   top: 35%;
   right: -14%;
   background: rgba(0, 180, 100, 0.12);
+  filter: blur(50px);
 }
 
 .ambient__orb--c {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   bottom: 8%;
   left: 28%;
   background: rgba(77, 159, 255, 0.07);
+  filter: blur(50px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient__mesh,
+  .ambient__grid,
+  .ambient__scan {
+    animation: none !important;
+  }
 }
