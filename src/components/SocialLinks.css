@@ -1,0 +1,36 @@
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.social-links--footer {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.social-links-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+}
+
+.social-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+}
+
+.social-handle {
+  font-size: 0.8em;
+  opacity: 0.85;
+}
+
+.social-handle::before {
+  content: ' · ';
+}

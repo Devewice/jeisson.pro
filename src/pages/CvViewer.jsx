@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext.jsx'
 import '../App.css'
 
 const CV_CONFIG = {
@@ -13,6 +14,7 @@ const CV_CONFIG = {
 }
 
 export default function CvViewer({ variant }) {
+  const { logout } = useAuth()
   const config = CV_CONFIG[variant]
 
   if (!config) {
@@ -24,9 +26,12 @@ export default function CvViewer({ variant }) {
       <div className="cv-viewer-toolbar">
         <h1>{config.title}</h1>
         <div className="cv-viewer-actions">
-          <Link to="/" className="btn">
-            ← Inicio
+          <Link to="/interno" className="btn">
+            ← CV interno
           </Link>
+          <button type="button" className="btn" onClick={() => logout()}>
+            Salir
+          </button>
           <a
             href={config.src}
             target="_blank"

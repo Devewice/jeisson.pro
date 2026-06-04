@@ -13,13 +13,13 @@
   },
   "basics": {
     "name": "Jeisson David Riveros García",
-    "headline": "Desarrollador Web Full Stack · PHP · JavaScript · WordPress",
-    "email": "contacto@elcreador.com.co",
+    "headline": "Desarrollador Web Full Stack · PHP · TypeScript · WordPress · APIs",
+    "email": "contacto@jeisson.pro",
     "phone": "+57 312 724 0080",
     "location": "Suba, Bogotá D.C., Colombia",
     "website": {
-      "url": "https://www.elcreador.com.co",
-      "label": "elcreador.com.co"
+      "url": "https://jeisson.pro",
+      "label": "jeisson.pro"
     },
     "customFields": [
       {
@@ -35,7 +35,7 @@
     "icon": "article",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> construyendo plataformas, APIs y sitios en producción (PHP, JavaScript, WordPress, MySQL). Experiencia reciente como <strong>Desarrollador Senior</strong> en <a href=\"https://motai.app\">Motai</a> (producto web en producción).</p><p>Experiencia en sector educativo y comercial en <strong>jornadas institucionales compatibles</strong> con proyectos freelance y desarrollo por encargo. <strong>Disponible</strong> para nuevas oportunidades back-end / full stack.</p><p>Aporto código mantenible, integración de APIs y entrega con resultados medibles.</p>"
+    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> en producción (PHP, TypeScript, JavaScript, WordPress, MySQL/PostgreSQL). En <a href=\"https://motai.app\">Motai</a> trabajé el <strong>producto público</strong> (WooCommerce, plugin a medida, integración ERP). <strong>Desarrollo activo</strong> en el <strong>backoffice interno</strong> (NestJS, Next.js, PostgreSQL) con despliegue continuo.</p><p>Experiencia en sector educativo y comercial en <strong>jornadas compatibles</strong> con freelance. <strong>Disponible</strong> para back-end / full stack.</p><p>Código mantenible, APIs documentadas y entregas con impacto medible.</p>"
   },
   "sections": {
     "profiles": {
@@ -63,10 +63,10 @@
           "icon": "github-logo",
           "iconColor": "",
           "network": "GitHub",
-          "username": "jeissondav1",
+          "username": "Devewice",
           "website": {
-            "url": "https://github.com/jeissondav1",
-            "label": "github.com/jeissondav1",
+            "url": "https://github.com/Devewice",
+            "label": "github.com/Devewice",
             "inlineLink": false
           }
         },
@@ -76,10 +76,62 @@
           "icon": "globe",
           "iconColor": "",
           "network": "Portfolio",
-          "username": "elcreador",
+          "username": "jeisson.pro",
           "website": {
-            "url": "https://www.elcreador.com.co",
-            "label": "elcreador.com.co",
+            "url": "https://jeisson.pro",
+            "label": "jeisson.pro",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000006",
+          "hidden": false,
+          "icon": "instagram-logo",
+          "iconColor": "",
+          "network": "Instagram",
+          "username": "jeissondav1",
+          "website": {
+            "url": "https://www.instagram.com/jeissondav1",
+            "label": "@jeissondav1",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000007",
+          "hidden": false,
+          "icon": "tiktok-logo",
+          "iconColor": "",
+          "network": "TikTok",
+          "username": "jeisson.david.riv",
+          "website": {
+            "url": "https://www.tiktok.com/@jeisson.david.riv",
+            "label": "@jeisson.david.riv",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000008",
+          "hidden": false,
+          "icon": "x-logo",
+          "iconColor": "",
+          "network": "X",
+          "username": "jeissondav1",
+          "website": {
+            "url": "https://x.com/jeissondav1",
+            "label": "@jeissondav1",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000009",
+          "hidden": false,
+          "icon": "threads-logo",
+          "iconColor": "",
+          "network": "Threads",
+          "username": "jeissondav1",
+          "website": {
+            "url": "https://www.threads.net/@jeissondav1",
+            "label": "@jeissondav1",
             "inlineLink": false
           }
         }
@@ -95,7 +147,7 @@
           "id": "018f1a2b-3c4d-7000-8002-000000000001",
           "hidden": false,
           "company": "Motai",
-          "position": "Desarrollador Senior PHP / JavaScript",
+          "position": "Desarrollador Senior Full Stack",
           "location": "Bogotá D.C., Colombia (remoto)",
           "period": "Jul 2025 – Jun 2026",
           "website": {
@@ -104,7 +156,7 @@
             "inlineLink": true
           },
           "roles": [],
-          "description": "<ul><li>Desarrollé el producto web en <strong>motai.app</strong>: módulos back-end en <strong>PHP</strong>, lógica de negocio en <strong>JavaScript</strong> y consumo de <strong>APIs REST</strong>.</li><li>Modelé y consulté datos en <strong>MySQL</strong>; documenté endpoints para integraciones internas.</li><li>Trabajé con <strong>Git</strong> (branches, PRs) y despliegues iterativos con el equipo de producto.</li><li>Stack: PHP 8+, JavaScript (ES6+), MySQL, HTML/CSS.</li></ul>"
+          "description": "<ul><li>Mantuve y evolucioné <strong>motai.app</strong> con <strong>WordPress/WooCommerce</strong> y plugin a medida (<strong>PHP</strong>, PSR-4): sincronización de inventario vía API JSON, caché Redis/transients, capa <strong>REST/AJAX</strong> y arquitectura modular en producción.</li><li><strong>Desarrollo activo</strong> en el <strong>backoffice operativo interno</strong> con <strong>TypeScript</strong> (<strong>NestJS</strong>, <strong>Next.js</strong>, <strong>PostgreSQL</strong>, TypeORM): flujos de cotización, contratos y traspasos, <strong>RBAC</strong> multi-sede y API documentada (OpenAPI).</li><li>Integro servicios externos (validación de identidad, firma digital, ERP, automatización) con <strong>webhooks</strong> y actualizaciones en tiempo real (<strong>SSE/WebSockets</strong>).</li><li>Participo en <strong>CI/CD</strong> del backoffice (GitHub Actions, Docker), migraciones de BD y pruebas (Jest/Vitest); trabajo en equipo con <strong>Git</strong> y revisiones por PR.</li></ul>"
         },
         {
           "id": "018f1a2b-3c4d-7000-8002-000000000002",
@@ -369,10 +421,25 @@
           "proficiency": "Avanzado",
           "level": 0,
           "keywords": [
-            "Laravel (formación)",
-            "APIs",
-            "MVC",
-            "MySQL"
+            "Laravel",
+            "Plugins WP",
+            "PSR-4",
+            "PHPUnit"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000014",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "TypeScript",
+          "proficiency": "Avanzado",
+          "level": 0,
+          "keywords": [
+            "NestJS",
+            "Next.js",
+            "React",
+            "Tipado estricto"
           ]
         },
         {
@@ -385,9 +452,9 @@
           "level": 0,
           "keywords": [
             "ES6+",
+            "Node.js",
             "DOM",
-            "APIs REST",
-            "Node.js (formación)"
+            "APIs REST"
           ]
         },
         {
@@ -399,9 +466,10 @@
           "proficiency": "Avanzado",
           "level": 0,
           "keywords": [
-            "Divi",
-            "CMS",
-            "E-commerce"
+            "Plugins custom",
+            "REST API",
+            "E-commerce",
+            "Caché"
           ]
         },
         {
@@ -413,9 +481,23 @@
           "proficiency": "Intermedio",
           "level": 0,
           "keywords": [
-            "SQL",
+            "WordPress",
             "Modelado",
             "Consultas"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000012",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "PostgreSQL",
+          "proficiency": "Intermedio",
+          "level": 0,
+          "keywords": [
+            "TypeORM",
+            "Migraciones",
+            "SQL"
           ]
         },
         {
@@ -455,9 +537,24 @@
           "proficiency": "Avanzado",
           "level": 0,
           "keywords": [
-            "Integración",
+            "OpenAPI",
+            "Webhooks",
             "JSON",
-            "Express (formación)"
+            "Integración ERP"
+          ]
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8005-000000000013",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Docker & CI/CD",
+          "proficiency": "Intermedio",
+          "level": 0,
+          "keywords": [
+            "GitHub Actions",
+            "Despliegue cloud",
+            "Contenedores"
           ]
         },
         {

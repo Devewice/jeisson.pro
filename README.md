@@ -60,6 +60,10 @@ Los HTML **no se sincronizan automáticamente** con los JSON. Si cambias conteni
 - Bullets en **tiempo pasado**; perfil sin “actualmente en Motai”.
 - En DEV el resumen menciona Motai como experiencia reciente en producto web (`motai.app`).
 
+### Motai — Torque y plugin (referencia interna)
+
+Trabajo local en `C:\torque` (backoffice NestJS/Next.js) y en el plugin WordPress de listing **no se listan como proyectos** en el CV: solo la **experiencia Motai** y **skills** con stack real. Ver **`docs/motai-experiencia-referencia.md`** (rutas, qué nombrar y qué omitir por seguridad).
+
 ### Convenciones de contenido aplicadas
 
 - Sin barras de nivel en skills (`level: 0`, `type: "hidden"` en diseño).
@@ -72,13 +76,15 @@ Los HTML **no se sincronizan automáticamente** con los JSON. Si cambias conteni
 ### Datos de contacto (referencia)
 
 - **Nombre:** Jeisson David Riveros García  
-- **Email:** contacto@elcreador.com.co  
+- **Email:** contacto@jeisson.pro  
 - **Tel:** +57 312 724 0080  
 - **Ubicación:** Suba, Bogotá D.C., Colombia  
-- **Portfolio:** https://www.elcreador.com.co  
+- **Sitio:** https://jeisson.pro  
+- **Portfolio histórico / creativo:** https://www.elcreador.com.co  
 - **LinkedIn:** [jeisson-david-riveros-garcia](https://www.linkedin.com/in/jeisson-david-riveros-garcia-6291b9244)  
-- **GitHub:** https://github.com/jeissondav1  
+- **GitHub:** https://github.com/Devewice  
 - **Behance:** https://www.behance.net/jeissondav1  
+- **Redes:** [Instagram](https://www.instagram.com/jeissondav1) · [TikTok](https://www.tiktok.com/@jeisson.david.riv) (@jeisson.david.riv) · [X](https://x.com/jeissondav1) · [Threads](https://www.threads.net/@jeissondav1)  
 
 ---
 
@@ -103,24 +109,52 @@ Estructura clave: `picture`, `basics`, `summary`, `sections`, `customSections`, 
 
 ---
 
-## App Node + React
+## Portal jeisson.pro (Node + React)
 
 Requisito: [Node.js](https://nodejs.org) 20+.
 
-| Comando / acción | Descripción |
-|------------------|-------------|
-| Doble clic en **`start.bat`** | `npm install` (si falta) + `npm run dev` → http://localhost:5173 |
-| `npm run dev` | Vite en desarrollo |
-| `npm run build` | Genera `dist/` y copia `cv-dev` y `cv-creativo` |
-| `npm run start` | Express en http://localhost:3000 (tras `build`) |
+### Público (portafolio)
 
-Rutas de la app:
+| Ruta | Contenido |
+|------|-----------|
+| `/` | Inicio — hero, servicios, CTA |
+| `/sobre-mi` | Bio y trayectoria |
+| `/servicios` | Qué ofreces (dev, WP, diseño, TIC) |
+| `/proyectos` | Proyectos destacados |
+| `/contacto` | Email y redes |
 
-- `/` — portada con enlaces a cada CV
-- `/cv/dev` — visor embebido de `cv-dev/index.html`
-- `/cv/creativo` — visor embebido de `cv-creativo/index.html`
+Textos editables en `src/data/site.js`.
 
-Las plantillas en `cv-dev/` y `cv-creativo/` **no se editan** en esta fase; React solo las sirve y muestra en iframe.
+### Interno (requiere login)
+
+| Ruta | Contenido |
+|------|-----------|
+| `/login` | Acceso con usuario/contraseña (`.env`) |
+| `/interno` | Selector de CV dev / creativo |
+| `/cv/dev`, `/cv/creativo` | Visor (HTML protegido en servidor) |
+
+Los archivos `cv-dev/` y `cv-creativo/` **no son públicos**: sin sesión, `/cv-dev/*` responde 401.
+
+### Comandos
+
+| Comando | Descripción |
+|---------|-------------|
+| **`start.bat`** | Crea `.env` si falta, instala deps, `npm run dev` (API :3001 + web :5173) |
+| `npm run dev` | Desarrollo (API + Vite con proxy) |
+| `npm run build` | Build frontend → `dist/` |
+| `npm run start` | Producción en :3000 (tras `build` + `.env`) |
+
+### Variables de entorno
+
+Copia `.env.example` → `.env`:
+
+```env
+AUTH_USERNAME=jeisson
+AUTH_PASSWORD=tu-contraseña-segura
+SESSION_SECRET=secreto-largo-aleatorio
+```
+
+En producción define `NODE_ENV=production` para cookies seguras (HTTPS).
 
 ---
 
@@ -148,8 +182,7 @@ cv-creativo/index.html  → también en /cv-creativo/index.html vía la app
 ## Dominio y marca (solo planificación)
 
 Se valoró **`jeisson.pro`** como dominio profesional (mejor que `.click` o `.store`).  
-**`elcreador.com.co`** sigue siendo el portfolio principal en el CV.  
-Comprar/hostear `jeisson.pro` **no está hecho** en este repo de archivos locales.
+**`jeisson.pro`** es el sitio y correo principal en el CV DEV. **`elcreador.com.co`** sigue en proyectos y perfil creativo.
 
 ---
 

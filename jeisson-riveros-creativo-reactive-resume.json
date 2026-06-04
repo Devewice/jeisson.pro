@@ -14,7 +14,7 @@
   "basics": {
     "name": "Jeisson David Riveros García",
     "headline": "Diseñador Multimedial · Editorial · Branding · Producción digital",
-    "email": "contacto@elcreador.com.co",
+    "email": "contacto@jeisson.pro",
     "phone": "+57 312 724 0080",
     "location": "Suba, Bogotá D.C., Colombia",
     "website": {
@@ -80,6 +80,58 @@
           "website": {
             "url": "https://www.elcreador.com.co",
             "label": "elcreador.com.co",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000006",
+          "hidden": false,
+          "icon": "instagram-logo",
+          "iconColor": "",
+          "network": "Instagram",
+          "username": "jeissondav1",
+          "website": {
+            "url": "https://www.instagram.com/jeissondav1",
+            "label": "@jeissondav1",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000007",
+          "hidden": false,
+          "icon": "tiktok-logo",
+          "iconColor": "",
+          "network": "TikTok",
+          "username": "jeisson.david.riv",
+          "website": {
+            "url": "https://www.tiktok.com/@jeisson.david.riv",
+            "label": "@jeisson.david.riv",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000008",
+          "hidden": false,
+          "icon": "x-logo",
+          "iconColor": "",
+          "network": "X",
+          "username": "jeissondav1",
+          "website": {
+            "url": "https://x.com/jeissondav1",
+            "label": "@jeissondav1",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8001-000000000009",
+          "hidden": false,
+          "icon": "threads-logo",
+          "iconColor": "",
+          "network": "Threads",
+          "username": "jeissondav1",
+          "website": {
+            "url": "https://www.threads.net/@jeissondav1",
+            "label": "@jeissondav1",
             "inlineLink": false
           }
         }

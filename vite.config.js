@@ -2,37 +2,16 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import sirv from 'sirv'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = __dirname
 
-function serveCvStatic() {
-  const mount = (server, dir, urlPath) => {
-    server.middlewares.use(
-      urlPath,
-      sirv(path.join(root, dir), { dev: true, single: false })
-    )
-  }
-
-  return {
-    name: 'serve-cv-templates',
-    configureServer(server) {
-      mount(server, 'cv-dev', '/cv-dev')
-      mount(server, 'cv-creativo', '/cv-creativo')
-    },
-    configurePreviewServer(server) {
-      mount(server, 'cv-dev', '/cv-dev')
-      mount(server, 'cv-creativo', '/cv-creativo')
-    },
-  }
-}
+const apiTarget = process.env.API_URL || 'http://localhost:3001'
 
 export default defineConfig({
   plugins: [
     react(),
-    serveCvStatic(),
     viteStaticCopy({
       targets: [
         { src: 'cv-dev', dest: '.' },
@@ -43,8 +22,18 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true,
+    proxy: {
+      '/api': { target: apiTarget, changeOrigin: true },
+      '/cv-dev': { target: apiTarget, changeOrigin: true },
+      '/cv-creativo': { target: apiTarget, changeOrigin: true },
+    },
   },
   preview: {
     port: 4173,
+    proxy: {
+      '/api': { target: apiTarget, changeOrigin: true },
+      '/cv-dev': { target: apiTarget, changeOrigin: true },
+      '/cv-creativo': { target: apiTarget, changeOrigin: true },
+    },
   },
 })

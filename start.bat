@@ -9,6 +9,13 @@ if errorlevel 1 (
   exit /b 1
 )
 
+if not exist ".env" (
+  echo Creando .env desde .env.example...
+  copy /Y ".env.example" ".env" >nul
+  echo Edita .env con tu AUTH_PASSWORD y SESSION_SECRET.
+  echo.
+)
+
 if not exist "node_modules\" (
   echo Instalando dependencias...
   call npm install
@@ -20,8 +27,11 @@ if not exist "node_modules\" (
 )
 
 echo.
-echo Iniciando jeisson.pro en modo desarrollo...
-echo Abre http://localhost:5173 en el navegador
+echo Portafolio jeisson.pro
+echo  Web:  http://localhost:5173
+echo  API:  http://localhost:3001
+echo  Login CV: http://localhost:5173/login
+echo  Usuario por defecto: jeisson (ver .env)
 echo.
 call npm run dev
 

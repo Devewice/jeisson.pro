@@ -11,6 +11,7 @@ desktop.ini
 # Secretos / temporales
 .env
 .env.*
+!.env.example
 *.log
 *.tmp
 

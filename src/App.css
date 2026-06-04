@@ -16,9 +16,18 @@
 }
 
 .home-hero p {
-  margin: 0;
+  margin: 0 0 0.5rem;
   color: var(--muted);
   max-width: 42rem;
+}
+
+.home-hero a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.home-hero a:hover {
+  text-decoration: underline;
 }
 
 .cv-grid {
