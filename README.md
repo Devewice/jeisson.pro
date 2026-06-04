@@ -24,8 +24,12 @@ Documentación del trabajo realizado sobre la hoja de vida de **Jeisson David Ri
 |-------------------|---------------|
 | `jeisson-riveros-reactive-resume.json` | **Fuente de verdad — versión DEV.** Importar en Reactive Resume. |
 | `jeisson-riveros-creativo-reactive-resume.json` | **Fuente de verdad — versión CREATIVA.** Importar en Reactive Resume. |
-| `cv-dev/` | HTML + CSS tema tech (sidebar oscuro, JetBrains Mono). |
-| `cv-creativo/` | HTML + CSS tema editorial. |
+| `cv-dev/` | Plantilla HTML + CSS (tech). **No modificar por ahora**; la app React la embebe tal cual. |
+| `cv-creativo/` | Plantilla HTML + CSS (editorial). **Idem.** |
+| `src/` | Frontend React (Vite): inicio, rutas `/cv/dev` y `/cv/creativo`. |
+| `server/` | Express sirve `dist/` y las carpetas CV en producción. |
+| `start.bat` | Instala dependencias si hace falta y lanza `npm run dev`. |
+| `package.json` | Scripts Node: `dev`, `build`, `preview`, `start`. |
 | `ReactiveResume_Jeisson.json` | Borradores intermedios de la sesión inicial. **No usar** salvo comparar historial. |
 | `ReactiveResume_Jeisson_Riveros.json` | ↑ |
 | `ReactiveResume_Jeisson_Riveros_v2.json` | ↑ |
@@ -99,16 +103,37 @@ Estructura clave: `picture`, `basics`, `summary`, `sections`, `customSections`, 
 
 ---
 
-## HTML estático
+## App Node + React
+
+Requisito: [Node.js](https://nodejs.org) 20+.
+
+| Comando / acción | Descripción |
+|------------------|-------------|
+| Doble clic en **`start.bat`** | `npm install` (si falta) + `npm run dev` → http://localhost:5173 |
+| `npm run dev` | Vite en desarrollo |
+| `npm run build` | Genera `dist/` y copia `cv-dev` y `cv-creativo` |
+| `npm run start` | Express en http://localhost:3000 (tras `build`) |
+
+Rutas de la app:
+
+- `/` — portada con enlaces a cada CV
+- `/cv/dev` — visor embebido de `cv-dev/index.html`
+- `/cv/creativo` — visor embebido de `cv-creativo/index.html`
+
+Las plantillas en `cv-dev/` y `cv-creativo/` **no se editan** en esta fase; React solo las sirve y muestra en iframe.
+
+---
+
+## HTML estático (plantillas archivadas)
 
 ```text
-cv-dev/index.html       → abrir en navegador (doble clic o Live Server)
-cv-creativo/index.html  → idem
+cv-dev/index.html       → también en /cv-dev/index.html vía la app
+cv-creativo/index.html  → también en /cv-creativo/index.html vía la app
 ```
 
 - Estilos en `styles.css` de cada carpeta.
 - Fuentes Google Fonts (DM Sans, JetBrains Mono en dev).
-- **PDF:** Ctrl+P → “Guardar como PDF”, márgenes y fondos según necesidad de impresión.
+- **PDF:** abrir el CV en la app o en pestaña nueva → Ctrl+P → “Guardar como PDF”.
 
 ---
 
@@ -162,6 +187,7 @@ Historial detallado de la conversación donde se generó todo: transcripción Cu
 | Jun 2026 | Movimiento desde `Downloads` → proyecto local |
 | Jun 2026 | Añadido `README.md` para continuidad entre sesiones |
 | Jun 2026 | Repo GitHub, workspace `.code-workspace`, reglas Cursor |
+| Jun 2026 | Proyecto Node + React (Vite); `start.bat`; plantillas CV sin tocar |
 
 ---
 

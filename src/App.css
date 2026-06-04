@@ -1,0 +1,175 @@
+.home {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.home-hero {
+  margin-bottom: 2.5rem;
+}
+
+.home-hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.home-hero p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 42rem;
+}
+
+.cv-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.cv-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.cv-card:hover {
+  transform: translateY(-2px);
+}
+
+.cv-card--dev:hover {
+  border-color: var(--accent);
+}
+
+.cv-card--creativo:hover {
+  border-color: var(--creativo);
+}
+
+.cv-card-tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.cv-card--dev .cv-card-tag {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.cv-card--creativo .cv-card-tag {
+  background: var(--creativo-soft);
+  color: var(--creativo);
+}
+
+.cv-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.cv-card p {
+  margin: 0;
+  flex: 1;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.cv-card-cta {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cv-card--dev .cv-card-cta {
+  color: var(--accent);
+}
+
+.cv-card--creativo .cv-card-cta {
+  color: var(--creativo);
+}
+
+.home-note {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+
+.cv-viewer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px);
+}
+
+.cv-viewer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.cv-viewer-toolbar h1 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.cv-viewer-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cv-viewer-frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  filter: brightness(1.08);
+}

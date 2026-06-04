@@ -14,5 +14,9 @@ desktop.ini
 *.log
 *.tmp
 
+# Node
+node_modules/
+dist/
+
 # PDFs generados localmente (opcional; descomenta si no quieres versionarlos)
 # *.pdf

@@ -10,11 +10,11 @@
       "jeisson-riveros-*.json": "jsonc"
     },
     "editor.formatOnSave": false,
-    "liveServer.settings.root": "/cv-dev"
+    "npm.packageManager": "npm"
   },
   "extensions": {
     "recommendations": [
-      "ritwickdey.liveserver",
+      "dbaeumer.vscode-eslint",
       "esbenp.prettier-vscode"
     ]
   }
