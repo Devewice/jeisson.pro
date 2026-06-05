@@ -64,6 +64,13 @@ function MatrixLine({ text, className }) {
   return (
     <span className={className}>
       {chars.map((char, i) => {
+        if (char === ' ') {
+          return (
+            <span key={`space-${i}`} className="hero__char hero__char--space" aria-hidden="true">
+              {' '}
+            </span>
+          )
+        }
         const glitch = glitchMap[i]
         const isGlitch = glitch !== undefined
         return (

@@ -15,6 +15,14 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
+/** Secure solo en HTTPS real; NODE_ENV=production en local no debe bloquear la cookie. */
+function sessionCookieSecure() {
+  if (process.env.COOKIE_SECURE === 'true') return true
+  if (process.env.COOKIE_SECURE === 'false') return false
+  const publicUrl = (process.env.PUBLIC_URL || '').trim()
+  return publicUrl.startsWith('https://')
+}
+
 function getCredentials() {
   const username = process.env.AUTH_USERNAME || 'admin'
   const password = process.env.AUTH_PASSWORD || 'cambiar-en-produccion'
@@ -35,7 +43,6 @@ function requireAuth(req, res, next) {
 
 export function createApp({ distPath } = {}) {
   const app = express()
-  const isProd = process.env.NODE_ENV === 'production'
   const dist = distPath || path.join(root, 'dist')
 
   app.use(cookieParser())
@@ -49,7 +56,7 @@ export function createApp({ distPath } = {}) {
       saveUninitialized: false,
       cookie: {
         httpOnly: true,
-        secure: isProd,
+        secure: sessionCookieSecure(),
         sameSite: 'lax',
         maxAge: 7 * 24 * 60 * 60 * 1000,
       },

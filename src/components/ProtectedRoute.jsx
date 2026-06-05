@@ -14,7 +14,14 @@ export default function ProtectedRoute({ children }) {
   }
 
   if (!hasCvAccess) {
-    return <Navigate to="/acceso-invalido" replace state={{ from: location.pathname }} />
+    const toLogin = location.pathname === '/interno'
+    return (
+      <Navigate
+        to={toLogin ? '/login' : '/acceso-invalido'}
+        replace
+        state={{ from: location.pathname }}
+      />
+    )
   }
 
   return children
