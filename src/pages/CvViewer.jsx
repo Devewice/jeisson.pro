@@ -1,22 +1,26 @@
-import { useRef } from 'react'
+import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
+import { downloadCvPdf } from '../utils/cvPdfExport.js'
 import '../App.css'
 
 const CV_CONFIG = {
   dev: {
     title: 'CV — Desarrollador full stack',
     src: '/cv-dev/index.html',
+    pdfName: 'Jeisson-Riveros-CV-desarrollo.pdf',
+    atsPdfName: 'Jeisson-Riveros-CV-ATS.pdf',
   },
   creativo: {
     title: 'CV — Diseño multimedial (complemento)',
     src: '/cv-creativo/index.html',
+    pdfName: 'Jeisson-Riveros-CV-creativo.pdf',
   },
 }
 
 export default function CvViewer({ variant }) {
   const { logout, cvAccess, owner } = useAuth()
-  const iframeRef = useRef(null)
+  const [exporting, setExporting] = useState(null)
   const config = CV_CONFIG[variant]
 
   const locked = cvAccess?.variant && cvAccess.variant !== variant
@@ -29,13 +33,31 @@ export default function CvViewer({ variant }) {
     return <Navigate to="/interno" replace />
   }
 
-  function printPdf() {
-    const win = iframeRef.current?.contentWindow
-    if (win) {
-      win.focus()
-      win.print()
+  async function runDownload(key, options, filename) {
+    if (exporting) return
+    setExporting(key)
+    try {
+      await downloadCvPdf({ variant, filename, ...options })
+    } catch (err) {
+      console.error(err)
+      globalThis.alert(
+        err?.message ||
+          'No se pudo generar el PDF. Comprueba la sesión y vuelve a intentarlo.',
+      )
+    } finally {
+      setExporting(null)
     }
   }
+
+  function downloadPdf() {
+    runDownload('pdf', { ats: false }, config.pdfName)
+  }
+
+  function downloadAtsPdf() {
+    runDownload('ats', { ats: true }, config.atsPdfName)
+  }
+
+  const busy = exporting !== null
 
   return (
     <div className="cv-viewer">
@@ -47,9 +69,25 @@ export default function CvViewer({ variant }) {
               ← Volver
             </Link>
           )}
-          <button type="button" className="btn" onClick={printPdf}>
-            Guardar PDF
+          <button
+            type="button"
+            className="btn"
+            onClick={downloadPdf}
+            disabled={busy}
+          >
+            {exporting === 'pdf' ? 'Generando…' : 'Descargar PDF'}
           </button>
+          {variant === 'dev' && (
+            <button
+              type="button"
+              className="btn btn--soft"
+              onClick={downloadAtsPdf}
+              disabled={busy}
+              title="Una columna, sin foto ni redes secundarias; ideal para portales ATS"
+            >
+              {exporting === 'ats' ? 'Generando…' : 'Descargar PDF ATS'}
+            </button>
+          )}
           <button type="button" className="btn" onClick={() => logout()}>
             Salir
           </button>
@@ -64,7 +102,6 @@ export default function CvViewer({ variant }) {
         </div>
       </div>
       <iframe
-        ref={iframeRef}
         className="cv-viewer-frame"
         src={config.src}
         title={config.title}

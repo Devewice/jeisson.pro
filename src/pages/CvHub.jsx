@@ -21,7 +21,7 @@ export default function CvHub() {
           {owner ? 'Administración' : cvAccess?.label || 'Acceso invitado'}
         </p>
         <h1>Hojas de vida</h1>
-        <p>Versión desarrollo y creativa. Usa Ctrl+P en el visor para guardar PDF.</p>
+        <p>Versión desarrollo y creativa. En el visor usa «Descargar PDF» o «Descargar PDF ATS» (dev).</p>
         <button type="button" className="btn" onClick={() => logout()}>
           Cerrar sesión
         </button>

@@ -11,6 +11,7 @@ import {
   requireOwner,
   revokeAccessToken,
 } from './accessTokens.js'
+import { cvPdfFilename, generateCvPdf, getCvPdfBaseUrl } from './cvPdf.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
@@ -133,8 +134,14 @@ export function createApp({ distPath } = {}) {
   })
 
   app.post('/api/access-links', requireOwner, (req, res) => {
-    const { label = '', variant = null, expiresInHours = 168 } = req.body ?? {}
-    const entry = createAccessToken({ label, variant, expiresInHours })
+    const { label = '', variant = null, expiresInHours = 168, unlimited = false } =
+      req.body ?? {}
+    const entry = createAccessToken({
+      label,
+      variant,
+      expiresInHours,
+      unlimited: Boolean(unlimited),
+    })
     const base = process.env.PUBLIC_URL || ''
     res.json({
       ok: true,
@@ -142,6 +149,7 @@ export function createApp({ distPath } = {}) {
         id: entry.id,
         url: `${base}/acceso/${entry.token}`,
         variant: entry.variant,
+        unlimited: entry.unlimited,
         expiresAt: entry.expiresAt,
         label: entry.label,
       },
@@ -155,6 +163,32 @@ export function createApp({ distPath } = {}) {
       return
     }
     res.json({ ok: true })
+  })
+
+  app.get('/api/cv/pdf', requireCvAuth, async (req, res) => {
+    const variant = req.query.variant === 'creativo' ? 'creativo' : 'dev'
+    const ats = req.query.ats === '1' || req.query.ats === 'true'
+
+    try {
+      const buffer = await generateCvPdf({
+        variant,
+        ats,
+        cookieHeader: req.headers.cookie,
+        baseUrl: getCvPdfBaseUrl(req),
+      })
+      const filename = cvPdfFilename(variant, ats)
+      res.setHeader('Content-Type', 'application/pdf')
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`)
+      res.send(Buffer.from(buffer))
+    } catch (err) {
+      console.error('[cv/pdf]', err)
+      const status =
+        err.code === 'CHROME_NOT_FOUND' ? 503 : err.code === 'CV_AUTH' ? 401 : 500
+      res.status(status).json({
+        ok: false,
+        error: err.message || 'No se pudo generar el PDF',
+      })
+    }
   })
 
   app.use('/cv-dev', requireCvAuth, express.static(path.join(root, 'cv-dev')))

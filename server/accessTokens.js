@@ -44,14 +44,29 @@ export function requireCvAuth(req, res, next) {
   res.status(401).send('Enlace de acceso inválido o expirado.')
 }
 
-export function createAccessToken({ label = '', variant = null, expiresInHours = 168 }) {
+function isTokenActive(entry, now = Date.now()) {
+  if (entry.unlimited || entry.expiresAt == null) return true
+  return entry.expiresAt > now
+}
+
+export function createAccessToken({
+  label = '',
+  variant = null,
+  expiresInHours = 168,
+  unlimited = false,
+}) {
   const token = crypto.randomBytes(24).toString('base64url')
-  const expiresAt = Date.now() + expiresInHours * 60 * 60 * 1000
+  const noExpiry = Boolean(unlimited)
+  const hours = Number(expiresInHours)
+  const expiresAt = noExpiry
+    ? null
+    : Date.now() + (Number.isFinite(hours) && hours > 0 ? hours : 168) * 60 * 60 * 1000
   const entry = {
     id: crypto.randomUUID(),
     token,
     label,
     variant,
+    unlimited: noExpiry,
     expiresAt,
     createdAt: Date.now(),
     uses: 0,
@@ -66,7 +81,7 @@ export function redeemAccessToken(token) {
   const store = readStore()
   const entry = store.tokens.find((t) => t.token === token)
   if (!entry) return null
-  if (Date.now() > entry.expiresAt) return null
+  if (!isTokenActive(entry)) return null
   entry.uses += 1
   entry.lastUsedAt = Date.now()
   writeStore(store)
@@ -77,11 +92,12 @@ export function listAccessTokens() {
   const store = readStore()
   const now = Date.now()
   return store.tokens
-    .filter((t) => t.expiresAt > now)
-    .map(({ token, label, variant, expiresAt, createdAt, uses, id }) => ({
+    .filter((t) => isTokenActive(t, now))
+    .map(({ token, label, variant, expiresAt, createdAt, uses, id, unlimited }) => ({
       id,
       label,
       variant,
+      unlimited: Boolean(unlimited || expiresAt == null),
       expiresAt,
       createdAt,
       uses,

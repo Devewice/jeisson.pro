@@ -1,0 +1,187 @@
+/* Vista impresión ATS — una columna, texto lineal, sin decoración */
+html.ats-print {
+  font-size: 11pt;
+}
+
+html.ats-print,
+html.ats-print body {
+  background: #fff;
+  color: #111;
+  font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+}
+
+html.ats-print a {
+  color: #111;
+  text-decoration: underline;
+}
+
+html.ats-print .ats-print-hint {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  background: #f4f6f5;
+  color: #334;
+  border-bottom: 1px solid #dde3df;
+}
+
+html.ats-print .page {
+  display: flex;
+  flex-direction: column;
+  max-width: 8.5in;
+  margin: 0 auto;
+  min-height: auto;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+html.ats-print .sidebar,
+html.ats-print .main {
+  background: #fff;
+  color: #111;
+  border: none;
+  padding: 0.4in 0.65in 0;
+  width: 100%;
+}
+
+html.ats-print .main {
+  padding-top: 0.35in;
+  padding-bottom: 0.5in;
+}
+
+html.ats-print .sidebar-inner {
+  gap: 1rem;
+}
+
+html.ats-print .profile-photo,
+html.ats-print .badge,
+html.ats-print .skill-level,
+html.ats-print .timeline::before,
+html.ats-print .timeline-marker {
+  display: none !important;
+}
+
+html.ats-print .link-list li:nth-child(n + 4) {
+  display: none;
+}
+
+html.ats-print .name {
+  font-size: 1.35rem;
+  color: #111;
+}
+
+html.ats-print .headline {
+  color: #333;
+}
+
+html.ats-print .side-title,
+html.ats-print .section-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: #222;
+  border-bottom: 1px solid #222;
+  width: 100%;
+  padding-bottom: 0.25rem;
+}
+
+html.ats-print .contact-list,
+html.ats-print .link-list {
+  font-size: 0.92rem;
+}
+
+html.ats-print .contact-list a,
+html.ats-print .link-list a {
+  color: #111;
+}
+
+html.ats-print .ico {
+  display: none;
+}
+
+html.ats-print .contact-list li {
+  padding-left: 0;
+}
+
+html.ats-print .skill-block {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+html.ats-print .skill-name {
+  font-size: 0.95rem;
+  color: #111;
+}
+
+html.ats-print .tag {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  background: #f2f2f2;
+  color: #222;
+  border: 1px solid #ddd;
+}
+
+html.ats-print .lang-fluency {
+  color: #444;
+}
+
+html.ats-print .section {
+  margin-bottom: 1.25rem;
+  break-inside: avoid;
+}
+
+html.ats-print .timeline {
+  padding-left: 0;
+}
+
+html.ats-print .timeline-item {
+  margin-bottom: 1.1rem;
+  break-inside: avoid;
+}
+
+html.ats-print .card,
+html.ats-print .edu-item {
+  break-inside: avoid;
+}
+
+html.ats-print .rich,
+html.ats-print .summary-text {
+  font-size: 0.95rem;
+  color: #111;
+}
+
+html.ats-print .rich.small,
+html.ats-print .card-period,
+html.ats-print .edu-meta,
+html.ats-print .cert-date {
+  color: #444;
+}
+
+html.ats-print .footer {
+  font-size: 0.85rem;
+  color: #444;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ddd;
+}
+
+@media print {
+  html.ats-print .ats-print-hint {
+    display: none !important;
+  }
+
+  html.ats-print .page,
+  html.ats-print .sidebar,
+  html.ats-print .main {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @page {
+    margin: 0.55in;
+    size: letter;
+  }
+}
