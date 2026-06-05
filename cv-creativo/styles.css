@@ -58,12 +58,15 @@ a:hover { color: var(--accent); }
 .sidebar-inner { display: flex; flex-direction: column; gap: 2rem; }
 
 .profile-photo {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--accent-soft);
-  box-shadow: 0 6px 20px rgba(44, 36, 25, 0.15);
+  width: auto;
+  max-width: 120px;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  filter: drop-shadow(0 6px 18px rgba(44, 36, 25, 0.2));
 }
 
 .badge {

@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Jeisson David Riveros García',
   shortName: 'Jeisson',
-  profileImage: '/images/profile.jpg',
+  profileImage: '/images/profile.png',
   tagline: 'Desarrollador full stack · diseño como complemento al código',
   email: 'contacto@jeisson.pro',
   siteUrl: 'https://jeisson.pro',
@@ -21,6 +21,8 @@ export const FOOTER = {
 
 export const HERO = {
   name: 'Jeisson David Riveros García',
+  givenName: 'Jeisson David',
+  familyName: 'Riveros García',
   title: 'Desarrollador full stack',
   subtitle:
     'APIs, deploy y producto en producción — NestJS, Next.js, WordPress y lo que el proyecto pida.',

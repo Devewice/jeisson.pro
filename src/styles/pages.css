@@ -32,19 +32,22 @@
   display: grid;
   gap: 2rem;
   margin-bottom: 2.5rem;
-  align-items: start;
+  align-items: end;
 }
 
 @media (min-width: 720px) {
   .page-hero-split {
     grid-template-columns: auto 1fr;
     gap: 2.5rem;
+    align-items: end;
   }
 }
 
 .page-hero-split .profile-avatar {
-  width: 160px;
-  height: 160px;
+  width: auto;
+  max-width: min(88vw, 360px);
+  max-height: min(58vh, 520px);
+  object-position: bottom center;
 }
 
 .process-mini {

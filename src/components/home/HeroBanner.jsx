@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FOOTER, HERO, HERO_SLIDES, SITE } from '../../data/site.js'
 import HeroRotatingLine from './HeroRotatingLine.jsx'
+import HeroMatrixName from './HeroMatrixName.jsx'
 
 export default function HeroBanner() {
   return (
@@ -20,11 +21,12 @@ export default function HeroBanner() {
 
           <motion.h1
             className="hero__title"
+            aria-label={HERO.name}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08 }}
           >
-            <span className="hero__name">{HERO.name}</span>
+            <HeroMatrixName givenName={HERO.givenName} familyName={HERO.familyName} />
             <span className="hero__role">{HERO.title}</span>
           </motion.h1>
 
@@ -82,8 +84,8 @@ export default function HeroBanner() {
             className="hero__photo"
             src={SITE.profileImage}
             alt={SITE.name}
-            width={280}
-            height={280}
+            width={680}
+            height={920}
             fetchPriority="high"
           />
         </motion.figure>
