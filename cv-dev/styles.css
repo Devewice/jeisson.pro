@@ -1,15 +1,17 @@
-/* CV Desarrollador — Jeisson Riveros */
+/* CV Desarrollador — alineado con jeisson.pro (Matrix) */
 :root {
-  --bg: #0b1120;
-  --bg-side: #0f172a;
-  --surface: #ffffff;
-  --text: #1e293b;
-  --text-muted: #64748b;
-  --side-text: #e2e8f0;
-  --side-muted: #94a3b8;
-  --accent: #38bdf8;
-  --accent-soft: rgba(56, 189, 248, 0.15);
-  --border: #e2e8f0;
+  --bg: #060a08;
+  --bg-side: #0e1210;
+  --surface: #f6f9f7;
+  --text: #0f1a14;
+  --text-muted: #4a5c52;
+  --side-text: #e8f0eb;
+  --side-muted: #7d8f86;
+  --accent: #00e676;
+  --accent-dim: #00b35a;
+  --accent-soft: rgba(0, 230, 118, 0.14);
+  --accent-glow: rgba(0, 255, 136, 0.25);
+  --border: #d4e0da;
   --font: "DM Sans", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -21,7 +23,7 @@ html { font-size: 15px; }
 body {
   font-family: var(--font);
   color: var(--text);
-  background: #cbd5e1;
+  background: #0a0f0d;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
@@ -35,7 +37,9 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: 300px 1fr;
   min-height: calc(100vh - 4rem);
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px var(--accent-soft);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -44,6 +48,7 @@ a:hover { text-decoration: underline; }
   background: linear-gradient(165deg, var(--bg-side) 0%, var(--bg) 100%);
   color: var(--side-text);
   padding: 2.25rem 1.75rem;
+  border-right: 1px solid var(--accent-soft);
 }
 
 .sidebar-inner { display: flex; flex-direction: column; gap: 1.75rem; }

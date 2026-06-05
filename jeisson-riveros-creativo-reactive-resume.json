@@ -1,7 +1,7 @@
 {
   "picture": {
     "hidden": false,
-    "url": "https://jeisson.pro/images/profile.jpg",
+    "url": "https://jeisson.pro/images/profile.png",
     "size": 96,
     "rotation": 0,
     "aspectRatio": 1,
@@ -35,7 +35,7 @@
     "icon": "article",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Diseñador multimedial con <strong>5+ años</strong> en branding, editorial, fotografía y contenidos digitales. Portfolio: <strong>jeisson.pro</strong>, Behance y <strong>occidentexxi.com</strong>. Adobe Suite, WordPress y motion. Busco diseño gráfico, comunicación visual o producción multimedia.</p>"
+    "content": "<p>Diseñador multimedial con <strong>5+ años</strong> en branding, editorial y contenidos digitales. Portfolio: <strong>jeisson.pro</strong>, Behance y <strong>occidentexxi.com</strong> (+20 ediciones). Adobe Suite, motion y WordPress. Hoy el foco principal es <strong>desarrollo web</strong>; el diseño entra como complemento cuando el proyecto lo pide.</p>"
   },
   "sections": {
     "profiles": {

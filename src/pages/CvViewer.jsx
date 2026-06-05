@@ -5,11 +5,11 @@ import '../App.css'
 
 const CV_CONFIG = {
   dev: {
-    title: 'CV — Desarrollador Web Full Stack',
+    title: 'CV — Desarrollador full stack',
     src: '/cv-dev/index.html',
   },
   creativo: {
-    title: 'CV — Diseño multimedial',
+    title: 'CV — Diseño multimedial (complemento)',
     src: '/cv-creativo/index.html',
   },
 }

@@ -1,12 +1,12 @@
-/* CV Creativo — Jeisson Riveros */
+/* CV Creativo — tono editorial (acento alineado con --creativo del sitio) */
 :root {
   --bg: #faf7f2;
   --surface: #fffdf9;
   --text: #2c2419;
   --text-muted: #6b5d4f;
-  --accent: #c45c3e;
-  --accent-dark: #9a3f28;
-  --accent-soft: rgba(196, 92, 62, 0.12);
+  --accent: #c9a227;
+  --accent-dark: #9a7b1a;
+  --accent-soft: rgba(201, 162, 39, 0.14);
   --border: #e8ddd0;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Source Sans 3", system-ui, sans-serif;

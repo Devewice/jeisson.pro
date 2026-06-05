@@ -1,7 +1,7 @@
 {
   "picture": {
     "hidden": false,
-    "url": "https://jeisson.pro/images/profile.jpg",
+    "url": "https://jeisson.pro/images/profile.png",
     "size": 96,
     "rotation": 0,
     "aspectRatio": 1,
@@ -13,7 +13,7 @@
   },
   "basics": {
     "name": "Jeisson David Riveros García",
-    "headline": "Desarrollador Web Full Stack · PHP · TypeScript · WordPress · APIs",
+    "headline": "Desarrollador full stack · NestJS · WordPress · APIs",
     "email": "contacto@jeisson.pro",
     "phone": "+57 312 724 0080",
     "location": "Suba, Bogotá D.C., Colombia",
@@ -35,7 +35,7 @@
     "icon": "article",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> en producción (PHP, TypeScript, JavaScript, WordPress, MySQL/PostgreSQL). En <a href=\"https://motai.app\">Motai</a> trabajé el <strong>producto público</strong> (WooCommerce, plugin a medida, integración ERP). <strong>Desarrollo activo</strong> en el <strong>backoffice interno</strong> (NestJS, Next.js, PostgreSQL) con despliegue continuo.</p><p>Experiencia en sector educativo y comercial en <strong>jornadas compatibles</strong> con freelance. <strong>Disponible</strong> para back-end / full stack.</p><p>Código mantenible, APIs documentadas y entregas con impacto medible.</p>"
+    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> en producción (PHP, TypeScript, JavaScript, WordPress, PostgreSQL/MySQL). En <a href=\"https://motai.app\">Motai</a> entregué e-commerce, <strong>apps web</strong> y backoffice (<strong>NestJS</strong>, <strong>Next.js</strong>, PostgreSQL). Experiencia en educación y comercio; <strong>disponible</strong> para desarrollo full stack y APIs.</p><p>Coordinación TIC en colegios (+800 usuarios). Diseño como <strong>complemento</strong> (Figma, handoff) cuando el proyecto lo incluye.</p><p>Código en Git, APIs documentadas y deploy en producción.</p>"
   },
   "sections": {
     "profiles": {
@@ -147,7 +147,7 @@
           "id": "018f1a2b-3c4d-7000-8002-000000000001",
           "hidden": false,
           "company": "Motai",
-          "position": "Desarrollador Senior Full Stack",
+          "position": "Desarrollador full stack",
           "location": "Bogotá D.C., Colombia (remoto)",
           "period": "Jul 2025 – Jun 2026",
           "website": {
@@ -156,7 +156,7 @@
             "inlineLink": true
           },
           "roles": [],
-          "description": "<ul><li>Mantuve y evolucioné <strong>motai.app</strong> con <strong>WordPress/WooCommerce</strong> y plugin a medida (<strong>PHP</strong>, PSR-4): sincronización de inventario vía API JSON, caché Redis/transients, capa <strong>REST/AJAX</strong> y arquitectura modular en producción.</li><li><strong>Desarrollo activo</strong> en el <strong>backoffice operativo interno</strong> con <strong>TypeScript</strong> (<strong>NestJS</strong>, <strong>Next.js</strong>, <strong>PostgreSQL</strong>, TypeORM): flujos de cotización, contratos y traspasos, <strong>RBAC</strong> multi-sede y API documentada (OpenAPI).</li><li>Integro servicios externos (validación de identidad, firma digital, ERP, automatización) con <strong>webhooks</strong> y actualizaciones en tiempo real (<strong>SSE/WebSockets</strong>).</li><li>Participo en <strong>CI/CD</strong> del backoffice (GitHub Actions, Docker), migraciones de BD y pruebas (Jest/Vitest); trabajo en equipo con <strong>Git</strong> y revisiones por PR.</li></ul>"
+          "description": "<ul><li>Desarrollé y mantuve <strong>motai.app</strong>: <strong>WooCommerce</strong>, plugins a medida (<strong>PHP</strong>, PSR-4), <strong>apps web</strong> y sincronización ERP (API JSON, Redis).</li><li>Construí el <strong>backoffice operativo</strong> con <strong>NestJS</strong>, <strong>Next.js</strong> y <strong>PostgreSQL</strong>: cotizaciones, contratos, RBAC y APIs documentadas (OpenAPI).</li><li>Integré servicios externos (identidad, firma digital, ERP) vía <strong>webhooks</strong> y tiempo real (<strong>SSE/WebSockets</strong>).</li><li>Participé en <strong>CI/CD</strong> (GitHub Actions, Docker), migraciones y pruebas (Jest/Vitest); flujos en <strong>Git</strong> con revisiones por PR.</li></ul>"
         },
         {
           "id": "018f1a2b-3c4d-7000-8002-000000000002",

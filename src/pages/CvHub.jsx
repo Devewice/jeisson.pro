@@ -30,14 +30,14 @@ export default function CvHub() {
       <div className="cv-grid">
         <Link to="/cv/dev" className="cv-card cv-card--dev">
           <span className="cv-card-tag">Desarrollo</span>
-          <h2>CV — Full Stack</h2>
-          <p>PHP, TypeScript, Laravel, WordPress.</p>
+          <h2>CV — Full stack</h2>
+          <p>NestJS, WordPress, APIs y producto en producción.</p>
           <span className="cv-card-cta">Abrir →</span>
         </Link>
 
         <Link to="/cv/creativo" className="cv-card cv-card--creativo">
           <span className="cv-card-tag">Creativo</span>
-          <h2>CV — Diseño multimedial</h2>
+          <h2>CV — Diseño (complemento)</h2>
           <p>Editorial, branding, Behance.</p>
           <span className="cv-card-cta">Abrir →</span>
         </Link>
