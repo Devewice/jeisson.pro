@@ -22,7 +22,13 @@ export default function Login() {
     setError('')
     setPending(true)
     try {
-      await login(username, password)
+      const session = await login(username, password)
+      if (!session.owner) {
+        setError(
+          'La sesión no se guardó en el navegador. Reinicia con npm run dev (API + web) y prueba de nuevo en http://localhost:5173/login.'
+        )
+        return
+      }
       navigate(from, { replace: true })
     } catch (err) {
       setError(err.message)

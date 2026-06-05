@@ -15,10 +15,11 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
-/** Secure solo en HTTPS real; NODE_ENV=production en local no debe bloquear la cookie. */
+/** Secure solo en HTTPS real. Con API_PORT (npm run dev) siempre HTTP en localhost. */
 function sessionCookieSecure() {
   if (process.env.COOKIE_SECURE === 'true') return true
   if (process.env.COOKIE_SECURE === 'false') return false
+  if (process.env.API_PORT) return false
   const publicUrl = (process.env.PUBLIC_URL || '').trim()
   return publicUrl.startsWith('https://')
 }

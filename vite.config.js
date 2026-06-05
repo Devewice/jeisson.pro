@@ -23,17 +23,27 @@ export default defineConfig({
     port: 5173,
     open: true,
     proxy: {
-      '/api': { target: apiTarget, changeOrigin: true },
-      '/cv-dev': { target: apiTarget, changeOrigin: true },
-      '/cv-creativo': { target: apiTarget, changeOrigin: true },
+      '/api': {
+        target: apiTarget,
+        changeOrigin: true,
+        secure: false,
+        cookieDomainRewrite: 'localhost',
+      },
+      '/cv-dev': { target: apiTarget, changeOrigin: true, secure: false },
+      '/cv-creativo': { target: apiTarget, changeOrigin: true, secure: false },
     },
   },
   preview: {
     port: 4173,
     proxy: {
-      '/api': { target: apiTarget, changeOrigin: true },
-      '/cv-dev': { target: apiTarget, changeOrigin: true },
-      '/cv-creativo': { target: apiTarget, changeOrigin: true },
+      '/api': {
+        target: apiTarget,
+        changeOrigin: true,
+        secure: false,
+        cookieDomainRewrite: 'localhost',
+      },
+      '/cv-dev': { target: apiTarget, changeOrigin: true, secure: false },
+      '/cv-creativo': { target: apiTarget, changeOrigin: true, secure: false },
     },
   },
   build: {

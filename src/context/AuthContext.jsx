@@ -23,13 +23,18 @@ export function AuthProvider({ children }) {
     refresh()
   }, [refresh])
 
-  const login = useCallback(
-    async (username, password) => {
-      await authApi.login(username, password)
-      await refresh()
-    },
-    [refresh]
-  )
+  const login = useCallback(async (username, password) => {
+    await authApi.login(username, password)
+    const data = await authApi.fetchSession()
+    const next = {
+      owner: data.owner ?? false,
+      cvAccess: data.cvAccess ?? null,
+      canManageLinks: data.canManageLinks ?? false,
+    }
+    setSession(next)
+    setLoading(false)
+    return next
+  }, [])
 
   const logout = useCallback(async () => {
     await authApi.logout()
