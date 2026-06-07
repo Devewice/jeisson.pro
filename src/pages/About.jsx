@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import PageShell from '../components/PageShell.jsx'
-import PageBreadcrumb from '../components/PageBreadcrumb.jsx'
 import PageNextStep from '../components/PageNextStep.jsx'
 import AnimateIn from '../components/AnimateIn.jsx'
 import {
@@ -19,8 +18,6 @@ export default function About() {
 
   return (
     <PageShell eyebrow={copy.title} title={copy.heading} subtitle={copy.subtitle}>
-      <PageBreadcrumb />
-
       <div className="page-hero-split">
         <AnimateIn>
           <img

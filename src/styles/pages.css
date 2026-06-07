@@ -497,40 +497,6 @@
 
 /* —— Fase 2–3: páginas internas —— */
 
-.page-breadcrumb {
-  margin: -1rem 0 1.75rem;
-  font-size: 0.82rem;
-}
-
-.page-breadcrumb ol {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.5rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  color: var(--muted);
-}
-
-.page-breadcrumb li:not(:last-child)::after {
-  content: '/';
-  margin-left: 0.5rem;
-  opacity: 0.45;
-}
-
-.page-breadcrumb a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.page-breadcrumb a:hover {
-  color: var(--accent);
-}
-
-.page-breadcrumb [aria-current='page'] {
-  color: var(--text);
-}
-
 .page-next {
   margin-top: 3rem;
   padding-top: 2rem;

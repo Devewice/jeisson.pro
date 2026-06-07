@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PageShell from '../components/PageShell.jsx'
-import PageBreadcrumb from '../components/PageBreadcrumb.jsx'
 import PageNextStep from '../components/PageNextStep.jsx'
 import AnchorCase from '../components/AnchorCase.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
@@ -30,8 +29,6 @@ export default function Projects() {
 
   return (
     <PageShell eyebrow={copy.title} title={copy.heading} subtitle={copy.subtitle}>
-      <PageBreadcrumb />
-
       <AnimateIn>
         <p className="page-lead">{copy.intro}</p>
       </AnimateIn>

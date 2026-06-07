@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import PageShell from '../components/PageShell.jsx'
-import PageBreadcrumb from '../components/PageBreadcrumb.jsx'
 import PageNextStep from '../components/PageNextStep.jsx'
 import AnimateIn from '../components/AnimateIn.jsx'
 import ContactForm from '../components/ContactForm.jsx'
@@ -94,8 +93,6 @@ export default function Contact() {
 
   return (
     <PageShell eyebrow={copy.title} title={copy.heading} subtitle={copy.subtitle}>
-      <PageBreadcrumb />
-
       <div className="contact-layout">
         <AnimateIn>
           <p className="page-lead">{copy.intro}</p>

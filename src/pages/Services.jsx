@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import PageShell from '../components/PageShell.jsx'
-import PageBreadcrumb from '../components/PageBreadcrumb.jsx'
 import PageNextStep from '../components/PageNextStep.jsx'
 import AnimateIn from '../components/AnimateIn.jsx'
 import TechStackSection from '../components/TechStackSection.jsx'
@@ -74,8 +73,6 @@ export default function Services() {
 
   return (
     <PageShell eyebrow={copy.title} title={copy.heading} subtitle={copy.subtitle}>
-      <PageBreadcrumb />
-
       <AnimateIn>
         <p className="page-lead">{copy.intro}</p>
         <p className="page-inline-link">
