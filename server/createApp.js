@@ -5,12 +5,14 @@ import session from 'express-session'
 import cookieParser from 'cookie-parser'
 import {
   createAccessToken,
+  dataDir,
   listAccessTokens,
   redeemAccessToken,
   requireCvAuth,
   requireOwner,
   revokeAccessToken,
 } from './accessTokens.js'
+import { createFileSessionStore } from './fileSessionStore.js'
 import { cvPdfFilename, generateCvPdf, getCvPdfBaseUrl, readBundledCvPdf } from './cvPdf.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -50,12 +52,16 @@ export function createApp({ distPath } = {}) {
   app.use(cookieParser())
   app.use(express.json())
 
+  const persistentDir = dataDir()
+  console.log(`[cv-access] ${listAccessTokens().length} enlace(s) en ${persistentDir}`)
+
   app.use(
     session({
       name: 'jeisson.sid',
       secret: process.env.SESSION_SECRET || 'dev-secret-cambiar-en-produccion',
       resave: false,
       saveUninitialized: false,
+      store: createFileSessionStore(path.join(persistentDir, 'sessions')),
       cookie: {
         httpOnly: true,
         secure: sessionCookieSecure(),
@@ -136,24 +142,29 @@ export function createApp({ distPath } = {}) {
   app.post('/api/access-links', requireOwner, (req, res) => {
     const { label = '', variant = null, expiresInHours = 168, unlimited = false } =
       req.body ?? {}
-    const entry = createAccessToken({
-      label,
-      variant,
-      expiresInHours,
-      unlimited: Boolean(unlimited),
-    })
-    const base = process.env.PUBLIC_URL || ''
-    res.json({
-      ok: true,
-      link: {
-        id: entry.id,
-        url: `${base}/acceso/${entry.token}`,
-        variant: entry.variant,
-        unlimited: entry.unlimited,
-        expiresAt: entry.expiresAt,
-        label: entry.label,
-      },
-    })
+    try {
+      const entry = createAccessToken({
+        label,
+        variant,
+        expiresInHours,
+        unlimited: Boolean(unlimited),
+      })
+      const base = process.env.PUBLIC_URL || ''
+      res.json({
+        ok: true,
+        link: {
+          id: entry.id,
+          url: `${base}/acceso/${entry.token}`,
+          variant: entry.variant,
+          unlimited: entry.unlimited,
+          expiresAt: entry.expiresAt,
+          label: entry.label,
+        },
+      })
+    } catch (err) {
+      console.error('[access-links]', err)
+      res.status(500).json({ ok: false, error: 'No se pudo guardar el enlace en el servidor' })
+    }
   })
 
   app.delete('/api/access-links/:id', requireOwner, (req, res) => {

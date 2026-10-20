@@ -77,6 +77,12 @@
   border-radius: 8px;
 }
 
+.access-admin__empty {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
 .access-admin__created code {
   display: block;
   margin: 0.5rem 0;

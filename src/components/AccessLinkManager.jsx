@@ -20,8 +20,9 @@ export default function AccessLinkManager() {
   const load = useCallback(async () => {
     try {
       setLinks(await fetchAccessLinks())
-    } catch {
-      setLinks([])
+      setError('')
+    } catch (err) {
+      setError(err.message || 'No se pudieron cargar los enlaces guardados')
     }
   }, [])
 
@@ -111,6 +112,10 @@ export default function AccessLinkManager() {
             Copiar
           </button>
         </div>
+      )}
+
+      {links.length === 0 && !error && (
+        <p className="access-admin__empty">Todavía no hay enlaces guardados.</p>
       )}
 
       {links.length > 0 && (

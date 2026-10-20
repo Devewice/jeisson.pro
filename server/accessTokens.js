@@ -1,23 +1,44 @@
 import crypto from 'node:crypto'
 import fs from 'node:fs'
+import os from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const STORE_PATH = path.join(__dirname, '..', 'data', 'access-tokens.json')
+const LEGACY_STORE = path.join(__dirname, '..', 'data', 'access-tokens.json')
+
+/** Fuera de la carpeta del deploy: en Hostinger esa carpeta se reemplaza y se pierden los enlaces. */
+export function dataDir() {
+  if (process.env.DATA_DIR) return path.resolve(process.env.DATA_DIR)
+  return path.join(os.homedir(), '.jeisson-pro')
+}
+
+function storePath() {
+  return path.join(dataDir(), 'access-tokens.json')
+}
+
+function migrateLegacy() {
+  const next = storePath()
+  if (fs.existsSync(next) || !fs.existsSync(LEGACY_STORE)) return
+  fs.mkdirSync(path.dirname(next), { recursive: true })
+  fs.copyFileSync(LEGACY_STORE, next)
+}
 
 function readStore() {
-  try {
-    const raw = fs.readFileSync(STORE_PATH, 'utf8')
-    return JSON.parse(raw)
-  } catch {
-    return { tokens: [] }
-  }
+  migrateLegacy()
+  const file = storePath()
+  if (!fs.existsSync(file)) return { tokens: [] }
+  const data = JSON.parse(fs.readFileSync(file, 'utf8'))
+  if (!Array.isArray(data.tokens)) return { tokens: [] }
+  return data
 }
 
 function writeStore(data) {
-  fs.mkdirSync(path.dirname(STORE_PATH), { recursive: true })
-  fs.writeFileSync(STORE_PATH, JSON.stringify(data, null, 2), 'utf8')
+  const file = storePath()
+  fs.mkdirSync(path.dirname(file), { recursive: true })
+  const tmp = `${file}.${process.pid}.tmp`
+  fs.writeFileSync(tmp, JSON.stringify(data, null, 2), 'utf8')
+  fs.renameSync(tmp, file)
 }
 
 export function hasCvAccess(session) {
