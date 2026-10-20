@@ -216,6 +216,7 @@ export function createApp({ distPath } = {}) {
 
   app.use('/cv-dev', requireCvAuth, express.static(path.join(root, 'cv-dev')))
   app.use('/cv-creativo', requireCvAuth, express.static(path.join(root, 'cv-creativo')))
+  app.use(express.static(path.join(root, 'public')))
 
   if (distPath !== null) {
     app.use(express.static(dist))
