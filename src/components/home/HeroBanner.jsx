@@ -84,8 +84,8 @@ export default function HeroBanner() {
             className="hero__photo"
             src={SITE.profileImage}
             alt={SITE.name}
-            width={680}
-            height={920}
+            width={1280}
+            height={1920}
             fetchPriority="high"
           />
         </motion.figure>

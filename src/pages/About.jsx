@@ -24,8 +24,8 @@ export default function About() {
             className="profile-avatar"
             src={SITE.profileImage}
             alt={SITE.name}
-            width={160}
-            height={160}
+            width={1280}
+            height={1920}
           />
         </AnimateIn>
         <div className="prose-block">
