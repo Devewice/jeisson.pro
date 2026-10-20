@@ -9,6 +9,7 @@
     "dev:web": "vite",
     "dev:api": "node server/dev-server.js",
     "build": "vite build",
+    "build:cv-pdf": "node scripts/build-cv-pdfs.mjs",
     "preview": "vite preview",
     "start": "node server/index.js"
   },

@@ -39,7 +39,7 @@ export default function AnchorCase({ className = 'section-block anchor-case' }) 
             <Link to={HOME_ANCHOR.cta.to} className="btn btn--soft">
               {HOME_ANCHOR.cta.label}
             </Link>
-            {project.url && (
+            {HOME_ANCHOR.link?.href && (
               <a
                 href={HOME_ANCHOR.link.href}
                 target="_blank"

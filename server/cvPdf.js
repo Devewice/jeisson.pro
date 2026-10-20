@@ -1,5 +1,9 @@
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import puppeteer from 'puppeteer-core'
+
+const pdfDir = path.join(path.dirname(fileURLToPath(import.meta.url)), 'cv-pdfs')
 
 const BROWSER_CANDIDATES = [
   process.env.PUPPETEER_EXECUTABLE_PATH,
@@ -33,6 +37,13 @@ export function cvPdfFilename(variant, ats) {
   return 'Jeisson-Riveros-CV-desarrollo.pdf'
 }
 
+/** PDF ya generado, para servidores sin Chrome (p. ej. el hosting). */
+export function readBundledCvPdf(variant, ats) {
+  const file = path.join(pdfDir, cvPdfFilename(variant, ats))
+  if (!existsSync(file)) return null
+  return readFileSync(file)
+}
+
 function getPdfExportCss(variant, ats) {
   const base = `
     html, body {
@@ -40,7 +51,7 @@ function getPdfExportCss(variant, ats) {
       padding: 0 !important;
       overflow: visible !important;
     }
-    .ats-print-hint { display: none !important; }
+    .ats-print-hint, .cv-more { display: none !important; }
     .page {
       margin: 0 !important;
       box-shadow: none !important;

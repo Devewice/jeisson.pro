@@ -56,20 +56,20 @@ export const HOME_STATS = [
 ]
 
 /** Caso ancla en home (título debe coincidir con PROJECTS) */
-export const HOME_ANCHOR_PROJECT = 'Motai — motai.app'
+export const HOME_ANCHOR_PROJECT = 'Fastco — Pathway'
 
 export const HOME_ANCHOR = {
   eyebrow: 'Caso reciente',
-  title: 'Motai — motai.app',
+  title: 'Fastco — Pathway',
   problem:
-    'Producto digital en motos: tienda pública, apps web y operación interna conectada al negocio.',
+    'Plataforma de pagos: pasarelas, facturación, notificaciones y el rastro de la operación.',
   bullets: [
-    'WooCommerce con plugins propios, apps web y sincronización ERP',
-    'Backoffice NestJS + PostgreSQL: cotizaciones, contratos y APIs documentadas',
-    'Deploy y mantenimiento del stack en producción',
+    'Cobros con pasarelas, facturación, roles de usuario y auditoría',
+    'Eventos, trazabilidad y motor de notificaciones por email y WhatsApp (Meta)',
+    'Programador de envíos, contact center y centro de mando',
   ],
   cta: { label: 'Ver todos los proyectos', to: '/proyectos' },
-  link: { label: 'Visitar motai.app', href: 'https://motai.app' },
+  link: { label: 'Fastco Group', href: 'https://www.fastcogroup.com/' },
 }
 
 export const HOME_AUDIENCE = [
@@ -254,7 +254,7 @@ export const PAGE_COPY = {
     skillsTitle: 'Otras habilidades',
     skillsSub:
       'Diseño editorial, motion y piezas visuales — las aporto cuando el proyecto lo pide, no como servicio principal.',
-    motaiLink: { label: 'Ver caso Motai en proyectos', to: '/proyectos#caso-destacado' },
+    motaiLink: { label: 'Ver caso Motai', to: '/proyectos/motai' },
   },
   projects: {
     title: 'Portafolio',
@@ -339,6 +339,7 @@ export const HOME_COPY = {
 }
 
 export const FEATURED_PROJECT_KEYS = [
+  'Fastco — Pathway',
   'Paola Biker — paolabiker.com',
   'Motai — motai.app',
   'jeisson.pro',
@@ -354,9 +355,9 @@ export const EXPERIENCE = [
     period: 'Ago 2026 – Presente',
     status: 'Activo',
     bullets: [
-      'Pathway: motor de notificaciones por email y WhatsApp, preferencias e historial',
-      'Programador de envíos únicos y recurrentes, con audiencia y backoffice de ejecuciones',
-      'También contact center (Socket.IO, Redis, RabbitMQ) y centro de mando',
+      'Pathway: plataforma de pagos, pasarelas, facturación y roles de usuario',
+      'Auditoría, eventos, trazabilidad y notificaciones por email y WhatsApp (Meta)',
+      'Programador de envíos, contact center y centro de mando',
     ],
   },
   {
@@ -433,7 +434,7 @@ export const EXPERIENCE = [
 
 export const ABOUT = {
   intro: [
-    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En Fastco trabajé sobre todo en Pathway (notificaciones por email y WhatsApp, y su programador). Para Paola Biker construí paolabiker.com. En motai.app desarrollé WooCommerce, plugins a medida, apps web y un backoffice con NestJS y PostgreSQL.',
+    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En Fastco trabajé sobre todo en Pathway, la plataforma de pagos: pasarelas, facturación, roles, auditoría y notificaciones por email y WhatsApp (Meta). Para Paola Biker construí paolabiker.com. En motai.app desarrollé WooCommerce, plugins a medida, apps web y un backoffice con NestJS y PostgreSQL.',
     'Antes de dedicarme a tiempo completo al código coordiné TIC y trabajé diseño en colegios y editorial. Complemento el desarrollo con criterio visual cuando hace falta. Hoy busco encargos de desarrollo.',
   ],
   highlights: [
@@ -601,9 +602,9 @@ export const PROJECTS = [
     status: 'private',
     role: 'Desarrollador full stack',
     description:
-      'Pathway: motor de notificaciones (email y WhatsApp) y programador de envíos únicos o recurrentes. También contact center y centro de mando.',
+      'Plataforma de pagos: pasarelas, facturación, roles, auditoría, eventos y notificaciones por email y WhatsApp (Meta). También el programador de envíos, el contact center y el centro de mando.',
     highlights: [
-      'Preferencias de usuario, historial y backoffice de programaciones y ejecuciones',
+      'Cobro, facturación y trazabilidad de la operación, con roles y auditoría',
       'Front Vue y API Node.js / TypeScript sobre SQL Server',
     ],
     tags: ['Node.js', 'TypeScript', 'Redis', 'Docker'],

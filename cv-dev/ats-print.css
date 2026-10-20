@@ -54,6 +54,7 @@ html.ats-print .sidebar-inner {
   gap: 1rem;
 }
 
+html.ats-print .cv-more,
 html.ats-print .profile-photo,
 html.ats-print .badge,
 html.ats-print .skill-level,

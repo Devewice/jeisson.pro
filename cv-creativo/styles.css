@@ -259,7 +259,29 @@ a:hover { color: var(--accent); }
   padding-top: 1rem;
 }
 
+button.cv-more {
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cv-more {
+  display: inline-block;
+  margin-top: 0.7rem;
+  padding: 0.28rem 0.75rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.cv-more:hover { opacity: 0.8; }
+
 @media print {
+  .cv-more { display: none !important; }
   body { background: white; }
   .page { margin: 0; box-shadow: none; border: none; }
 }

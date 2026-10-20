@@ -223,8 +223,16 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.detail-stack__card {
+  padding: 1.25rem 1.35rem 1.35rem;
+}
+
+.detail-stack__card:hover {
+  transform: none;
+}
+
 .detail-stack__card h3 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.85rem;
   font-size: 0.95rem;
 }
 

@@ -155,7 +155,7 @@
             "label": "fastcogroup.com",
             "inlineLink": true
           },
-          "description": "<ul><li>Pathway: motor y programador de notificaciones. Rol de desarrollo; no es el foco creativo de esta versión.</li></ul>",
+          "description": "<ul><li>Pathway: plataforma de pagos. Rol de desarrollo; no es el foco creativo de esta versión.</li></ul>",
           "roles": []
         },
         {
@@ -428,7 +428,7 @@
             "label": "",
             "inlineLink": false
           },
-          "description": "<p>Pathway: motor y programador de notificaciones. Queda fuera del foco creativo.</p><p><strong>Stack:</strong> Vue, Node.js, TypeScript, SQL Server.</p>"
+          "description": "<p>Pathway: plataforma de pagos. Queda fuera del foco creativo.</p><p><strong>Stack:</strong> Vue, Node.js, TypeScript, SQL Server.</p>"
         },
         {
           "id": "018f1a2b-3c4d-7000-8004-000000000001",

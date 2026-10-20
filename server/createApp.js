@@ -11,7 +11,7 @@ import {
   requireOwner,
   revokeAccessToken,
 } from './accessTokens.js'
-import { cvPdfFilename, generateCvPdf, getCvPdfBaseUrl } from './cvPdf.js'
+import { cvPdfFilename, generateCvPdf, getCvPdfBaseUrl, readBundledCvPdf } from './cvPdf.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
@@ -169,6 +169,13 @@ export function createApp({ distPath } = {}) {
     const variant = req.query.variant === 'creativo' ? 'creativo' : 'dev'
     const ats = req.query.ats === '1' || req.query.ats === 'true'
 
+    const filename = cvPdfFilename(variant, ats)
+    const sendPdf = (buffer) => {
+      res.setHeader('Content-Type', 'application/pdf')
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`)
+      res.send(Buffer.from(buffer))
+    }
+
     try {
       const buffer = await generateCvPdf({
         variant,
@@ -176,11 +183,16 @@ export function createApp({ distPath } = {}) {
         cookieHeader: req.headers.cookie,
         baseUrl: getCvPdfBaseUrl(req),
       })
-      const filename = cvPdfFilename(variant, ats)
-      res.setHeader('Content-Type', 'application/pdf')
-      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`)
-      res.send(Buffer.from(buffer))
+      sendPdf(buffer)
     } catch (err) {
+      if (err.code === 'CHROME_NOT_FOUND') {
+        const bundled = readBundledCvPdf(variant, ats)
+        if (bundled) {
+          console.warn('[cv/pdf] Sin Chrome en el servidor; se envía el PDF incluido en el despliegue')
+          sendPdf(bundled)
+          return
+        }
+      }
       console.error('[cv/pdf]', err)
       const status =
         err.code === 'CHROME_NOT_FOUND' ? 503 : err.code === 'CV_AUTH' ? 401 : 500
