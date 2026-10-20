@@ -214,13 +214,6 @@ export function createApp({ distPath } = {}) {
     }
   })
 
-  const portraitPath = path.join(root, 'public', 'images', 'jeisson-retrato.png')
-  app.get('/images/jeisson-retrato.png', (_req, res) => {
-    res.type('png')
-    res.setHeader('Cache-Control', 'public, max-age=3600')
-    res.sendFile(portraitPath)
-  })
-
   app.use('/cv-dev', requireCvAuth, express.static(path.join(root, 'cv-dev')))
   app.use('/cv-creativo', requireCvAuth, express.static(path.join(root, 'cv-creativo')))
   app.use(express.static(path.join(root, 'public')))

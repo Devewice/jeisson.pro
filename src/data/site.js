@@ -1,7 +1,9 @@
+import portraitUrl from '../assets/jeisson-retrato.png'
+
 export const SITE = {
   name: 'Jeisson David Riveros García',
   shortName: 'Jeisson',
-  profileImage: '/images/jeisson-retrato.png',
+  profileImage: portraitUrl,
   tagline: 'Desarrollador full stack · diseño como complemento al código',
   email: 'contacto@jeisson.pro',
   siteUrl: 'https://jeisson.pro',
