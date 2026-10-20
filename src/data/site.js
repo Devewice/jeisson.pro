@@ -339,6 +339,7 @@ export const HOME_COPY = {
 }
 
 export const FEATURED_PROJECT_KEYS = [
+  'Paola Biker — paolabiker.com',
   'Motai — motai.app',
   'jeisson.pro',
   'Revista Occidente XXI',
@@ -348,7 +349,32 @@ export const FEATURED_PROJECT_KEYS = [
 export const EXPERIENCE = [
   {
     role: 'Desarrollador full stack',
+    org: 'Fastco',
+    slug: 'fastco-pathway',
+    period: 'Ago 2026 – Presente',
+    status: 'Activo',
+    bullets: [
+      'Pathway: motor de notificaciones por email y WhatsApp, preferencias e historial',
+      'Programador de envíos únicos y recurrentes, con audiencia y backoffice de ejecuciones',
+      'También contact center (Socket.IO, Redis, RabbitMQ) y centro de mando',
+    ],
+  },
+  {
+    role: 'Desarrollador full stack',
+    org: 'Paola Biker · paolabiker.com',
+    slug: 'paola-biker',
+    period: 'Ago 2026 – Presente',
+    status: 'Activo',
+    bullets: [
+      'Portal de la creadora: parche, rodadas, tienda, voz y encuestas',
+      'Vue 3, Vuetify y API TypeScript con MySQL',
+      'Pedidos, pagos, mapas y memorias',
+    ],
+  },
+  {
+    role: 'Desarrollador full stack',
     org: 'Motai · motai.app',
+    slug: 'motai',
     period: 'Jul 2025 – Jun 2026',
     status: 'Finalizado',
     bullets: [
@@ -360,6 +386,7 @@ export const EXPERIENCE = [
   {
     role: 'Coordinación TIC y desarrollo',
     org: 'Colegio Van Leeuwenhoek',
+    slug: 'van-leeuwenhoek',
     period: '2020 – 2025',
     status: 'Finalizado',
     bullets: [
@@ -371,6 +398,7 @@ export const EXPERIENCE = [
   {
     role: 'TIC y desarrollo de software',
     org: 'Colegio Reina de Gales',
+    slug: 'reina-de-gales',
     period: '2021 – 2025',
     status: 'Finalizado',
     bullets: [
@@ -382,6 +410,7 @@ export const EXPERIENCE = [
   {
     role: 'Desarrollo web y diseño editorial',
     org: 'Revista Occidente XXI',
+    slug: 'occidente-xxi',
     period: '2020 – 2024',
     status: 'Finalizado',
     bullets: [
@@ -392,6 +421,7 @@ export const EXPERIENCE = [
   {
     role: 'Desarrollo y encargos creativos',
     org: 'Marca personal · jeisson.pro',
+    slug: 'jeisson-pro',
     period: '2019 – Presente',
     status: 'Activo',
     bullets: [
@@ -403,7 +433,7 @@ export const EXPERIENCE = [
 
 export const ABOUT = {
   intro: [
-    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En motai.app desarrollé WooCommerce, plugins a medida, apps web y un backoffice con NestJS y PostgreSQL.',
+    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En Fastco trabajé sobre todo en Pathway (notificaciones por email y WhatsApp, y su programador). Para Paola Biker construí paolabiker.com. En motai.app desarrollé WooCommerce, plugins a medida, apps web y un backoffice con NestJS y PostgreSQL.',
     'Antes de dedicarme a tiempo completo al código coordiné TIC y trabajé diseño en colegios y editorial. Complemento el desarrollo con criterio visual cuando hace falta. Hoy busco encargos de desarrollo.',
   ],
   highlights: [
@@ -547,6 +577,39 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
+    slug: 'paola-biker',
+    title: 'Paola Biker — paolabiker.com',
+    period: 'Ago 2026 — Presente',
+    url: 'https://paolabiker.com',
+    category: 'dev',
+    status: 'online',
+    role: 'Desarrollador full stack',
+    description:
+      'Portal de la creadora Paola Biker: parche, rodadas, tienda, voz y encuestas, con front y API propios.',
+    highlights: [
+      'Vue 3, Vuetify y TypeScript en módulos desacoplados',
+      'API con MySQL: pedidos, pagos, mapas y memorias',
+    ],
+    tags: ['Vue', 'TypeScript', 'MySQL', 'Vuetify'],
+  },
+  {
+    slug: 'fastco-pathway',
+    title: 'Fastco — Pathway',
+    period: 'Ago 2026 — Presente',
+    url: null,
+    category: 'dev',
+    status: 'private',
+    role: 'Desarrollador full stack',
+    description:
+      'Pathway: motor de notificaciones (email y WhatsApp) y programador de envíos únicos o recurrentes. También contact center y centro de mando.',
+    highlights: [
+      'Preferencias de usuario, historial y backoffice de programaciones y ejecuciones',
+      'Front Vue y API Node.js / TypeScript sobre SQL Server',
+    ],
+    tags: ['Node.js', 'TypeScript', 'Redis', 'Docker'],
+  },
+  {
+    slug: 'motai',
     title: 'Motai — motai.app',
     period: '2025 — 2026',
     url: 'https://motai.app',
@@ -562,6 +625,7 @@ export const PROJECTS = [
     tags: ['WordPress', 'NestJS', 'TypeScript', 'PostgreSQL', 'Apps web'],
   },
   {
+    slug: 'jeisson-pro',
     title: 'jeisson.pro',
     period: '2019 — Presente',
     url: 'https://jeisson.pro',
@@ -574,6 +638,7 @@ export const PROJECTS = [
     tags: ['React', 'Node.js', 'WordPress', 'Branding'],
   },
   {
+    slug: 'campus',
     title: 'Campus — Administración escolar',
     period: 'Open source',
     url: 'https://github.com/Devewice/Campus',
@@ -590,6 +655,7 @@ export const PROJECTS = [
     tags: ['PHP', 'MySQL', 'GitHub', 'Educación', 'Open source'],
   },
   {
+    slug: 'santiago-aviador',
     title: 'Santiago Aviador — E-commerce',
     period: '2024 — 2025',
     url: null,
@@ -606,6 +672,7 @@ export const PROJECTS = [
     tags: ['WooCommerce', 'WordPress', 'E-commerce', 'PHP'],
   },
   {
+    slug: 'van-leeuwenhoek',
     title: 'Colegio Van Leeuwenhoek',
     period: '2020 — 2025',
     url: 'https://colvanlee.edu.co',
@@ -622,6 +689,7 @@ export const PROJECTS = [
     tags: ['TIC', 'JavaScript', 'Web', 'Apps móviles', 'CMS'],
   },
   {
+    slug: 'reina-de-gales',
     title: 'Colegio Reina de Gales',
     period: '2021 — 2025',
     url: null,
@@ -638,6 +706,7 @@ export const PROJECTS = [
     tags: ['TIC', 'JavaScript', 'Web', 'Software a medida', 'Institucional'],
   },
   {
+    slug: 'occidente-xxi',
     title: 'Revista Occidente XXI',
     period: '2020 — 2024',
     url: 'https://www.occidentexxi.com/ediciones',
@@ -654,6 +723,7 @@ export const PROJECTS = [
     tags: ['WordPress', 'Redis', 'Web', 'InDesign', 'Editorial'],
   },
   {
+    slug: 'roger-murillo',
     title: 'Roger Murillo SAS',
     period: '2023 — 2025',
     url: null,
@@ -670,6 +740,7 @@ export const PROJECTS = [
     tags: ['WordPress', 'n8n', 'Chatbots', 'E-learning', 'E-commerce', 'Automatización'],
   },
   {
+    slug: 'eshac',
     title: 'Corporación ESHAC',
     period: '2022',
     url: null,

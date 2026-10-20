@@ -30,3 +30,7 @@ export function projectStatusLabel(status) {
 export function isComplementService(service) {
   return service.complement === true
 }
+
+export function findProject(projects, slug) {
+  return projects.find((project) => project.slug === slug) ?? null
+}

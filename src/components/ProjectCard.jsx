@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { projectStatusLabel } from '../utils/projects.js'
 
 export default function ProjectCard({ project }) {
@@ -37,6 +38,11 @@ export default function ProjectCard({ project }) {
             {t}
           </span>
         ))}
+      </div>
+      <div className="info-card-actions">
+        <Link to={`/proyectos/${project.slug}`} className="btn btn--soft">
+          Ver a detalle
+        </Link>
       </div>
     </article>
   )

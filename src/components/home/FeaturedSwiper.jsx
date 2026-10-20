@@ -38,21 +38,24 @@ export default function FeaturedSwiper({ featured }) {
                       </span>
                     ))}
                   </div>
-                  {p.url ? (
-                    <a
-                      href={p.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="featured-card__link"
-                    >
-                      Visitar sitio
+                  <div className="featured-card__actions">
+                    <Link to={`/proyectos/${p.slug}`} className="featured-card__link">
+                      Ver a detalle
                       <span className="featured-card__link-arrow" aria-hidden="true">
                         →
                       </span>
-                    </a>
-                  ) : (
-                    <span className="featured-card__no-link">Sin enlace público</span>
-                  )}
+                    </Link>
+                    {p.url ? (
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="featured-card__link"
+                      >
+                        Visitar sitio
+                      </a>
+                    ) : null}
+                  </div>
                 </footer>
               </article>
             </SwiperSlide>

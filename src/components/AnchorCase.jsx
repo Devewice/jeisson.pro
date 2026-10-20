@@ -33,7 +33,10 @@ export default function AnchorCase({ className = 'section-block anchor-case' }) 
             </div>
           </div>
           <footer className="anchor-case__actions">
-            <Link to={HOME_ANCHOR.cta.to} className="btn btn--primary">
+            <Link to={`/proyectos/${project.slug}`} className="btn btn--primary">
+              Ver a detalle
+            </Link>
+            <Link to={HOME_ANCHOR.cta.to} className="btn btn--soft">
               {HOME_ANCHOR.cta.label}
             </Link>
             {project.url && (

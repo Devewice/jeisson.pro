@@ -568,6 +568,12 @@
   gap: 1rem;
 }
 
+.featured-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+}
+
 .featured-card__tags {
   margin: 0;
 }

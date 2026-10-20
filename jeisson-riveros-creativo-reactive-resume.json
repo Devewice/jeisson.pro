@@ -35,7 +35,7 @@
     "icon": "article",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Diseñador multimedial con <strong>5+ años</strong> en branding, editorial y contenidos digitales. Portfolio: <strong>jeisson.pro</strong>, Behance y <strong>occidentexxi.com</strong> (+20 ediciones). Adobe Suite, motion y WordPress. Hoy el foco principal es <strong>desarrollo web</strong>; el diseño entra como complemento cuando el proyecto lo pide.</p>"
+    "content": "<p>Diseñador multimedial con <strong>5+ años</strong> en branding, editorial y contenidos digitales. Portfolio: <strong>jeisson.pro</strong>, Behance y <strong>occidentexxi.com</strong> (+20 ediciones). Adobe Suite, motion y WordPress. Hoy el foco principal es <strong>desarrollo web</strong>; el diseño entra como complemento cuando el proyecto lo pide.</p><p>Reciente: portal de marca <a href=\"https://paolabiker.com\">Paola Biker</a> (interfaz, parche, rodadas y tienda).</p>"
   },
   "sections": {
     "profiles": {
@@ -143,6 +143,36 @@
       "columns": 1,
       "hidden": false,
       "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000008",
+          "hidden": true,
+          "company": "Fastco",
+          "position": "Desarrollador full stack",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Ago 2026 – Presente",
+          "website": {
+            "url": "https://www.fastcogroup.com/",
+            "label": "fastcogroup.com",
+            "inlineLink": true
+          },
+          "description": "<ul><li>Pathway: motor y programador de notificaciones. Rol de desarrollo; no es el foco creativo de esta versión.</li></ul>",
+          "roles": []
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000009",
+          "hidden": false,
+          "company": "Paola Biker",
+          "position": "Diseño de producto · Portal de marca",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Ago 2026 – Presente",
+          "website": {
+            "url": "https://paolabiker.com",
+            "label": "paolabiker.com",
+            "inlineLink": true
+          },
+          "description": "<ul><li>Portal de marca para la creadora <strong>Paola Biker</strong>: interfaz, parche, rodadas y tienda en <strong>paolabiker.com</strong>.</li><li>UI y motion (Vuetify, GSAP) alineados al tono de la marca.</li></ul>",
+          "roles": []
+        },
         {
           "id": "018f1a2b-3c4d-7000-8002-000000000001",
           "hidden": true,
@@ -376,6 +406,30 @@
       "columns": 1,
       "hidden": false,
       "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000009",
+          "hidden": false,
+          "name": "Paola Biker — Portal de marca",
+          "period": "Ago 2026 – Presente",
+          "website": {
+            "url": "https://paolabiker.com",
+            "label": "paolabiker.com",
+            "inlineLink": true
+          },
+          "description": "<p>Portal de la creadora Paola Biker: identidad aplicada en interfaz, parche, rodadas y tienda.</p><p><strong>Stack:</strong> Vue 3, Vuetify, GSAP, motion, branding.</p>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000008",
+          "hidden": true,
+          "name": "Fastco — Pathway",
+          "period": "Ago 2026 – Presente",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Pathway: motor y programador de notificaciones. Queda fuera del foco creativo.</p><p><strong>Stack:</strong> Vue, Node.js, TypeScript, SQL Server.</p>"
+        },
         {
           "id": "018f1a2b-3c4d-7000-8004-000000000001",
           "hidden": false,

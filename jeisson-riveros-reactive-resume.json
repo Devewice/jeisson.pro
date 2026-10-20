@@ -35,7 +35,7 @@
     "icon": "article",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> en producción (PHP, TypeScript, JavaScript, WordPress, PostgreSQL/MySQL). En <a href=\"https://motai.app\">Motai</a> entregué e-commerce, <strong>apps web</strong> y backoffice (<strong>NestJS</strong>, <strong>Next.js</strong>, PostgreSQL). Experiencia en educación y comercio; <strong>disponible</strong> para desarrollo full stack y APIs.</p><p>Coordinación TIC en colegios (+800 usuarios). Diseño como <strong>complemento</strong> (Figma, handoff) cuando el proyecto lo incluye.</p><p>Código en Git, APIs documentadas y deploy en producción.</p>"
+    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> en producción (PHP, TypeScript, JavaScript, WordPress, PostgreSQL/MySQL). En <a href=\"https://www.fastcogroup.com/\"><strong>Fastco</strong></a> trabajé sobre todo en <strong>Pathway</strong>: motor y programador de notificaciones (<strong>email</strong> y <strong>WhatsApp</strong>). También el contact center y el centro de mando. Para <a href=\"https://paolabiker.com\">Paola Biker</a> construí el portal de la creadora (<strong>Vue 3</strong>, API y <strong>MySQL</strong>). En <a href=\"https://motai.app\">Motai</a> entregué e-commerce, <strong>apps web</strong> y backoffice (<strong>NestJS</strong>, <strong>Next.js</strong>, PostgreSQL).</p><p>Coordinación TIC en colegios (+800 usuarios). Diseño como <strong>complemento</strong> (Figma, handoff) cuando el proyecto lo incluye.</p><p>Código en Git, APIs documentadas y deploy en producción.</p>"
   },
   "sections": {
     "profiles": {
@@ -143,6 +143,36 @@
       "columns": 1,
       "hidden": false,
       "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000008",
+          "hidden": false,
+          "company": "Fastco",
+          "position": "Desarrollador full stack",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Ago 2026 – Presente",
+          "website": {
+            "url": "https://www.fastcogroup.com/",
+            "label": "fastcogroup.com",
+            "inlineLink": true
+          },
+          "roles": [],
+          "description": "<ul><li><strong>Pathway</strong>: motor de notificaciones por <strong>email</strong> y <strong>WhatsApp</strong>, preferencias del usuario e historial de envíos.</li><li>Programador en Pathway: envíos únicos y recurrentes, audiencia y backoffice para crear programaciones y ver ejecuciones. Front <strong>Vue</strong> y API <strong>Node.js</strong> / <strong>TypeScript</strong> sobre <strong>SQL Server</strong>.</li><li>Además, plataforma de <strong>contact center</strong> (OpenAPI, <strong>Socket.IO</strong>, <strong>Redis</strong>, <strong>RabbitMQ</strong>) y centro de mando de la operación.</li></ul>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8002-000000000009",
+          "hidden": false,
+          "company": "Paola Biker",
+          "position": "Desarrollador full stack",
+          "location": "Bogotá D.C., Colombia",
+          "period": "Ago 2026 – Presente",
+          "website": {
+            "url": "https://paolabiker.com",
+            "label": "paolabiker.com",
+            "inlineLink": true
+          },
+          "roles": [],
+          "description": "<ul><li>Portal <strong>paolabiker.com</strong> para la creadora: inicio, parche, rodadas, tienda, voz y encuestas.</li><li>Front <strong>Vue 3</strong> + Vuetify + TypeScript y API TypeScript con <strong>MySQL</strong> (Knex), en módulos desacoplados.</li><li>Pedidos, pagos, mapas y memorias con comentarios.</li></ul>"
+        },
         {
           "id": "018f1a2b-3c4d-7000-8002-000000000001",
           "hidden": false,
@@ -344,6 +374,30 @@
       "columns": 1,
       "hidden": false,
       "items": [
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000008",
+          "hidden": false,
+          "name": "Fastco — Pathway",
+          "period": "Ago 2026 – Presente",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Producto Pathway en Fastco: motor de notificaciones (email y WhatsApp) y programador de envíos únicos o recurrentes, con backoffice de programaciones y ejecuciones. También contact center y centro de mando.</p><p><strong>Stack:</strong> Vue, Node.js, TypeScript, SQL Server, Knex, Redis, RabbitMQ.</p>"
+        },
+        {
+          "id": "018f1a2b-3c4d-7000-8004-000000000009",
+          "hidden": false,
+          "name": "Paola Biker — paolabiker.com",
+          "period": "Ago 2026 – Presente",
+          "website": {
+            "url": "https://paolabiker.com",
+            "label": "paolabiker.com",
+            "inlineLink": true
+          },
+          "description": "<p>Portal de la creadora Paola Biker: parche, rodadas, tienda, voz y encuestas. Producto web con front y API propios.</p><p><strong>Stack:</strong> Vue 3, Vuetify, TypeScript, MySQL, Knex.</p>"
+        },
         {
           "id": "018f1a2b-3c4d-7000-8004-000000000001",
           "hidden": true,

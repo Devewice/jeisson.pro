@@ -66,6 +66,11 @@ export default function About() {
                     <li key={b}>{b}</li>
                   ))}
                 </ul>
+                {job.slug && (
+                  <Link to={`/proyectos/${job.slug}`} className="btn btn--soft experience-card__detail">
+                    Ver a detalle
+                  </Link>
+                )}
               </article>
             </AnimateIn>
           ))}

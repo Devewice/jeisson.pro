@@ -10,6 +10,7 @@ const Landing = lazy(() => import('./pages/Landing.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Services = lazy(() => import('./pages/Services.jsx'))
 const Projects = lazy(() => import('./pages/Projects.jsx'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
 const CvHub = lazy(() => import('./pages/CvHub.jsx'))
 const CvViewer = lazy(() => import('./pages/CvViewer.jsx'))
@@ -24,6 +25,7 @@ export default function App() {
         <Route index element={<Landing />} />
         <Route path="sobre-mi" element={<About />} />
         <Route path="servicios" element={<Services />} />
+        <Route path="proyectos/:slug" element={<ProjectDetail />} />
         <Route path="proyectos" element={<Projects />} />
         <Route path="contacto" element={<Contact />} />
         <Route

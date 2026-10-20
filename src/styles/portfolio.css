@@ -194,6 +194,44 @@
   margin-top: 0.25rem;
 }
 
+.info-card-actions {
+  margin-top: 1rem;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.detail-scope {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.detail-scope li + li {
+  margin-top: 0.55rem;
+}
+
+.detail-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.detail-stack__card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.experience-card__detail {
+  margin-top: 1rem;
+}
+
 .filter-btn__count {
   opacity: 0.75;
   font-weight: 400;
