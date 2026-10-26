@@ -16,6 +16,12 @@ const CV_CONFIG = {
     src: '/cv-creativo/index.html',
     pdfName: 'Jeisson-Riveros-CV-creativo.pdf',
   },
+  producto: {
+    title: 'CV — Producto en operación',
+    src: '/cv-producto/index.html',
+    pdfName: 'Jeisson-Riveros-CV-producto.pdf',
+    atsPdfName: 'Jeisson-Riveros-CV-producto-ATS.pdf',
+  },
 }
 
 export default function CvViewer({ variant }) {
@@ -77,7 +83,7 @@ export default function CvViewer({ variant }) {
           >
             {exporting === 'pdf' ? 'Generando…' : 'Descargar PDF'}
           </button>
-          {variant === 'dev' && (
+          {(variant === 'dev' || variant === 'producto') && (
             <button
               type="button"
               className="btn btn--soft"

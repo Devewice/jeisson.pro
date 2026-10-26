@@ -24,8 +24,10 @@ Documentación del trabajo realizado sobre la hoja de vida de **Jeisson David Ri
 |-------------------|---------------|
 | `jeisson-riveros-reactive-resume.json` | **Fuente de verdad — versión DEV.** Importar en Reactive Resume. |
 | `jeisson-riveros-creativo-reactive-resume.json` | **Fuente de verdad — versión CREATIVA.** Importar en Reactive Resume. |
+| `jeisson-riveros-producto-reactive-resume.json` | **Fuente de verdad — versión PRODUCTO.** Operación, reglas e integraciones. Visible en `/cv/producto`. |
 | `cv-dev/` | Plantilla HTML + CSS (tech). **No modificar por ahora**; la app React la embebe tal cual. |
 | `cv-creativo/` | Plantilla HTML + CSS (editorial). **Idem.** |
+| `cv-producto/` | Plantilla HTML del CV de producto (operación). Misma regla: no se sincroniza sola con el JSON. |
 | `src/` | Frontend React (Vite): inicio, rutas `/cv/dev` y `/cv/creativo`. |
 | `server/` | Express sirve `dist/` y las carpetas CV en producción. |
 | `start.bat` | Instala dependencias si hace falta y lanza `npm run dev`. |
@@ -110,7 +112,7 @@ Estructura clave: `picture`, `basics`, `summary`, `sections`, `customSections`, 
 
 ## Portal jeisson.pro (Node + React)
 
-Requisito: [Node.js](https://nodejs.org) 20+.
+Requisito: [Node.js](https://nodejs.org) **24.22.1 o superior** (el parche de seguridad del 21 de octubre de 2026). Node 22 solo si el hosting no ofrece 24: mínimo **22.23.4**. Node 20 ya no recibe ese parche.
 
 ### Público (portafolio)
 

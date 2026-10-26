@@ -76,6 +76,7 @@ export default function AccessLinkManager() {
           <select value={variant} onChange={(e) => setVariant(e.target.value)}>
             <option value="">Ambos (elegir en hub)</option>
             <option value="dev">Solo desarrollo</option>
+            <option value="producto">Solo producto</option>
             <option value="creativo">Solo creativo</option>
           </select>
         </label>

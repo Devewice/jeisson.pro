@@ -13,6 +13,9 @@ export default function CvHub() {
   if (lockedVariant === 'creativo') {
     return <Navigate to="/cv/creativo" replace />
   }
+  if (lockedVariant === 'producto') {
+    return <Navigate to="/cv/producto" replace />
+  }
 
   return (
     <div className="home">
@@ -21,7 +24,7 @@ export default function CvHub() {
           {owner ? 'Administración' : cvAccess?.label || 'Acceso invitado'}
         </p>
         <h1>Hojas de vida</h1>
-        <p>Versión desarrollo y creativa. En el visor usa «Descargar PDF» o «Descargar PDF ATS» (dev).</p>
+        <p>Desarrollo, producto y creativa. En el visor puedes descargar el PDF.</p>
         <button type="button" className="btn" onClick={() => logout()}>
           Cerrar sesión
         </button>
@@ -32,6 +35,13 @@ export default function CvHub() {
           <span className="cv-card-tag">Desarrollo</span>
           <h2>CV — Full stack</h2>
           <p>NestJS, WordPress, APIs y producto en producción.</p>
+          <span className="cv-card-cta">Abrir →</span>
+        </Link>
+
+        <Link to="/cv/producto" className="cv-card cv-card--producto">
+          <span className="cv-card-tag">Producto</span>
+          <h2>CV — Operación</h2>
+          <p>Reglas, integraciones y sistemas que siguen en uso. Para roles de producto.</p>
           <span className="cv-card-cta">Abrir →</span>
         </Link>
 

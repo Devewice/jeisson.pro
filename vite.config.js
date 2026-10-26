@@ -16,6 +16,7 @@ export default defineConfig({
       targets: [
         { src: 'cv-dev', dest: '.' },
         { src: 'cv-creativo', dest: '.' },
+        { src: 'cv-producto', dest: '.' },
       ],
     }),
   ],
@@ -31,6 +32,7 @@ export default defineConfig({
       },
       '/cv-dev': { target: apiTarget, changeOrigin: true, secure: false },
       '/cv-creativo': { target: apiTarget, changeOrigin: true, secure: false },
+      '/cv-producto': { target: apiTarget, changeOrigin: true, secure: false },
     },
   },
   preview: {
@@ -44,6 +46,7 @@ export default defineConfig({
       },
       '/cv-dev': { target: apiTarget, changeOrigin: true, secure: false },
       '/cv-creativo': { target: apiTarget, changeOrigin: true, secure: false },
+      '/cv-producto': { target: apiTarget, changeOrigin: true, secure: false },
     },
   },
   build: {

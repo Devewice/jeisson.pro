@@ -22,7 +22,7 @@ for (const [slug, detail] of Object.entries(PROJECT_DETAILS)) {
 }
 writeFileSync('public/cv-details.json', JSON.stringify(out))
 
-for (const file of ['cv-dev/index.html', 'cv-creativo/index.html']) {
+for (const file of ['cv-dev/index.html', 'cv-creativo/index.html', 'cv-producto/index.html']) {
   let html = readFileSync(file, 'utf8')
   html = html.replace(
     /<a class="cv-more" href="\/proyectos\/([^"]+)" target="_top">Ver más<\/a>/g,

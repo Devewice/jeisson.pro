@@ -35,7 +35,7 @@
     "icon": "article",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> en producción (PHP, TypeScript, JavaScript, WordPress, PostgreSQL/MySQL). En <a href=\"https://www.fastcogroup.com/\"><strong>Fastco</strong></a> trabajé sobre todo en <strong>Pathway</strong>, la plataforma de pagos: pasarelas, facturación, roles, auditoría y notificaciones (<strong>email</strong> y <strong>WhatsApp Meta</strong>). También el contact center y el centro de mando. Para <a href=\"https://paolabiker.com\">Paola Biker</a> construí el portal de la creadora (<strong>Vue 3</strong>, API y <strong>MySQL</strong>). En <a href=\"https://motai.app\">Motai</a> entregué e-commerce, <strong>apps web</strong> y backoffice (<strong>NestJS</strong>, <strong>Next.js</strong>, PostgreSQL).</p><p>Coordinación TIC en colegios (+800 usuarios). Diseño como <strong>complemento</strong> (Figma, handoff) cuando el proyecto lo incluye.</p><p>Código en Git, APIs documentadas y deploy en producción.</p>"
+    "content": "<p>Desarrollador web full stack con <strong>5+ años</strong> en producción (PHP, TypeScript, JavaScript, WordPress, PostgreSQL/MySQL). En <a href=\"https://www.fastcogroup.com/\"><strong>Fastco</strong></a> trabajé sobre todo en <strong>Pathway</strong>, la plataforma de pagos: pasarelas, facturación, roles, auditoría y notificaciones (<strong>email</strong> y <strong>WhatsApp Meta</strong>). También el contact center y el centro de mando. Para <a href=\"https://paolabiker.com\">Paola Biker</a> construí el portal de la creadora (<strong>Vue 3</strong>, API y <strong>MySQL</strong>). En <a href=\"https://motai.app\">Motai</a> entregué e-commerce, <strong>apps web</strong> y backoffice (<strong>NestJS</strong>, <strong>Next.js</strong>, PostgreSQL).</p><p>Coordinación TIC en colegios (+800 usuarios). En Roger Murillo armé flujos de <strong>n8n</strong> con chatbots para atención y procesos repetidos. Diseño como <strong>complemento</strong> (Figma, handoff) cuando el proyecto lo incluye.</p><p>Código en Git, APIs documentadas y deploy en producción.</p>"
   },
   "sections": {
     "profiles": {
@@ -235,9 +235,9 @@
         },
         {
           "id": "018f1a2b-3c4d-7000-8002-000000000004",
-          "hidden": true,
+          "hidden": false,
           "company": "Roger Murillo SAS",
-          "position": "Community Manager · Desarrollador",
+          "position": "Desarrollo web y automatización",
           "location": "Bogotá D.C., Colombia",
           "period": "Ene 2023 – Jul 2025",
           "website": {
@@ -246,7 +246,7 @@
             "inlineLink": false
           },
           "roles": [],
-          "description": ""
+          "description": "<ul><li>Flujos en <strong>n8n</strong> con chatbots para atención y procesos que se repetían.</li><li>Sitio <strong>WordPress</strong>, e-learning y tienda en línea con bonos.</li><li>Campañas y piezas cuando el mismo encargo lo pedía.</li></ul>"
         },
         {
           "id": "018f1a2b-3c4d-7000-8002-000000000006",
@@ -448,7 +448,7 @@
         },
         {
           "id": "018f1a2b-3c4d-7000-8004-000000000005",
-          "hidden": true,
+          "hidden": false,
           "name": "Campañas Digitales — Roger Murillo SAS",
           "period": "2023 – 2025",
           "website": {
@@ -456,7 +456,7 @@
             "label": "",
             "inlineLink": false
           },
-          "description": "<p>Suite de campañas publicitarias multicanal: piezas animadas 2D, gestión de redes sociales, landing pages y sitios CMS. Coordinación creativa desde concepto hasta publicación y seguimiento de métricas.</p><p><strong>Stack:</strong> Blender, Adobe Premiere, WordPress, community management, marketing digital.</p>"
+          "description": "<p>Flujos de <strong>n8n</strong> con chatbots para atención y procesos repetidos, junto al sitio WordPress, el e-learning y la tienda con bonos.</p><p><strong>Stack:</strong> n8n, chatbots, WordPress, e-learning.</p>"
         }
       ]
     },
@@ -612,6 +612,21 @@
           ]
         },
         {
+          "id": "018f1a2b-3c4d-7000-8005-000000000024",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Automatización",
+          "proficiency": "Avanzado",
+          "level": 0,
+          "keywords": [
+            "n8n",
+            "Chatbots",
+            "Flujos",
+            "Procesos"
+          ]
+        },
+        {
           "id": "018f1a2b-3c4d-7000-8005-000000000011",
           "hidden": false,
           "icon": "",
@@ -622,7 +637,7 @@
           "keywords": [
             "Cursor",
             "Agentes",
-            "Asistencia de código",
+            "n8n",
             "Automatización"
           ]
         }
@@ -699,9 +714,9 @@
           "iconColor": "",
           "name": "Tecnología e IA aplicada",
           "keywords": [
-            "Desarrollo web",
-            "Automatización",
-            "Innovación"
+            "n8n",
+            "Chatbots",
+            "Automatización"
           ]
         }
       ]

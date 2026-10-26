@@ -118,6 +118,7 @@ export const TECH_MARQUEE = [
   'Redis',
   'Docker',
   'OpenAPI',
+  'n8n',
   'Git',
 ]
 
@@ -150,6 +151,10 @@ export const TECH_STACK = [
   {
     group: 'Producto e integraciones',
     items: ['RBAC', 'SSE', 'WebSockets', 'Sync ERP', 'reCAPTCHA', 'LiteSpeed'],
+  },
+  {
+    group: 'Automatización',
+    items: ['n8n', 'Chatbots', 'Flujos', 'Agentes'],
   },
 ]
 
@@ -436,7 +441,7 @@ export const EXPERIENCE = [
 
 export const ABOUT = {
   intro: [
-    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En Fastco trabajé sobre todo en Pathway, la plataforma de pagos: pasarelas, facturación, roles, auditoría y notificaciones por email y WhatsApp (Meta). Para Paola Biker construí paolabiker.com. En motai.app desarrollé WooCommerce, plugins a medida, apps web y un backoffice con NestJS y PostgreSQL.',
+    'Desarrollo web full stack hace más de cinco años: PHP, TypeScript, APIs, WordPress y lo que hace falta para publicar — Git, Docker, bases de datos. En Fastco trabajé sobre todo en Pathway, la plataforma de pagos: pasarelas, facturación, roles, auditoría y notificaciones por email y WhatsApp (Meta). Para Paola Biker construí paolabiker.com. En motai.app desarrollé WooCommerce, plugins a medida, apps web y un backoffice con NestJS y PostgreSQL. En Roger Murillo armé flujos de n8n con chatbots para atención y procesos repetidos.',
     'Antes de dedicarme a tiempo completo al código coordiné TIC y trabajé diseño en colegios y editorial. Complemento el desarrollo con criterio visual cuando hace falta. Hoy busco encargos de desarrollo.',
   ],
   highlights: [
@@ -552,6 +557,15 @@ export const SERVICES = [
     tags: ['WordPress', 'WooCommerce', 'PHP', 'Redis', 'REST/AJAX'],
     includes: ['Plugins y temas hijo cuando aplica', 'Integraciones ERP/API', 'Puesta en línea acordada'],
     excludes: ['Contenido masivo de producto sin briefing', 'Licencias premium de terceros sin presupuesto'],
+  },
+  {
+    title: 'Automatización de procesos',
+    complement: false,
+    description:
+      'Flujos en n8n con chatbots para atención y tareas que se repiten, conectados al sitio o a la operación. En Roger Murillo quedó así: WordPress, e-learning, tienda con bonos y esos flujos.',
+    tags: ['n8n', 'Chatbots', 'Flujos', 'WordPress'],
+    includes: ['Flujo conectado al proceso real', 'Chatbot para atención o tareas repetidas', 'Puesta en marcha acordada'],
+    excludes: ['Entrenamiento de modelos', 'Campañas de pauta pagada'],
   },
   {
     title: 'Educación y coordinación TIC',

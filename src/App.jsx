@@ -52,6 +52,14 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="cv/producto"
+          element={
+            <ProtectedRoute>
+              <CvViewer variant="producto" />
+            </ProtectedRoute>
+          }
+        />
       </Route>
     </Routes>
   )

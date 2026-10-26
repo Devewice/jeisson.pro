@@ -44,6 +44,8 @@ const jobs = [
   { variant: 'dev', ats: false },
   { variant: 'dev', ats: true },
   { variant: 'creativo', ats: false },
+  { variant: 'producto', ats: false },
+  { variant: 'producto', ats: true },
 ]
 
 for (const job of jobs) {

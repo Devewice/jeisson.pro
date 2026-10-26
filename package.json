@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=24.22.1"
+  },
   "description": "Portafolio y visualización de CV — Jeisson David Riveros García",
   "scripts": {
     "dev": "concurrently -n api,web -c blue,green \"node server/dev-server.js\" \"vite\"",

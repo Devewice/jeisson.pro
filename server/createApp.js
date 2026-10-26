@@ -15,6 +15,12 @@ import {
 import { createFileSessionStore } from './fileSessionStore.js'
 import { cvPdfFilename, generateCvPdf, getCvPdfBaseUrl, readBundledCvPdf } from './cvPdf.js'
 
+const CV_REDIRECT = {
+  dev: '/cv/dev',
+  creativo: '/cv/creativo',
+  producto: '/cv/producto',
+}
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
@@ -131,7 +137,7 @@ export function createApp({ distPath } = {}) {
     res.json({
       ok: true,
       variant: entry.variant,
-      redirect: entry.variant === 'dev' ? '/cv/dev' : entry.variant === 'creativo' ? '/cv/creativo' : '/interno',
+      redirect: CV_REDIRECT[entry.variant] || '/interno',
     })
   })
 
@@ -177,7 +183,7 @@ export function createApp({ distPath } = {}) {
   })
 
   app.get('/api/cv/pdf', requireCvAuth, async (req, res) => {
-    const variant = req.query.variant === 'creativo' ? 'creativo' : 'dev'
+    const variant = CV_REDIRECT[req.query.variant] ? req.query.variant : 'dev'
     const ats = req.query.ats === '1' || req.query.ats === 'true'
 
     const filename = cvPdfFilename(variant, ats)
@@ -216,6 +222,7 @@ export function createApp({ distPath } = {}) {
 
   app.use('/cv-dev', requireCvAuth, express.static(path.join(root, 'cv-dev')))
   app.use('/cv-creativo', requireCvAuth, express.static(path.join(root, 'cv-creativo')))
+  app.use('/cv-producto', requireCvAuth, express.static(path.join(root, 'cv-producto')))
   app.use(express.static(path.join(root, 'public')))
 
   if (distPath !== null) {

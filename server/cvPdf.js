@@ -31,9 +31,18 @@ export function getCvPdfBaseUrl(req) {
   return `${proto}://${host}`
 }
 
+export function cvHtmlPath(variant) {
+  if (variant === 'creativo') return '/cv-creativo/index.html'
+  if (variant === 'producto') return '/cv-producto/index.html'
+  return '/cv-dev/index.html'
+}
+
 export function cvPdfFilename(variant, ats) {
-  if (ats) return 'Jeisson-Riveros-CV-ATS.pdf'
   if (variant === 'creativo') return 'Jeisson-Riveros-CV-creativo.pdf'
+  if (variant === 'producto') {
+    return ats ? 'Jeisson-Riveros-CV-producto-ATS.pdf' : 'Jeisson-Riveros-CV-producto.pdf'
+  }
+  if (ats) return 'Jeisson-Riveros-CV-ATS.pdf'
   return 'Jeisson-Riveros-CV-desarrollo.pdf'
 }
 
@@ -130,8 +139,7 @@ export async function generateCvPdf({ variant, ats, cookieHeader, baseUrl }) {
     throw err
   }
 
-  const htmlPath =
-    variant === 'creativo' ? '/cv-creativo/index.html' : '/cv-dev/index.html'
+  const htmlPath = cvHtmlPath(variant)
   const url = `${baseUrl}${htmlPath}${ats ? '?ats=1' : '?pdf=1'}`
 
   const browser = await puppeteer.launch({
